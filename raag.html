@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>raag</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+</head>
+<body>
+    <style>
+        .raags{
+            /* text-decoration: dashed; */
+            /* text-decoration: dotted; */
+            /* text-decoration: double; */
+            /* text-decoration:line-through; */
+            /* text-decoration:overline; */
+            /* text-decoration:solid; */
+            /* text-decoration:underline; this*/
+            /* text-decoration:wavy; */
+        }
+    </style>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 raags">
+          <li class="nav-item">
+            <select class="nav-link" name="" id="chooseTime">
+                <option value="Empty">Choose the time</option>
+                <option value="Morning">Morning</option>
+                <option value="Afternoon">Afternoon</option>
+                <option value="Evening">Evening</option>
+                <option value="Dawn">Dawn</option>
+                <option value="Night">Night</option>
+            </select>
+          </li>
+        <li class="nav-item">
+            <select class="nav-link" name="" id="chooseThaat">
+                <option value="Empty">Choose the thaat</option>
+            </select>
+        </li>
+        <li class="nav-item">
+            <select class="nav-link" name="" id="chooseRaag">
+                <option value="Empty">Choose the raag</option>
+            </select>
+        </li>
+        <li class="nav-item">
+            <select class="nav-link" name="" id="RaagSong">
+                <option value="Empty">Choose the song</option>
+                <!-- <option value="saarang">Saarang</option>
+                <option value="bhoopali">bhoopali</option>
+                <option value="bhairav">bhairav</option> -->
+            </select>
+        </li>
+        <div class="d-flex">
+            <button class="btn btn-primary" onclick="history.go(0)"> <i class="fas fa-recycle"></i></button>
+        </div>
+        <!-- <button class="btn btn-primary">Transpose</button> -->
+
+        <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li> -->
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+         <div class="row jumbotron">
+            <div class="col-lg-3 raginfo"></div>
+            <div class="col-lg-9 list"></div>
+        </div>        
+    <script src="raagJson.js"></script>
+    <script src="transpose2.js"></script>
+
+    <script>
+        var chooseThaat=document.querySelector("#chooseThaat");
+        var chooseRaag=document.querySelector("#chooseRaag");
+        var chooseTime=document.querySelector("#chooseTime")
+        chooseThaat.addEventListener("change",()=>{
+            selectRaag("thaat")
+        })
+        chooseRaag.addEventListener("change",()=>{
+            selectSong()
+        })
+        chooseTime.addEventListener("change",()=>{
+            selectRaag("time")
+        })
+
+        // Object.keys(songraag).forEach(ard=>{
+        //     document.querySelector("#RaagSong").innerHTML+= `<option value="${ard}">${ard}</option>`
+        // });
+
+        Object.keys(thaat).forEach((sard,key)=>{
+            chooseThaat.innerHTML+= `<option value="${sard}">${sard}</option>`
+        });
+
+        document.querySelector("#RaagSong").addEventListener("change",()=>{
+            var ragsong = document.querySelector("#RaagSong").value
+            transpose(eval(ragsong),Nepnotes,8);
+        })
+        chooseRaag.addEventListener("change",()=>{
+            var timeValue = chooseRaag            
+            // console.log(timeValue.options[timeValue.selectedIndex].text)
+            giveINfo(timeValue.value)
+        })
+
+        function selectRaag(thaatime){
+            var tvalue;
+            let rag;
+            if(thaatime== "time"){
+                var tvalue = chooseTime.value
+            }
+            else{
+                var tvalue = chooseThaat.value
+            }
+            // chooseRaag.innerHTML
+            var abcde=Object.keys(raags.raag)
+            // var rand= Math.floor(Math.random(4)*4);
+            // let durations= ["Night","Morning","Afternoon","Evening"]
+            // console.log(durations[rand],rand)
+            abcde.forEach(abc=>{
+                if(thaatime== "time"){
+                    rag=(raags.raag[abc].time);
+                }
+                else{
+                    rag=(raags.raag[abc].thaat);
+                }
+            if( rag == tvalue || rag == tvalue.toLowerCase()){
+                ragoption=document.createElement("option")
+                ragoption.value= abc;
+                ragoption.textContent= abc;
+                chooseRaag.appendChild(ragoption)
+            }
+    })
+
+    }
+
+    getText("https://flutisthacker.github.io/flutisthacker.github.io-gamemaybe/varnotes.js");
+
+async function getText(file) {
+  let myObject = await fetch(file);
+
+  let myText = await myObject.text();
+  document.getElementById("demo").innerHTML = myText;
+}
+
+    function selectSong(){
+            var tvalue = chooseRaag.value
+            var abcde=Object.keys(songraag)
+            abcde.forEach(abc=>{
+                let rag=Object.keys(songraag[abc]);
+            if( abc == tvalue || abc == tvalue.toLowerCase()){
+                rag.forEach(ragg=>{
+                    ragoption=document.createElement("option")
+                    ragoption.value= `songraag["${abc}"]["${ragg}"]`;
+                    ragoption.textContent= ragg;
+                    document.querySelector("#RaagSong").appendChild(ragoption)
+                })    
+            }
+    })
+    }
+
+
+        function giveINfo(raagname){
+            document.querySelector(".raginfo").innerHTML=""
+            var raginfo=raags.raag[raagname]
+            raginfokeys= Object.keys(raags.raag[raagname])
+
+            let ragCard= document.createElement("div")
+            ragCard.className ="card"
+            ragCard.style= "width:18rem"
+
+            let ragBody= document.createElement("div")
+            ragBody.className ="card-body"
+
+            let ragTitle= document.createElement("div")
+            ragTitle.className ="card-header"
+            ragTitle.textContent=raagname
+
+
+            let ragUL= document.createElement("ul")
+            ragUL.className ="list-group list-group-flush"
+
+            raginfokeys.forEach(raginfokey=>{
+                ragUL.innerHTML+=(`<li class="list-group-item">${raginfokey}: ${raags.raag[raagname][raginfokey]}</li>`)
+            })
+
+            ragCard.appendChild(ragTitle)
+            ragBody.appendChild(ragUL) 
+            ragCard.appendChild(ragBody)
+            document.querySelector(".raginfo").appendChild(ragCard)
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+{
+	"raag": {
+		"aasawari": {},
+		"bhairav": {
+			"vadi": "d",
+			"samvadi": "r",
+			"arohi": "S r G m P d N S",
+			"avarohi": "S N d P m G r S",
+			"thaat": "bhairav",
+			"jati": "Sampurna",
+			"mood": "Ascetic",
+			"time": "morning"
+		},
+		"bhairavi": {
+			"vadi": "m",
+			"samvadi": "S",
+			"arohi": "S r g m P d n S",
+			"avarohi": "S n d P m g r S",
+			"thaat": "bhairavi",
+			"jati": "sampurna",
+			"mood": "devotion compassion",
+			"time": "Morning"
+		},
+		"bihaag": {
+			"vadi": "G",
+			"samvadi": "N",
+			"arohi": "N S G M P N S",
+			"avarohi": "S N D P M G m G R S",
+			"thaat": "bilawal",
+			"jati": "audav-sampurna",
+			"mood": "celebratory romance",
+			"time": "Night"
+		},
+		"yaman": {
+			"vadi": "g",
+			"samvadi": "n",
+			"arohi": "n r g m' d n s",
+			"avarohi": "s n d p m' g r s",
+			"thaat": "kalyan",
+			"jati": "shadav-sampurna",
+			"mood": "romance",
+			"time": "evening"
+		},
+		"bhoopali": {
+			"vadi": "G",
+			"samvadi": "D",
+			"arohi": "S R G P D S",
+			"avarohi": " S D P G R S",
+			"thaat": "kalyan",
+			"jati": "audav-audav",
+			"mood": "meditative",
+			"time": "evening"
+		},
+		"saarang": {},
+		"kafi": {},
+		"khamaj": {},
+		"bhimpalasi": {
+			"vadi": "m",
+			"samvadi": "S",
+			"arohi": "S g M P n S",
+			"avarohi": "S n D  P m P g m g R S",
+			"thaat": "kafi",
+			"jati": "audav-sampurna",
+			"mood": "passionate quiet tender",
+			"time": "Afternoon"
+		},
+		"bageshree": {
+			"vadi": "M",
+			"samvadi": "S",
+			"arohi": "S g m P D n S",
+			"avarohi": "S n D m PD g M g R S",
+			"thaat": "kafi",
+			"jati": "shadav-sampurna",
+			"mood": "romance flirtatious",
+			"time": "night"
+		},
+		"durga": {},
+		"desh": {
+			"vadi": "R",
+			"samvadi": "P",
+			"arohi": "N S R M P N S",
+			"avarohi": "S n D P m G R S N S",
+			"thaat": "khamaj",
+			"jati": "audav-sampurna",
+			"mood": "romance devotion",
+			"time": "evening"
+		},
+		"pilu": {},
+		"tilang": {},
+		"hamsadhwani": {
+			"vadi": "S",
+			"samvadi": "P",
+			"arohi": "S R G P N S",
+			"avarohi": " S N P G R S",
+			"thaat": "Bilawal",
+			"jati": "Audav-audav",
+			"mood": "positive",
+			"time": "night"
+		},
+		"khamaj":{
+			"vadi": "G",
+			"samvadi": "N",
+			"arohi": "S G M P D N S",
+			"avarohi": "S n D P m G R S",
+			"thaat": "khamaj",
+			"jati": "shadav-sampurna",
+			"mood": "romance",
+			"time": "evening"
+		},
+		"malkauns":{
+			"vadi": "M",
+			"samvadi": "S",
+			"arohi": "S g m d n S",
+			"avarohi": "S n d m g S",
+			"thaat": "bhairavi",
+			"jati": "audav-audav",
+			"mood": "majestic solemn",
+			"time": "night"
+		},
+		"blank":{
+			"vadi": "",
+			"samvadi": "",
+			"arohi": "",
+			"avarohi": "",
+			"thaat": "",
+			"jati": "",
+			"mood": "",
+			"time": ""
+		}
+
+	}
+}

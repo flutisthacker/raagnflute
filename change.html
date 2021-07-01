@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="raagJson.js"></script>
+    <input type="text" id="takenote">
+<textarea name="" id="givenote" cols="30" rows="10"></textarea>
+<button class="change">change</button>
+<script>
+        const Ckey = ["C", "c", "D", "d", "E", "F", "f", "G", "g", "A", "a", "B", "-"];
+        const keey = ["c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b", "-"];
+        const neey = ["S", "r", "R", "g", "G", "m", "M", "P", "d", "D", "n", "N", "-"];
+        const kneey = ["s", "r'", "r", "g'", "g", "m", "m'", "p", "d'", "d", "n'", "n", "-"];
+        let newNote=[];
+    toChange.forEach(note=>{
+        newNote.push(Ckey[kneey.indexOf(note)])
+    })
+document.querySelector("#givenote").value=newNote
+    </script>
+</body>
+</html>
