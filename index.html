@@ -39,6 +39,9 @@
                 <option value="Afternoon">Afternoon</option>
                 <option value="Evening">Evening</option>
                 <option value="Dawn">Dawn</option>
+                <option value="Dusk">Dusk</option>
+                <option value="Midnight">Midnight</option>
+                <option value="Twilight">Twilight</option>
                 <option value="Night">Night</option>
             </select>
           </li>
@@ -83,8 +86,8 @@
   </nav>
 
          <div class="row jumbotron">
-            <div class="col-lg-3 col-sm-6 raginfo"></div>
-            <div class="col-lg-9 col-sm-6 list"></div>
+            <div class="col-lg-3 col-md-6 col-sm-6 raginfo"></div>
+            <div class="col-lg-9 col-md-6 col-sm-6 list"></div>
         </div>        
     <script src="raagJson.js"></script>
     <script src="transpose2.js"></script>
@@ -93,6 +96,47 @@
         var chooseThaat=document.querySelector("#chooseThaat");
         var chooseRaag=document.querySelector("#chooseRaag");
         var chooseTime=document.querySelector("#chooseTime")
+        var timeBadge={"morning":0,"evening":0,"night":0,"midnight":0,"afternoon":0,"dawn":0,"empty":0};
+
+        getBadge()
+
+        function getBadge(){
+            Object.keys(raags.raag).forEach(a=>{
+                    switch(raags.raag[a].time) {
+                        case "morning" || "Morning":
+                                timeBadge["morning"]+=1
+                            break;
+                        case "evening"|| "Evening":
+                                timeBadge["evening"]+=1
+                            break;
+                        case "afternoon" || "Afternoon":
+                                timeBadge["afternoon"]+=1
+                            break;
+                        case "dawn" || "Dawn":
+                                timeBadge["dawn"]+=1
+                            break;
+                        case "empty":
+                                timeBadge["empty"]+=1
+                            break;
+                        case "night"|| "Night":
+                                timeBadge["night"]+=1
+                            break;
+                        case "midnight"|| "Midnight":
+                                timeBadge["midnight"]+=1
+                            break;
+                        default:
+                            // code block
+                        }
+                })
+
+                for(i=0;i<9;i++){
+                    console.log(chooseTime.options[i].text)
+                    var ctot =chooseTime.options[i].text
+                    if(timeBadge[ctot.toLowerCase()] != undefined){
+                        chooseTime.options[i].text = ctot + `(${timeBadge[ctot.toLowerCase()]})`
+                    }
+                }
+        }
         chooseThaat.addEventListener("change",()=>{
             selectRaag("thaat")
         })
