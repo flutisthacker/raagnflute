@@ -7,19 +7,135 @@
     <title>Document</title>
 </head>
 <body>
+    <style>
+        .btn{
+            height:30px;
+            width:50px;
+            margin:2px;
+        }
+    </style>
     <script src="raagJson.js"></script>
     <input type="text" id="takenote">
 <textarea name="" id="givenote" cols="30" rows="10"></textarea>
 <button class="change">change</button>
+<input type="text" name="" id="idmaker" placeholder="put to make ids">
+<div class="mybtn">
+    <button onClick="mytimint=setInterval(myTimer, 60000/beat)">  play</button>
+    <button onClick="clearInterval(mytimint)">  stop</button>
+    <button onClick="mytimdd=1">  reset</button>
+</div>
+<p id="timer"></p>
+<p id="note"></p>
+
+<script src="music.js"></script>
 <script>
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    var mytimint;
+    
+    function play(frequency,times){
+        // create Oscillator node
+        otype="triangle";
+        // sine square triangle sawtooth
+        const oscillator = audioCtx.createOscillator();
+        oscillator.frequency.setValueAtTime(frequency, audioCtx.currentTime);        
+        let g = audioCtx.createGain();
+        oscillator.type = otype;        
+        oscillator.connect(g)
+        g.connect(audioCtx.destination)
+        oscillator.start()
+        g.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + 2 * times)
+        // create web audio api context
+    }
+
+        var beat =120
+        var mytimd=1;
+        var mytimdd=-8;
+        var prevnote="";
+        var currnote="";
+        var mybeatcount=0;
+        function playrandom(){
+            // randomNote=Math.floor(Math.random()*noteFrequency.length)
+            // play(noteFrequency[randomNote])
+            play(311.1,1)
+            play(261.6,1)
+            play(370.0,1)
+        }
+        function myTimer(){
+            if(mytimd>8){
+                document.getElementById("timer").innerHTML ="";
+                document.getElementById("note").innerHTML +="</br>";
+                mytimd=1;
+            }
+            document.getElementById("timer").innerHTML += mytimd++ + "    ";
+            document.getElementById("note").innerHTML += `<button class="btn">${mynoted[mytimdd] || mytimd-1}</button> `+ "    " ;
+            mytimdd++;
+            console.log(noteFrequency[notes.indexOf(mynoted[mytimdd-1])])
+            playnote(mynoted,mytimdd)
+        }
+
+
+        function myTimer1(){
+            var twonotes=currnote.split("");
+
+            if(mybeatcount > twonotes.length){
+                setTimeout(clearInterval(mytimeout),500)
+            }
+            play(noteFrequency[notes.indexOf(twonotes[mybeatcount-1])],.5)
+        }
+
+        function playnote(mynotedd,mytimdd){
+            // console.log("mynotedd"+mynotedd)
+            if(mytimdd>=mynotedd.length){
+                // my current beat is greater than  the total note length
+                        clearInterval(mytimint);
+            }
+            if(notes.indexOf(mynotedd[mytimdd-1]) == (notes.length-1)){
+                // index of the note in current beat is equal to the -
+                // without randomNOte the note is played twice rathe than extending
+                play(prevnote[randomNote],2)
+            }
+            else{
+                // previous note is stored in frequency and played on else
+                prevnote=noteFrequency[notes.indexOf(mynotedd[mytimdd-1])]
+                // ["ab"]
+                if(mynotedd[mytimdd-1].length>1){
+                    //if the length of current note is >1 suppose ab or bca
+                    console.log("else",mynotedd[mytimdd-1].length,mynotedd[mytimdd-1])
+                    currnote=mynotedd[mytimdd-1]
+                    // twonotes=mynotedd[mytimdd-1].split("");
+                    mybeatcount++;
+                    mytimeout= setInterval(myTimer1, 250)
+
+                        // var mytimeout=setInterval(play(440,1),250)
+                        // setTimeout(clearInterval(mytimeout),500)
+                }else{
+                    play(prevnote,1)
+                }
+            }
+        }
+
         const Ckey = ["C", "c", "D", "d", "E", "F", "f", "G", "g", "A", "a", "B", "-"];
         const keey = ["c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b", "-"];
         const neey = ["S", "r", "R", "g", "G", "m", "M", "P", "d", "D", "n", "N", "-"];
         const kneey = ["s", "r'", "r", "g'", "g", "m", "m'", "p", "d'", "d", "n'", "n", "-"];
         let newNote=[];
+        /* 
+        धं निं सां रें गं मं पं 
+        पँ धँ निँ सा
+            */
+        
     toChange.forEach(note=>{
-        newNote.push(Ckey[kneey.indexOf(note)])
+        newNote.push(Ckey[neey.indexOf(note)])
     })
+
+/* 
+var id=""
+makeid=document.querySelector('#idmaker').value
+makeids=makeid.split("")
+makeids.forEach(mi=>{
+id+=mi.charCodeAt();
+})
+ */
 document.querySelector("#givenote").value=newNote
     </script>
 </body>
