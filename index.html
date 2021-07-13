@@ -66,6 +66,15 @@
         <div class="d-flex">
             <button class="btn btn-primary" onclick="history.go(0)"> <i class="fas fa-recycle"></i></button>
         </div>
+
+        <h5  class="btn btn-outline-primary position-relative raagh5">
+            Raag
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              99+
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </h5>
+          <button onClick="mytimint=setInterval(myTimer, 60000/beat)" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-play"></i></button>
         <!-- <button class="btn btn-primary">Transpose</button> -->
 
         <!-- <li class="nav-item dropdown">
@@ -84,21 +93,139 @@
       </div>
     </div>
   </nav>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">play the song</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p id="timer"></p>
+            <p id="note"></p>
+        </div>
+        <div class="modal-footer">
+          <button onClick="clearInterval(mytimint)" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button onClick="mytimdd=1" type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
          <div class="row jumbotron">
             <div class="col-lg-3 col-md-6 col-sm-6 raginfo"></div>
             <div class="col-lg-9 col-md-6 col-sm-6 list"></div>
         </div>        
+
+
     <script src="raagJson.js"></script>
     <script src="transpose2.js"></script>
-
+    <script src="music.js"></script>
     <script>
+            const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        var mytimint,mytimeout;
+        
+        function play(frequency,times){
+            // create Oscillator node
+            otype="triangle";
+            // sine square triangle sawtooth
+            const oscillator = audioCtx.createOscillator();
+            oscillator.frequency.setValueAtTime(frequency, audioCtx.currentTime);
+            let g = audioCtx.createGain();
+            oscillator.type = otype;        
+            oscillator.connect(g)
+            g.connect(audioCtx.destination)
+            oscillator.start()
+            g.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + 2 * times)
+            // create web audio api context
+        }
+    
+            var beat =120
+            var mytimd=1;
+            var mytimdd=-8;
+            var prevnote="";
+            var currnote="";
+            var mybeatcount=0;
+            function playrandom(){
+                // randomNote=Math.floor(Math.random()*noteFrequency.length)
+                // play(noteFrequency[randomNote])
+                play(311.1,1)
+                play(261.6,1)
+                play(370.0,1)
+            }
+            function myTimer(){
+                if(mytimd>8){
+                    document.getElementById("timer").innerHTML ="";
+                    document.getElementById("note").innerHTML +="</br>";
+                    mytimd=1;
+                }
+                document.getElementById("timer").innerHTML += mytimd++ + "    ";
+                document.getElementById("note").innerHTML += `<button class="btn">${eval(raagSong.value)[mytimdd] || mytimd-1}</button> `+ "    " ;
+                mytimdd++;
+                // console.log(noteFrequency[notes.indexOf(mynoted[mytimdd-1])])
+                playnote(eval(raagSong.value),mytimdd)
+            }
+    
+            var twonotes;
+            function myTimer1(){
+                mybeatcount++;
+                play(noteFrequency[notes.indexOf(twonotes[mybeatcount])],.5)
+                if(mybeatcount == twonotes.length){
+                    clearInterval(mytimeout)
+                }
+            }
+    
+            function playnote(mynotedd,mytimdd){
+                // console.log("mynotedd"+mynotedd)
+                if(mytimdd>=mynotedd.length){
+                    // my current beat is greater than  the total note length
+                    clearInterval(mytimint);
+                }
+                if(notes.indexOf(mynotedd[mytimdd-1]) == (notes.length-1)){
+                    // index of the note in current beat is equal to the -
+                    // without randomNOte the note is played twice rathe than extending
+                    play(prevnote[randomNote],2)
+                }
+                else{
+                    // previous note is stored in frequency and played on else
+                    prevnote=noteFrequency[notes.indexOf(mynotedd[mytimdd-1])]
+                    // ["ab"]
+                    if(mynotedd[mytimdd-1].length>1){
+                        //if the length of current note is >1 suppose ab or bca
+                        // console.log("else",mynotedd[mytimdd-1].length,mynotedd[mytimdd-1])
+                        currnote=mynotedd[mytimdd-1]
+                        // twonotes=mynotedd[mytimdd-1].split("");
+                        mybeatcount=0;
+                        twonotes=currnote.split("");
+                        mytimeout= setInterval(myTimer1, 250)
+                            // var mytimeout=setInterval(play(440,1),250)
+                            // setTimeout(clearInterval(mytimeout),500)
+                    }else{
+                        play(prevnote,1)
+                    }
+                }
+            }
+    
+    </script>
+    <script>
+        // console.table(raags.raag)
         var chooseThaat=document.querySelector("#chooseThaat");
         var chooseRaag=document.querySelector("#chooseRaag");
         var chooseTime=document.querySelector("#chooseTime")
+        var raagSong = document.querySelector("#RaagSong")
         var timeBadge={"morning":0,"evening":0,"night":0,"midnight":0,"afternoon":0,"dawn":0,"empty":0};
+        var totalRaag=0;
 
+        document.addEventListener("keypress",e=>{
+            if(e.keyCode ==15){
+                
+            }
+        })
         getBadge()
+        document.querySelector(".start-100").textContent=totalRaag
+        document.querySelector(".raagh5").innerHTML+=`(${Object.keys(raags.raag).length})`
+
 
         function getBadge(){
             Object.keys(raags.raag).forEach(a=>{
@@ -136,6 +263,9 @@
                         chooseTime.options[i].text = ctot + `(${timeBadge[ctot.toLowerCase()]})`
                     }
                 }
+                Object.keys(songraag).forEach(rag=>{
+                totalRaag= totalRaag+(Object.keys(songraag[rag]).length)
+                })
         }
         chooseThaat.addEventListener("change",()=>{
             selectRaag("thaat")
@@ -148,15 +278,15 @@
         })
 
         // Object.keys(songraag).forEach(ard=>{
-        //     document.querySelector("#RaagSong").innerHTML+= `<option value="${ard}">${ard}</option>`
+        //     raagSong.innerHTML+= `<option value="${ard}">${ard}</option>`
         // });
 
         Object.keys(thaat).forEach((sard,key)=>{
             chooseThaat.innerHTML+= `<option value="${sard}">${sard}</option>`
         });
 
-        document.querySelector("#RaagSong").addEventListener("change",()=>{
-            var ragsong = document.querySelector("#RaagSong").value
+        raagSong.addEventListener("change",()=>{
+            var ragsong = raagSong.value
             transpose(eval(ragsong),Nepnotes,8);
         })
         chooseRaag.addEventListener("change",()=>{
@@ -180,6 +310,7 @@
             // let durations= ["Night","Morning","Afternoon","Evening"]
             // console.log(durations[rand],rand)
             abcde.forEach(abc=>{
+
                 if(thaatime== "time"){
                     rag=(raags.raag[abc].time);
                 }
@@ -215,7 +346,7 @@
                     ragoption=document.createElement("option")
                     ragoption.value= `songraag["${abc}"]["${ragg}"]`;
                     ragoption.textContent= ragg;
-                    document.querySelector("#RaagSong").appendChild(ragoption)
+                    raagSong.appendChild(ragoption)
                 })    
             }
     })

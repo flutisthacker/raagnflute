@@ -15,7 +15,7 @@
         }
     </style>
     <script src="raagJson.js"></script>
-    <input type="text" id="takenote">
+<textarea name="" id="takenote" cols="30" rows="10"></textarea>
 <textarea name="" id="givenote" cols="30" rows="10"></textarea>
 <button class="change">change</button>
 <input type="text" name="" id="idmaker" placeholder="put to make ids">
@@ -26,18 +26,19 @@
 </div>
 <p id="timer"></p>
 <p id="note"></p>
-
+<div class="list"></div>
 <script src="music.js"></script>
+<script src="raagJson.js"></script>
 <script>
-    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    var mytimint;
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    var mytimint,mytimeout;
     
     function play(frequency,times){
         // create Oscillator node
         otype="triangle";
         // sine square triangle sawtooth
         const oscillator = audioCtx.createOscillator();
-        oscillator.frequency.setValueAtTime(frequency, audioCtx.currentTime);        
+        oscillator.frequency.setValueAtTime(frequency, audioCtx.currentTime);
         let g = audioCtx.createGain();
         oscillator.type = otype;        
         oscillator.connect(g)
@@ -69,25 +70,24 @@
             document.getElementById("timer").innerHTML += mytimd++ + "    ";
             document.getElementById("note").innerHTML += `<button class="btn">${mynoted[mytimdd] || mytimd-1}</button> `+ "    " ;
             mytimdd++;
-            console.log(noteFrequency[notes.indexOf(mynoted[mytimdd-1])])
+            // console.log(noteFrequency[notes.indexOf(mynoted[mytimdd-1])])
             playnote(mynoted,mytimdd)
         }
 
-
+        var twonotes;
         function myTimer1(){
-            var twonotes=currnote.split("");
-
-            if(mybeatcount > twonotes.length){
-                setTimeout(clearInterval(mytimeout),500)
+            mybeatcount++;
+            play(noteFrequency[notes.indexOf(twonotes[mybeatcount])],.5)
+            if(mybeatcount == twonotes.length){
+                clearInterval(mytimeout)
             }
-            play(noteFrequency[notes.indexOf(twonotes[mybeatcount-1])],.5)
         }
 
         function playnote(mynotedd,mytimdd){
             // console.log("mynotedd"+mynotedd)
             if(mytimdd>=mynotedd.length){
                 // my current beat is greater than  the total note length
-                        clearInterval(mytimint);
+                clearInterval(mytimint);
             }
             if(notes.indexOf(mynotedd[mytimdd-1]) == (notes.length-1)){
                 // index of the note in current beat is equal to the -
@@ -100,12 +100,12 @@
                 // ["ab"]
                 if(mynotedd[mytimdd-1].length>1){
                     //if the length of current note is >1 suppose ab or bca
-                    console.log("else",mynotedd[mytimdd-1].length,mynotedd[mytimdd-1])
+                    // console.log("else",mynotedd[mytimdd-1].length,mynotedd[mytimdd-1])
                     currnote=mynotedd[mytimdd-1]
                     // twonotes=mynotedd[mytimdd-1].split("");
-                    mybeatcount++;
+                    mybeatcount=0;
+                    twonotes=currnote.split("");
                     mytimeout= setInterval(myTimer1, 250)
-
                         // var mytimeout=setInterval(play(440,1),250)
                         // setTimeout(clearInterval(mytimeout),500)
                 }else{
@@ -114,8 +114,11 @@
             }
         }
 
-        const Ckey = ["C", "c", "D", "d", "E", "F", "f", "G", "g", "A", "a", "B", "-"];
-        const keey = ["c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b", "-"];
+</script>
+<script src="transpose2.js"></script>
+<script>
+        // const Ckey = ["C", "c", "D", "d", "E", "F", "f", "G", "g", "A", "a", "B", "-"];
+        // const keey = ["c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b", "-"];
         const neey = ["S", "r", "R", "g", "G", "m", "M", "P", "d", "D", "n", "N", "-"];
         const kneey = ["s", "r'", "r", "g'", "g", "m", "m'", "p", "d'", "d", "n'", "n", "-"];
         let newNote=[];
@@ -123,7 +126,15 @@
         धं निं सां रें गं मं पं 
         पँ धँ निँ सा
             */
-        
+
+            
+        document.querySelector("#takenote").value=["BC", "CA", "A", "G", "-", "f", "d", "f", "G", "-", "-", "f", "d", "D", "C", "-", "CB", "C", "d", "f", "G", "A", "G", "G", "B", "B", "C", "A", "G", "f", "d", "f", "G", "G", "B", "C", "E", "F", "F", "C", "-", "D", "-", "C", "B","fE", "f", "G", "-", "fG", "A", "G", "f", "d", "f", "G", "B", "C", "-", "-", "d", "D", "D", "C", "-", "f", "d", "D", "C", "D", "C", "-", "C", "B", "B", "C", "C", "A", "A", "G", "G", "G", "f", "G", "f", "d", "F", "G", "B", "C","dD", "BC", "AG", "AG", "FE", "FE", "DC"]
+        acd=document.querySelector("#takenote").value
+        acdd=acd.split(",")
+        newxx=transpose(acdd,keey,8)
+        document.querySelector("#givenote").value=newxx
+        document.querySelector(".list").innerHTML=""
+
     toChange.forEach(note=>{
         newNote.push(Ckey[neey.indexOf(note)])
     })
@@ -136,7 +147,7 @@ makeids.forEach(mi=>{
 id+=mi.charCodeAt();
 })
  */
-document.querySelector("#givenote").value=newNote
+//  =newNote
     </script>
 </body>
 </html>
