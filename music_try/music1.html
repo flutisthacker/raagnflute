@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="music.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+
+
+<style>
+  /* audio player css */
+
+  body {
+    background: radial-gradient(#9696e4, #4545ee) !important;
+    font-size: 1.2em;
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    min-height: 50vh;
+  }
+
+  #musicList {
+    background-color: darkcyan;
+    border-radius: 10px;
+    text-align: left;
+  }
+
+  li {
+    padding: 15px;
+  }
+
+  li:hover,
+  svg:hover {
+    cursor: pointer;
+  }
+
+  #controls {
+    border: 1px lightgray solid;
+    border-radius: 10px;
+    background: darkcyan;
+    padding: 1.5 em;
+  }
+
+  svg {
+    /* color: lightslategray; */
+    color: slategray;
+  }
+
+  progress {
+    width: 80%;
+    margin: 10px;
+  }
+</style>
+
+<body>
+
+  <div class="containerd">
+    <div class="title">
+      <h1>music maker</h1>
+    </div>
+    <div class="list">
+      <!-- <select name="type" id="typeSelect">
+        <option value="sine">soothing
+        </option>
+        <option value="square">high
+        </option>
+        <option value="triangle">okey
+        </option>
+        <option value="sawtooth">irritating
+        </option>
+      </select> -->
+      <div class="row">
+        <div class="col-lg-6">
+          <audio id="player" ontimeupdate="updateProgress()">
+            <source id="source">
+            Audio not supported
+          </audio>
+          <span id="currentPlay">
+          </span>
+          <em><span id="currentSong"></span>
+          </em>
+          <h4>My songs</h4>
+          <div id="musicList">
+            <!-- <ol>
+                <li>hihat-808.wav</li>
+                <li>crash-noise.wav</li>
+                <li>kick-808.wav</li>
+                <li>openhat-808.wav</li>
+                <li>perc-metal.wav</li>
+                <li>snare-dist01.wav</li>
+              </ol> -->
+
+          </div>
+
+        </div>
+        <div class="col-lg-6">
+          <progress id="progress" min="0" max="100"></progress>
+
+          <div id="controls ">
+            <i class="far fa-play-circle fa-5x" onclick="playAudio()"></i>
+            <i class="far fa-pause-circle fa-5x" onclick="pauseAudio()"></i>
+            <p>Volume:</p>
+
+            <i class="fas fa-volume-down "></i>
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.01">
+            <i class="fas fa-volume-up "></i>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="addSect">
+
+
+    </div>
+
+  </div>
+
+  <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    const songs = [
+      "hihat-808.wav",
+      "crash-noise.wav",
+      "kick-808.wav",
+      "openhat-808.wav",
+      "cultofpersonality.mp3  ",
+      "snare-dist01.wav"
+
+    ]
+
+    const createMusicList = () => {
+      const list = document.createElement('ol');
+      for (let i = 0; i < songs.length; i++) {
+        const newItem = document.createElement('li');
+        newItem.appendChild(document.createTextNode(songs[i]));
+        list.appendChild(newItem);
+      }
+      return list;
+    }
+
+    document.getElementById("musicList").appendChild(createMusicList());
+
+    musicList.onclick = (e) => {
+      const clickItem = e.target;
+      const source = document.getElementById('source');
+      source.src = 'music1/' + clickItem.innerText;
+
+      player.load();
+      player.play();
+
+      document.getElementById('currentPlay').innerText = "Currently playing:";
+      document.getElementById('currentSong').innerText = clickItem.innerText;
+      console.log(document.getElementById('currentSong').innerText);
+
+    }
+    // same as function creareSongList(){}
+    $('.fa-play-circle').click(function () {
+      $('.fa-pause-circle').hide();
+    });
+    $('.fa-pause-circle').click(function () {
+      $('.fa-play-circle').hide();
+    });
+    const playAudio = () => {
+      if (player.readyState) {
+        player.play();
+
+      }
+    }
+    const pauseAudio = () => {
+      player.pause();
+    }
+
+
+    const slider = document.getElementById('volumeSlider');
+    slider.oninput = (e) => {
+      const volume = e.target.value;
+      player.volume = volume;
+    }
+
+    const updateProgress = () => {
+      const progressBar = document.getElementById("progress");
+      if (player.currentTime > 0) {
+        progressBar.value = (player.currentTime / player.duration) * 100;
+      }
+    }
+  </script>
+
+</body>
+
+</html>
