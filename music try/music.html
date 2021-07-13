@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="music.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="containerd">
+    <div class="title">
+      <h1>Piano</h1>
+    </div>
+    <div class="list">
+      <div class="natural">
+        <button class="add" id="c">C</button>
+        <button class="add" id="d">D</button>
+        <button class="add" id="e">E</button>
+        <button class="add" id="f">F</button>
+        <button class="add" id="g">G</button>
+        <button class="add" id="a">A</button>
+        <button class="add" id="b">B</button>
+      </div>
+
+      <div class="sharp">
+        <button class="add added" id="c#">C#</button>
+        <button class="add added" id="d#">d#</button>
+        <button class="add added" id="f#">f#</button>
+        <button class="add added" id="g#">g#</button>
+        <button class="add added" id="a#">a#</button>
+      </div>
+    </div>
+    <div class="addSect">
+      <select name="type" id="typeSelect">
+        <option value="sine">soothing
+        </option>
+        <option value="square">high
+        </option>
+        <option value="triangle">okey
+        </option>
+        <option value="sawtooth">irritating
+        </option>
+      </select>
+
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="soundplayer.js"></script>
+  <script>
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    const audio = new AudioContext();
+    $(document).keypress(function (e) {
+      if (e.keyCode == 13) {
+        (new SoundPlayer(audio)).play(440.0, 0.8, "sine").stop(0.5);
+      }
+    });
+  </script>
+  <script src="music.js"></script>
+  <script>
+    $(document).keypress(function (e) {
+      let context = new AudioContext();
+      if (e.keyCode == 97) {
+        // alert("c" + e.key);
+        new startOccilation(context, "c");
+      }
+      if (e.keyCode == 119) {
+        // alert("c#" + e.key);
+        new startOccilation(context, "c#");
+      }
+      if (e.keyCode == 115) {
+        // alert("d" + e.key);
+        new startOccilation(context, "d");
+      }
+      if (e.keyCode == 101) {
+        // alert("d#" + e.key);
+        new startOccilation(context, "d#");
+      }
+      if (e.keyCode == 100) {
+        // alert("e" + e.key);
+        new startOccilation(context, "e");
+      }
+      if (e.keyCode == 102) {
+        // alert("f" + e.key);
+        new startOccilation(context, "f");
+      }
+      if (e.keyCode == 116) {
+        // alert("f#" + e.key);
+        new startOccilation(context, "f#");
+      }
+      if (e.keyCode == 103) {
+        // alert("g" + e.key);
+        new startOccilation(context, "g");
+      }
+      if (e.keyCode == 121) {
+        // alert("g#" + e.key);
+        new startOccilation(context, "g#");
+      }
+      if (e.keyCode == 104) {
+        // alert("a" + e.key);
+        new startOccilation(context, "a");
+      }
+      if (e.keyCode == 117) {
+        // alert("a#" + e.key);
+        new startOccilation(context, "a#");
+      }
+      if (e.keyCode == 106) {
+        // alert("b" + e.key);
+        new startOccilation(context, "b");
+      }
+
+      if (e.keyCode == 53) {
+        octave = e.key;
+      }
+      if (e.keyCode == 52) {
+        octave = e.key;
+      }
+      if (e.keyCode == 51) {
+        octave = e.key;
+      }
+
+    });
+    $(".add").click(function () {
+      startOccilation(context, $(this).attr('id'));
+    });
+  </script>
+</body>
+
+</html>
