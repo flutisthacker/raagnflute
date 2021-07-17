@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        .btn-group{
+            display: flex;
+            flex-direction: row;
+        }
+.btn{
+    width:70px;
+    height:30px;
+    margin:10px;
+}
+    </style>
+<textarea name="" id="text" cols="80" rows="20"></textarea>
+<div class="btn-group">
+    <button value="c" class="btn">सा</button>
+<button value="d" class="btn">रे</button>
+<button value="e" class="btn">ग</button>
+<button value="f" class="btn">म</button>
+<button value="g" class="btn">प</button>
+<button value="a" class="btn">ध</button>
+<button value="b" class="btn">नि</button>
+<button value="-" class="btn">-</button>
+<button value=" " class="btn">space</button>
+<input type="checkbox" value="high" name="high" id="range">high
+<button value="clear" class="btn">clear</button>
+
+</div>
+<script>
+    document.querySelectorAll(".btn").forEach(btn=>{
+        btn.addEventListener("click",e=>{
+            var muval=btn.value
+            if(muval=="clear"){
+                document.querySelector("#text").innerHTML=''
+                muval=''
+            }
+            if(document.querySelector("#range").checked){
+                muval=muval.toUpperCase()
+            }
+            else{
+                muval=muval.toLowerCase()
+            }
+            document.querySelector("#text").innerHTML+= muval
+        })
+
+    })
+</script>
+</body>
+</html>
