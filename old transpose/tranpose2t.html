@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    grid-template-columns: auto;
+  }
+
+  textarea {
+    height: 50vh;
+    font-size: 2rem;
+  }
+
+  input {
+    height: 40px;
+    width: 70px;
+    padding: 2px 5px;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    /* grid-template-rows: auto; */
+
+  }
+</style>
+
+<body>
+  <div>
+    <input type="text" name="" placeholder="key" value="name" id="naam">
+    <input type="text" name="" placeholder="key" value="G" id="key">
+    <input type="text" name="" placeholder="beat" value="8" id="beat">
+    <input type="text" name="" placeholder="locale" value="nepali" id="locale">
+    <input type="text" name="" placeholder="bpm" value="90" id="bpm">
+    <input type="text" name="" placeholder="changetonum" value="saman" id="chtonum">
+  </div>
+  <textarea name="" id="takenote" cols="30" rows="10"></textarea>
+  <textarea name="" id="givenote" cols="30" rows="10"></textarea>
+</body>
+<script>
+  function changeatonum(a) {
+    const letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
+      "u", "v", "w", "x", "y", "z"
+    ];
+    aaa = a.split("")
+    changed="";
+          console.log(aaa);
+      for(i=0;i<aaa.length;i++){
+      for(j=0;j<letters.length;j++){
+        if (letters[j] == aaa[i]) {
+          changed+=(j + 1)
+        }
+      }
+    }
+  return changed;
+  }
+  document.querySelector("#chtonum").addEventListener("keypress", (e) => {
+    if (e.keyCode == 13) {
+      chn=changeatonum(document.querySelector("#chtonum").value);
+      document.querySelector("#chtonum").value=chn
+    }
+  })
+  var takenote = document.querySelector("#takenote")
+  var givenote = document.querySelector("#givenote")
+  takenote.addEventListener("keypress", () => {
+    if (takenote.value.includes("+")) {
+      initailvalue = takenote.value
+      initailvalue = initailvalue.replaceAll("	", " ");
+      initailvalue = initailvalue.replaceAll("/n", " ");
+      initailvalue = initailvalue.replaceAll("d", "f");
+      initailvalue = initailvalue.replaceAll(";f", "c");
+      initailvalue = initailvalue.replaceAll("k", "g");
+      initailvalue = initailvalue.replaceAll("u", "e");
+      initailvalue = initailvalue.replaceAll("w", "a");
+      initailvalue = initailvalue.replaceAll("/]", "d");
+      initailvalue = initailvalue.replaceAll("lg", "b");
+      initailvalue = initailvalue.replaceAll("–", "-");
+      initailvalue = initailvalue.replaceAll("+", "");
+      initailvalue = initailvalue.replaceAll("≥", "");
+      takenote.value = initailvalue
+    }
+    else if(!takenote.value.includes(`","`)){
+      takenote.value=takenote.value.replaceAll(",",'","')
+    }
+    var ass = `,"${document.querySelector("#naam").value}": {
+      "note": ["${takenote.value.replaceAll(" ",`","`)}"],
+      "key": "${document.querySelector("#key").value}",
+      "beat": "${document.querySelector("#beat").value}",
+      "locale": "${document.querySelector("#locale").value}",
+      "bpm":"${document.querySelector("#bpm").value}",
+      "artist":"${document.querySelector("#chtonum").value}",
+      "title": "${document.querySelector("#naam").value}"      
+    }`
+    givenote.value = ass
+  })
+
+  givenote.addEventListener("keypress", () => {
+    asd = JSON.parse(`{${givenote.value}}`)
+    keys=Object.keys(asd)[0]
+    document.querySelector("#key").value = asd[keys].key
+    allkeys=asd[keys].note
+    document.querySelector("#takenote").value =allkeys.toString().replaceAll(","," ")||allkeys.toString()
+    document.querySelector("#locale").value = asd[keys].locale
+    document.querySelector("#beat").value = asd[keys].beat
+    document.querySelector("#naam").value = keys
+  })
+</script>
+
+</html>

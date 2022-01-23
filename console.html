@@ -1,0 +1,57 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    // fetch("http://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1").then(a=>console.log(a.body))
+    fetch("http://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1").then(res =>
+            res.json()).then(d => {
+                console.table(d)
+            })
+
+    console.table(["Audi", "Volvo", "Ford"])
+    console.log("puts the value in array as a table")
+    console.table({ firstname : "John", lastname : "Doe" })
+    console.log("puts the value of json object as a table key as one row and value as another")
+    var car1 = { name : "Audi", model : "A4" }
+    var car2 = { name : "Volvo", model : "XC90" }
+    var car3 = { name : "Ford", model : "Fusion" }
+    
+    console.table([car1, car2, car3]);
+    console.log("puts the value of json key as row header and  value as column")
+    console.table([car1, car2, car3], ["model"]);
+    console.log("puts the specific value of json key as row header and  value as column")
+    
+    console.group("A before group creation")
+    console.warn("B befroe creation of collapsed group")
+    console.groupCollapsed()
+    console.warn("C")
+    console.groupEnd()
+    console.warn("D after group end")
+    console.groupEnd()
+    
+    console.assert(document.getElementById("demo"), "You have no element with ID 'demo'")
+
+    console.count("count me")
+    console.count("count me")
+    console.count("count me")
+
+    console.error("i am error")
+    console.info("hello this is info")
+    console.trace()
+    console.time()
+    console.timeStamp("asdasd")
+    console.timeEnd()
+
+</script>    
+</body>
+</html>

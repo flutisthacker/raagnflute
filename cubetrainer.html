@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style id="hellostyle">
+
+    .body{
+        display: flex;
+        flex-direction: column;
+    }
+    .cubeBox{
+        background: #16161d;
+        transform: translate(10%,10%);
+        width:330px;
+        height:330px;
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        grid-column-gap: 10px;
+    }
+    .cube{
+        width:95px;
+        height:95px;
+        background-color: rgb(143, 143, 5);
+        margin:2px;
+    }
+
+.top{
+        height:95px;
+        border-top: 5px yellow dashed;
+}
+.bottom{
+        height:95px;
+        border-bottom: 5px yellow dashed;
+}
+.left{
+        width:95px;
+        border-left: 5px yellow dashed;
+}
+.right{
+        width:95px;
+        border-right: 5px yellow dashed;
+}
+
+
+
+.none{
+    width:95px;
+    height:95px;
+    /* border-bottom: 5px yellow dashed;
+    border-right: 5px yellow dashed; */
+    background-color: yellow;
+}
+
+.textbox{
+    font-size:20px;
+    width:400px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+#selectAlg{
+    border:1px solid purple;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 2px;
+}
+</style>
+<body>
+    <input type="text" name="" id="" cols="30" rows="10" class="textbox">
+<select name="" id="selectType">
+    <option value="choose">choose</option>
+    <option value="OLL">oll</option>
+    <option value="PLL">pll</option>
+    <option value="roux">roux</option>
+</select>
+    <select name="" id="selectAlg">
+        <optgroup label="saman">
+            <option value="a">a</option>
+            <option value="b">b</option>
+        </optgroup>
+    </select>
+    <select name="" id="changeType">
+        <option value="GFkeys">Green front</option>
+        <option value="BFkeys">Blue front</option>
+        <option value="RFkeys">Red front</option>
+        <option value="OFkeys">Orange front</option>
+    </select>
+    <h1 class="title"></h1>
+    <div class="cubeBox">
+        <div id="cubea" class="cube">a</div>
+        <div id="cubeb" class="cube">b</div>
+        <div id="cubec" class="cube">c</div>
+        <div id="cubeh" class="cube">h</div>
+        <div id="cubei" class="cube">i</div>
+        <div id="cubed" class="cube">d</div>
+        <div id="cubeg" class="cube">g</div>
+        <div id="cubef" class="cube">f</div>
+        <div id="cubee" class="cube">e</div>
+    </div>
+<script>
+
+// ---------------------
+// GFkeys=["U","O","G","R","B","Y"]
+keys={
+    GFkeys:["U","L","F","R","B","D",
+    "U2","L2","F2","R2","B2","D2",
+    "U'","L'","F'","R'","B'","D'",
+    "u","l","f","r","b","d",
+    "M","M2","M'","m","y","y'","x","x'","z","z'"],
+BFkeys:["U","R","B","L","F","D",
+"U2","R2","B2","L2","F2","D2",
+"U'","R'","B'","L'","F'","D'",
+"u","r","b","l","f","d",
+"M","M2","M'","m","y","y'","x","x'","z","z'"],
+OFkeys:["U","F","R","B","L","D",
+"U2","F2","R2","B2","L2","D2",
+"U'","F'","R'","B'","L'","D'",
+"u","f","r","b","l","d",
+"M","M2","M'","m","y","y'","x","x'","z","z'"],
+RFkeys:["U","B","L","F","R","D",
+"U2","B2","L2","F2","R2","D2",
+"U'","B'","L'","F'","R'","D'",
+"u","b","l","f","r","d",
+"M","M2","M'","m","y","y'","x","x'","z","z'"]
+
+}
+
+document.querySelector("#changeType").addEventListener("change",()=>{
+    myalgs=document.querySelector(`#selectAlg`).value
+    changeTo=document.querySelector("#changeType").value
+    changeAlgs(myalgs,changeTo)
+})
+
+function changeAlgs(myalgs,changeTo){
+    // selectAlg.value
+    Rapren=algs[myalgs].algo
+Rap=Rapren.split(" ")
+NewAlg=[];
+Rap.forEach(r=>{
+NewAlg.push(keys["GFkeys"][keys[changeTo].indexOf(r)])
+document.querySelector(".textbox").value = NewAlg.toString()
+})
+}
+
+
+abbr={
+"t":"border-top",
+"b":"border-bottom",
+"l":"border-left",
+"r":"border-right",
+"O":"orange",
+"R":"red",
+"G":"green",
+"B":"blue",
+"m":"background",
+"Y":"yellow"
+}
+
+algs={
+    "headlight2":{
+        "color":{
+            "cubea":"left",
+            "cubeb":"none",
+            "cubec":"top",
+            "cubeh":"none",
+            "cubei":"none",
+            "cubed":"none",
+            "cubeg":"left",
+            "cubef":"none",
+            "cubee":"bottom"
+        },
+        "type":"OLL",
+        "shape":"2look",
+        "algo":"R U2 R2 U' R2 U' R2 U2 R"
+    },
+    "sune":{
+        "color":{
+            "cubea":"top",
+            "cubeb":"none",
+            "cubec":"right",
+            "cubed":"none",
+            "cubee":"bottom",
+            "cubef":"none",
+            "cubeg":"none",
+            "cubeh":"none", 
+            "cubei":"none"
+        },
+        "type":"OLL",
+        "shape":"2look",
+        "algo":"R U R' U R U2 R'"
+    },
+    "sune2":{
+        "color":{
+            "cubea":"left",
+            "cubeb":"none",
+            "cubec":"none",
+            "cubed":"none",
+            "cubee":"right",
+            "cubef":"none",
+            "cubeg":"bottom",
+            "cubeh":"none", 
+            "cubei":"none"
+        },
+        "type":"OLL",
+        "shape":"2look",
+        "algo":"R U2 R' U' R U' R'"
+    },
+    "double headlight":{
+        "color":{
+            "cubea":"top",
+            "cubeb":"none",
+            "cubec":"top",
+            "cubeh":"none",
+            "cubei":"none",
+            "cubed":"none",
+            "cubeg":"bottom",
+            "cubef":"none",
+            "cubee":"bottom"
+        },
+        "type":"OLL",
+        "shape":"2look",
+        "algo":"F (R U R' U')3 F'"    
+    },
+    "headlight":{
+        "color":{
+            "cubea":"none",
+            "cubeb":"none",
+            "cubec":"none",
+            "cubeh":"none",
+            "cubei":"none",
+            "cubed":"none",
+            "cubeg":"bottom",
+            "cubef":"none",
+            "cubee":"bottom",
+        },
+        "type":"OLL",
+        "shape":"2look",
+        "algo":"R2 D (R' U2 R) D' (R' U2 R')"
+    },
+    "horns":{
+        "color":{
+            "cubea":"top",
+            "cubeb":"none",
+            "cubec":"none",
+            "cubeh":"none",
+            "cubei":"none",
+            "cubed":"none",
+            "cubeg":"bottom",
+            "cubef":"none",
+            "cubee":"none",
+        },
+        "type":"OLL",
+        "shape":"2look",
+        "algo":"r U R' U' r' F RF'"
+    },
+    "acd":{
+        "color":{
+            "cubea":"none",
+            "cubeb":"none",
+            "cubec":"right",
+            "cubeh":"none",
+            "cubei":"none",
+            "cubed":"none",
+            "cubeg":"bottom",
+            "cubef":"none",
+            "cubee":"none",
+        },
+        "type":"OLL",
+        "shape":"2look",
+        "algo":"y F' (r U R' U') r' F R "
+    },
+"diagnol":{
+"color":{
+    "cubea":"none",
+    "cubeb":"top",
+    "cubec":"top",
+    "cubed":"right",
+    "cubee":"none",
+    "cubef":"bottom",
+    "cubeg":"left",
+    "cubeh":"left",
+    "cubei":"none"
+},
+"shape":"no edge",
+"type": "OLL",
+"algo":"R U R' U R' F R F' U2 R' F R F'"
+
+},
+"Vshape":{
+"color":{
+    "cubea":"none",
+    "cubeb":"top",
+    "cubec":"none",
+    "cubed":"right",
+    "cubee":"bottom",
+    "cubef":"bottom",
+    "cubeg":"bottom",
+    "cubeh":"left",
+    "cubei":"none"
+},
+"shape":"no edge",
+"type":"OLL",
+"algo":"r U R' U R U2 r2 U' R U' R' U2 r"
+
+},
+"V2shape":{
+"color":{
+    "cubea":"none",
+    "cubeb":"top",
+    "cubec":"none",
+    "cubed":"right",
+    "cubee":"right",
+    "cubef":"bottom",
+    "cubeg":"left",
+    "cubeh":"left",
+    "cubei":"none"
+},
+"shape":"no edge",
+"type":"OLL",
+"algo":"M U (R U R' U') M' (R' F R F')"
+
+},
+"Xshape":{
+"color":{
+    "cubea":"none",
+    "cubeb":"top",
+    "cubec":"none",
+    "cubed":"right",
+    "cubee":"none",
+    "cubef":"bottom",
+    "cubeg":"none",
+    "cubeh":"left",
+    "cubei":"none"
+},
+"shape":"no edge",
+"type":"OLL",
+"algo":"M U (R U R' U') M2' (U R U' r')"
+
+},
+    "dot":{
+        "color":{
+            "cubea":"left",
+            "cubeb":"top",
+            "cubec":"right",
+            "cubed":"right",
+            "cubee":"right",
+            "cubef":"bottom",
+            "cubeg":"left",
+            "cubeh":"left",
+            "cubei":"none"
+        },
+        "shape":"no edge",
+        "type":"OLL",
+        "algo":"R U2 R2 F R F' U2 R' F R F'"
+    },
+    "dot2":{
+        "color":{
+            "cubea":"left",
+            "cubeb":"top",
+            "cubec":"top",
+            "cubed":"right",
+            "cubee":"bottom",
+            "cubef":"bottom",
+            "cubeg":"left",
+            "cubeh":"left",
+            "cubei":"none"
+        },
+        "shape":"no edge",
+        "type":"OLL",
+        "algo":"F (R U R' U') F' f (R U R' U') f'"
+    },
+
+"clockhand":{
+    "color":{
+        "cubea":"top",
+        "cubeb":"top",
+        "cubec":"right",
+        "cubed":"right",
+        "cubee":"none",
+        "cubef":"bottom",
+        "cubeg":"left",
+        "cubeh":"left",
+        "cubei":"none"
+    },
+    "shape":"no edge",
+    "type":"OLL",
+    "algo":"f (R U R' U') f' U' F (R U R' U') F'"
+},
+"clockhand2":{
+    "color":{
+        "cubea":"left",
+        "cubeb":"top",
+        "cubec":"none",
+        "cubed":"right",
+        "cubee":"right",
+        "cubef":"bottom",
+        "cubeg":"bottom",
+        "cubeh":"left",
+        "cubei":"none"
+    },
+    "shape":"no edge",
+    "type":"OLL",
+    "algo":"f  (R U R' U') f' U F (R U R' U') F'"
+},
+"straight":{
+    "color":{
+        "cubea":"top",
+    "cubeb":"top",
+    "cubec":"right",
+    "cubed":"none",
+    "cubee":"right",
+    "cubef":"bottom",
+    "cubeg":"bottom",
+    "cubeh":"none", 
+    "cubei":"none",  
+    },
+    "shape":"I",
+    "type":"OLL",
+    "algo":"F (U R U' R')2 F'"
+},
+"straightA":{
+    "color":{
+    "cubea":"left",
+    "cubeb":"top",
+    "cubec":"right",
+    "cubed":"none",
+    "cubee":"right",
+    "cubef":"bottom",
+    "cubeg":"left",
+    "cubeh":"none", 
+    "cubei":"none",  
+    },
+    "shape":"I",
+    "type":"OLL",
+    "algo":"r' U' r (U' R' U R) (U' R' U R) r' U r"
+},
+"straightB":{
+    "color":{
+    "cubea":"top",
+    "cubeb":"none",
+    "cubec":"right",
+    "cubed":"right",
+    "cubee":"right",
+    "cubef":"none",
+    "cubeg":"bottom",
+    "cubeh":"left", 
+    "cubei":"none",  
+    },
+    "shape":"I",
+    "type":"OLL",
+    "algo":"(R U R' U R U') y (R U' R') F' "
+},
+"straightC":{
+    "color":{
+    "cubea":"left",
+    "cubeb":"none",
+    "cubec":"right",
+    "cubed":"right",
+    "cubee":"right",
+    "cubef":"none",
+    "cubeg":"left",
+    "cubeh":"left", 
+    "cubei":"none",  
+    },
+    "shape":"I",
+    "type":"OLL",
+    "algo":"y (R' F R U) (R U' R2' F') R2 U' R' (U R U R' "
+},
+"yShape":{
+    "color":{
+        "cubea":"left",
+    "cubeb":"none",
+    "cubec":"top",
+    "cubed":"right",
+    "cubee":"none",
+    "cubef":"bottom",
+    "cubeg":"bottom",
+    "cubeh":"none", 
+    "cubei":"none",
+    },
+    "shape":"fish",
+    "type":"OLL",
+    "algo":"(R U R' U') R' F (R2 U R' U') F' "
+},
+"y2Shape":{
+    "color":{
+        "cubea":"top",
+    "cubeb":"top",
+    "cubec":"none",
+    "cubed":"right",
+    "cubee":"bottom",
+    "cubef":"none",
+    "cubeg":"left",
+    "cubeh":"none", 
+    "cubei":"none",
+    },
+    "shape":"fish",
+    "type":"OLL",
+    "algo":"(R U R' U) (R' F R F') (R U2' R') "
+},
+"y3Shape":{
+    "color":{
+        "cubea":"none",
+    "cubeb":"top",
+    "cubec":"right",
+    "cubed":"none",
+    "cubee":"none",
+    "cubef":"none",
+    "cubeg":"bottom",
+    "cubeh":"left", 
+    "cubei":"none",
+    },
+    "shape":"fish",
+    "type":"OLL",
+    "algo":"(R U2') (R2' F R F') (R U2' R')"
+},
+"y4Shape":{
+    "color":{
+        "cubea":"none",
+    "cubeb":"none",
+    "cubec":"right",
+    "cubed":"right",
+    "cubee":"none",
+    "cubef":"bottom",
+    "cubeg":"bottom",
+    "cubeh":"none", 
+    "cubei":"none",
+    },
+    "shape":"fish",
+    "type":"OLL",
+    "algo":"F (R U' R' U') (R U R' F')"
+},
+"t1Shape":{
+    "color":{
+        "cubea":"left",
+    "cubeb":"top",
+    "cubec":"none",
+    "cubed":"none",
+    "cubee":"none",
+    "cubef":"bottom",
+    "cubeg":"left",
+    "cubeh":"none", 
+    "cubei":"none",
+    },
+    "shape":"Tshape",
+    "type":"OLL",
+    "algo":"F R U R' U'F' "
+},
+"t2Shape":{
+    "color":{
+        "cubea":"top",
+        "cubeb":"top",
+        "cubec":"none",
+        "cubed":"none",
+        "cubee":"none",
+        "cubef":"bottom",
+        "cubeg":"bottom",
+        "cubeh":"none", 
+        "cubei":"none",    
+    },
+    "shape":"Tshape",
+    "type":"OLL",
+    "algo":"R U R' U' R' F R F'"
+},
+"thunderShape":{
+    "color":{
+        "cubea":"top",
+        "cubeb":"none",
+        "cubec":"right",
+        "cubed":"right",
+        "cubee":"bottom",
+        "cubef":"bottom",
+        "cubeg":"none",
+        "cubeh":"none", 
+        "cubei":"none"
+    },
+    "shape":"thunder",
+    "type":"OLL",
+    "algo":"F R' F' R U2 R U2 R' "
+},
+"thunder3Shape":{
+    "color":{
+        "cubea":"top",
+        "cubeb":"top",
+        "cubec":"right",
+        "cubed":"none",
+        "cubee":"bottom",
+        "cubef":"none",
+        "cubeg":"none",
+        "cubeh":"left", 
+        "cubei":"none",    
+    },
+    "shape":"thunder",
+    "type":"OLL",
+    "algo":"r' R2 U R' U RU2 R' U M'"
+},
+"LShape":{
+    "color":{
+        "cubea":"top",
+        "cubeb":"top",
+        "cubec":"right",
+        "cubed":"none",
+        "cubee":"bottom",
+        "cubef":"bottom",
+        "cubeg":"none",
+        "cubeh":"none", 
+        "cubei":"none",    
+    },
+   "shape":"Knight move",
+    "type":"OLL",
+    "algo":"(r U' r') (U' r U r') y' (R' U R) "
+},
+"L2Shape":{
+    "color":{
+        "cubea":"left",
+        "cubeb":"top",
+        "cubec":"top",
+        "cubed":"none",
+        "cubee":"none",
+        "cubef":"bottom",
+        "cubeg":"bottom",
+        "cubeh":"none", 
+        "cubei":"none",    
+    },
+   "shape":"Knight move",
+    "type":"OLL",
+    "algo":"(R' F R) (U R' F' R) (F U' F')"
+},
+"L3Shape":{
+    "color":{
+        "cubea":"left",
+        "cubeb":"top",
+        "cubec":"none",
+        "cubed":"none",
+        "cubee":"right",
+        "cubef":"bottom",
+        "cubeg":"bottom",
+        "cubeh":"none", 
+        "cubei":"none",    
+    },
+   "shape":"Knight move",
+    "type":"OLL",
+    "algo":"(r U r') (R U R' U') (r U' r') "
+},
+"L4Shape":{
+    "color":{
+        "cubea":"top",
+        "cubeb":"top",
+        "cubec":"right",
+        "cubed":"none",
+        "cubee":"none",
+        "cubef":"bottom",
+        "cubeg":"left",
+        "cubeh":"none", 
+        "cubei":"none",    
+    },
+   "shape":"Knight move",
+    "type":"OLL",
+    "algo":"(r' U' r) (R' U' R U) (r' U r)"
+},
+"PlShape":{
+    "color":{
+        "cubea":"none",
+        "cubeb":"none",
+        "cubec":"right",
+        "cubed":"right",
+        "cubee":"right",
+        "cubef":"bottom",
+        "cubeg":"none",
+        "cubeh":"none", 
+        "cubei":"none",    
+    },
+   "shape":"P shape",
+    "type":"OLL",
+    "algo":"F R U R' U'F' "
+},
+"qlShape":{
+    "color":{
+        "cubea":"left",
+        "cubeb":"none",
+        "cubec":"none",
+        "cubed":"none",
+        "cubee":"none",
+        "cubef":"bottom",
+        "cubeg":"left",
+        "cubeh":"left", 
+        "cubei":"none",    
+    },
+    "shape":"P shape",
+    "type":"OLL",
+    "algo":"F' (U' L' U L)  F "
+},
+"bShape":{
+    "color":{
+        "cubea":"none",
+        "cubeb":"top",
+        "cubec":"top",
+        "cubed":"right",
+        "cubee":"bottom",
+        "cubef":"none",
+        "cubeg":"none",
+        "cubeh":"none", 
+        "cubei":"none",    
+    },
+    "shape":"P shape",
+    "type":"OLL",
+    "algo":"E L' U'  L U L F' L' f"
+},
+"dShape":{
+    "color":{
+        "cubea":"top",
+        "cubeb":"top",
+        "cubec":"none",
+        "cubed":"none",
+        "cubee":"none",
+        "cubef":"none",
+        "cubeg":"bottom",
+        "cubeh":"left", 
+        "cubei":"none",    
+    },
+    "shape":"P shape",
+    "type":"OLL",
+    "algo":"S (R U R' U') (R' F R f') "
+},
+"HShape":{
+    "color":{
+        "cubea":"none",
+        "cubeb":"top",
+        "cubec":"none",
+        "cubed":"none",
+        "cubee":"none",
+        "cubef":"bottom",
+        "cubeg":"none",
+        "cubeh":"none", 
+        "cubei":"none"
+    },
+    "shape":"edge flipped",
+    "type":"OLL",
+    "algo":"R UR' U' M' U R U'r' "
+},
+"rocketShape":{
+    "color":{
+        "cubea":"none",
+        "cubeb":"none",
+        "cubec":"none",
+        "cubed":"right",
+        "cubee":"none",
+        "cubef":"bottom",
+        "cubeg":"none",
+        "cubeh":"none", 
+        "cubei":"none"
+    },
+    "shape":"edge flipped",
+      "type":"OLL",
+    "algo":"r U R' U' M U R U' R'"
+},
+"WShape":{
+    "color":{
+        "cubea":"top",
+        "cubeb":"none",
+        "cubec":"none",
+        "cubed":"right",
+        "cubee":"right",
+        "cubef":"bottom",
+        "cubeg":"none",
+        "cubeh":"none", 
+        "cubei":"none"
+    },
+    "shape":"w shape",
+    "type":"OLL",
+    "algo":"R UR' U' M' U R U'r' "
+},
+"W2Shape":{
+    "color":{
+        "cubea":"none",
+        "cubeb":"top",
+        "cubec":"right",
+        "cubed":"right",
+        "cubee":"none",
+        "cubef":"none",
+        "cubeg":"bottom",
+        "cubeh":"none", 
+        "cubei":"none"
+    },
+    "shape":"w shape",
+    "type":"OLL",
+    "algo":"(R' U' R U') (R' U R U) l U' R' U x "
+},
+"nShape":{
+    "color":{
+        "cubea":"left",
+        "cubeb":"top",
+        "cubec":"top",
+        "cubed":"none",
+        "cubee":"bottom",
+        "cubef":"none",
+        "cubeg":"left",
+        "cubeh":"left", 
+        "cubei":"none"
+    },
+    "shape":"n",
+    "type":"OLL",
+    "algo":"r' U R2 U' r2 U' r2 U r' "
+},
+"nShape2":{
+    "color":{
+        "cubea":"left",
+        "cubeb":"none",
+        "cubec":"top",
+        "cubed":"right",
+        "cubee":"bottom",
+        "cubef":"bottom",
+        "cubeg":"left",
+        "cubeh":"none", 
+        "cubei":"none"
+    },
+    "shape":"n",
+    "type":"OLL",
+    "algo":"F (R U R' U') (R U R' U') F'  "
+},
+"nShape3":{
+    "color":{
+        "cubea":"top",
+        "cubeb":"none",
+        "cubec":"right",
+        "cubed":"none",
+        "cubee":"right",
+        "cubef":"bottom",
+        "cubeg":"bottom",
+        "cubeh":"left", 
+        "cubei":"none"
+    },
+    "shape":"n",
+    "type":"OLL",
+    "algo":"F' (L' U' L U) (L' U' L U) F| R' U' (R' F R F') (R' F R F') U R"
+},
+"nShape4":{
+    "color":{
+        "cubea":"left",
+        "cubeb":"none",
+        "cubec":"top",
+        "cubed":"none",
+        "cubee":"bottom",
+        "cubef":"bottom",
+        "cubeg":"left",
+        "cubeh":"left", 
+        "cubei":"none"
+    },
+    "shape":"n",
+    "type":"OLL",
+    "algo":"r U' r2' U r2 U r2' U' r"
+},
+"sq":{
+    "color":{
+        "cubea":"left",
+        "cubeb":"none",
+        "cubec":"none",
+        "cubed":"none",
+        "cubee":"right",
+        "cubef":"bottom",
+        "cubeg":"bottom",
+        "cubeh":"left", 
+        "cubei":"none"
+    },
+    "shape":"square",
+    "type":"OLL",
+    "algo":"r U2 R' U' R U' R'"
+},
+"sq2":{
+    "color":{
+        "cubea":"top",
+        "cubeb":"top",
+        "cubec":"right",
+        "cubed":"none",
+        "cubee":"none",
+        "cubef":"none",
+        "cubeg":"left",
+        "cubeh":"left", 
+        "cubei":"none"
+    },
+    "shape":"square",
+    "type":"OLL",
+    "algo":"r' U2 R U R' U R"
+},
+"Cshape":{
+    "color":{
+        "cubea":"left",
+        "cubeb":"top",
+        "cubec":"right",
+        "cubed":"none",
+        "cubee":"none",
+        "cubef":"bottom",
+        "cubeg":"none",
+        "cubeh":"none", 
+        "cubei":"none"
+    },
+    "shape":"c",
+    "type":"OLL",
+    "algo":"(R U R2' U') (R' F R U) R U' F' "
+},
+"CShape2":{
+    "color":{
+        "cubea":"none",
+        "cubeb":"none",
+        "cubec":"right",
+        "cubed":"right",
+        "cubee":"right",
+        "cubef":"none",
+        "cubeg":"none",
+        "cubeh":"left", 
+        "cubei":"none"
+    },
+    "shape":"c",
+    "type":"OLL",
+    "algo":"R' U' (R' F R F') U R"
+},
+
+
+"tetrisAShape":{
+    "color":{
+        "cubea":"none",
+        "cubeb":"top",
+        "cubec":"none",
+        "cubed":"right",
+        "cubee":"right",
+        "cubef":"none",
+        "cubeg":"left",
+        "cubeh":"none", 
+        "cubei":"none"
+    },
+    "type":"OLL",
+    "algo":"M U R U R' U' R' F R F' M' "
+},
+"AaPerm":{
+    "color":{
+        "cubea":"tG.lR" ,
+        "cubeb":"none",
+        "cubec":"tO.rB",
+        "cubed":"none",
+        "cubee":"bR.rB",
+        "cubef":"none",
+        "cubeg":"none",
+        "cubeh":"none", 
+        "cubei":"none"
+    },
+    "type":"PLL",
+    "algo":"R' F R' B2 R F' R' B2 R2"
+},
+"AbPerm":{
+    "color":{
+        "cubea":"lB.tR.mY" ,
+        "cubeb":"none",
+        "cubec":"tR.rG",
+        "cubed":"none",
+        "cubee":"bB.rO",
+        "cubef":"none",
+        "cubeg":"none",
+        "cubeh":"none", 
+        "cubei":"none"
+    },
+    "type":"PLL",
+    "algo":"R' F R' B2 R F' R' B2 R2"
+},
+"JaPerm":{
+    "color":{
+        "cubea":"none" ,
+        "cubeb":"none",
+        "cubec":"tR.rG",
+        "cubed":"rG",
+        "cubee":"bR.rB",
+        "cubef":"bR",
+        "cubeg":"none",
+        "cubeh":"none", 
+        "cubei":"none"
+    },
+    "type":"PLL",
+    "algo":"R U R' F' R U R' U' R' F R2 U' R' U'"
+},
+"JbPerm":{
+    "color":{
+        "cubea":"tO.lG" ,
+        "cubeb":"none",
+        "cubec":"none",
+        "cubed":"none",
+        "cubee":"none",
+        "cubef":"bO",
+        "cubeg":"bO.lB",
+        "cubeh":"lG", 
+        "cubei":"none"
+    },
+    "type":"PLL",
+    "algo":"R' F R' B2 R F' R' B2 R2"
+},
+"RaPerm":{
+    "color":{
+        "cubea":"lB.tR" ,
+        "cubeb":"none",
+        "cubec":"tO.rB",
+        "cubed":"rG",
+        "cubee":"none",
+        "cubef":"bR",
+        "cubeg":"none",
+        "cubeh":"none", 
+        "cubei":"none"
+    },
+    "type":"PLL",
+    "algo":"R' U2 R U2 R' F R U R' U' R' F' R2 U'"
+},
+"RbPerm":{
+    "color":{
+        "cubea":"lB.tR" ,
+        "cubeb":"none",
+        "cubec":"tO.rB",
+        "cubed":"none",
+        "cubee":"none",
+        "cubef":"bR",
+        "cubeg":"none",
+        "cubeh":"lG", 
+        "cubei":"none"
+    },
+    "type":"PLL",
+    "algo":"L U2 L' U2 L F' U' L U L F L2 U"
+},
+"NaPerm":{
+    "color":{
+        "cubea":"tG.lR" ,
+        "cubeb":"none",
+        "cubec":"none",
+        "cubed":"rO",
+        "cubee":"bB.rO",
+        "cubef":"none",
+        "cubeg":"none",
+        "cubeh":"lR", 
+        "cubei":"none"
+    },
+    "type":"PLL",
+    "algo":"R' U R' F R F' R U' R' F' U F R U R' U' R"
+},
+"NbPerm":{
+    "color":{
+        "cubea":"tG.lR" ,
+        "cubeb":"tG",
+        "cubec":"none",
+        "cubed":"none",
+        "cubee":"bB.rO",
+        "cubef":"bB",
+        "cubeg":"none",
+        "cubeh":"none", 
+        "cubei":"none"
+    },
+    "type":"PLL",
+    "algo":"R' F R' B2 R F' R' B2 R2"
+},
+"HPerm":{
+    "color":{
+        "cubea":"none" ,
+        "cubeb":"tG",
+        "cubec":"none",
+        "cubed":"rO",
+        "cubee":"none",
+        "cubef":"bB",
+        "cubeg":"none",
+        "cubeh":"lR", 
+        "cubei":"none"
+    },
+    "type":"PLL",
+    "algo":"R' F R' B2 R F' R' B2 R2"
+},
+"ZPerm":{
+    "color":{
+        "cubea":"none" ,
+        "cubeb":"tO",
+        "cubec":"none",
+        "cubed":"rG",
+        "cubee":"none",
+        "cubef":"bR",
+        "cubeg":"none",
+        "cubeh":"lB", 
+        "cubei":"none"
+    },
+    "type":"PLL",
+    "algo":"M2 U M2 U M' U2  M2 U2 M' U2"
+},
+"EPerm":{
+    "color":{
+        "cubea":"tO.lG" ,
+        "cubeb":"none",
+        "cubec":"tR.rG",
+        "cubed":"none",
+        "cubee":"bR.rB",
+        "cubef":"none",
+        "cubeg":"bO.lB",
+        "cubeh":"none", 
+        "cubei":"none"
+    },
+    "type":"PLL",
+    "algo":"R' F R' B2 R F' R' B2 R2"
+},
+"UaPerm":{
+    "color":{
+        "cubea":"none" ,
+        "cubeb":"tR",
+        "cubec":"none",
+        "cubed":"rO",
+        "cubee":"none",
+        "cubef":"none",
+        "cubeg":"none",
+        "cubeh":"lB", 
+        "cubei":"none"
+    },
+    "type":"PLL",
+    "algo":"M2 U' M' U2 M U' M2"
+},
+"UbPerm":{
+    "color":{
+        "cubea":"none" ,
+        "cubeb":"tO",
+        "cubec":"none",
+        "cubed":"rB",
+        "cubee":"none",
+        "cubef":"none",
+        "cubeg":"none",
+        "cubeh":"lR", 
+        "cubei":"none"
+    },
+    "type":"PLL",
+    "algo":"M2 U M' U2 M U M2"
+},
+"FPerm":{
+    "color":{
+        "cubea":"none" ,
+        "cubeb":"tG",
+        "cubec":"tR.rG",
+        "cubed":"none",
+        "cubee":"bR.rB",
+        "cubef":"bB",
+        "cubeg":"none",
+        "cubeh":"none", 
+        "cubei":"none"
+    },
+    "type":"PLL",
+    "algo":"R' F R' B2 R F' R' B2 R2"
+},
+"TPerm":{
+    "color":{
+        "cubea":"none" ,
+        "cubeb":"none",
+        "cubec":"tR.rG",
+        "cubed":"rO",
+        "cubee":"bR.rB",
+        "cubef":"none",
+        "cubeg":"none",
+        "cubeh":"lR", 
+        "cubei":"none"
+    },
+    "type":"PLL",
+    "algo":"R' F R' B2 R F' R' B2 R2"
+},
+"YPerm":{
+    "color":{
+        "cubea":"tG.lR" ,
+        "cubeb":"tO",
+        "cubec":"none",
+        "cubed":"none",
+        "cubee":"bB.rO",
+        "cubef":"none",
+        "cubeg":"none",
+        "cubeh":"lB", 
+        "cubei":"none"
+    },
+    "type":"PLL",
+    "algo":"R' F R' B2 R F' R' B2 R2"
+},
+"VPerm":{
+    "color":{
+        "cubea":"none" ,
+        "cubeb":"none",
+        "cubec":"tG.rO",
+        "cubed":"rG",
+        "cubee":"none",
+        "cubef":"bR",
+        "cubeg":"bB.lR",
+        "cubeh":"none", 
+        "cubei":"none"
+    },
+    "type":"PLL",
+    "algo":"R' F R' B2 R F' R' B2 R2"
+},
+"GaPerm":{
+    "color":{
+        "cubea":"none" ,
+        "cubeb":"tO",
+        "cubec":"tR.rG",
+        "cubed":"rG",
+        "cubee":"bR.rB",
+        "cubef":"bB",
+        "cubeg":"none",
+        "cubeh":"lR", 
+        "cubei":"none"
+    },
+    "type":"PLL",
+    "algo":"R' U' R' y R2 u R' U R U' R u' R2"
+},
+"GbPerm":{
+    "color":{
+        "cubea":"lR.tG",
+        "cubeb":"tO",
+        "cubec":"none",
+        "cubed":"none",
+        "cubee":"rG.bO",
+        "cubef":"bB",
+        "cubeg":"bO.lB",
+        "cubeh":"lG", 
+        "cubei":"none"
+    },
+    "type":"PLL",
+    "algo":"R2 u R' U R' U' R u' R2 y' R U R"
+},
+"GcPerm":{
+    "color":{
+        "cubea":"lR.tG" ,
+        "cubeb":"tR",
+        "cubec":"tO.rB",
+        "cubed":"rO",
+        "cubee":"rB.bR",
+        "cubef":"none",
+        "cubeg":"none",
+        "cubeh":"lB", 
+        "cubei":"none"
+    },
+    "type":"PLL",
+    "algo":"U2 R2' F2 (R U2' R U2') R' F (R U R' U') R' F R2"
+},
+"GdPerm":{
+    "color":{
+        "cubea":"none" ,
+        "cubeb":"none",
+        "cubec":"tG.rO",
+        "cubed":"rG",
+        "cubee":"none",
+        "cubef":"bR",
+        "cubeg":"bB.lR",
+        "cubeh":"none", 
+        "cubei":"none"
+    },
+    "type":"PLL",
+    "algo":"R' F R' B2 R F' R' B2 R2"
+},
+"doubleheadlight1":{
+    "color":{
+        "cubea":"none" ,
+        "cubeb":"none",
+        "cubec":"tG.rO",
+        "cubed":"rG",
+        "cubee":"none",
+        "cubef":"bR",
+        "cubeg":"bB.lR",
+        "cubeh":"none", 
+        "cubei":"none"
+    },
+    "type":"PLL",
+    "algo":"R' F R' B2 R F' R' B2 R2"
+}
+,"AC":{
+    "color":{
+        "cubea":"none" ,
+        "cubeb":"none",
+        "cubec":"tG.rO.mR",
+        "cubed":"rG",
+        "cubee":"none",
+        "cubef":"bR",
+        "cubeg":"bB.lR",
+        "cubeh":"none", 
+        "cubei":"none"
+    },
+    "type":"roux",
+    "algo":"M U2 M' U2 M' U M'"
+}
+
+,"extra":{
+    "color":{
+        "cubea":"none" ,
+        "cubeb":"none",
+        "cubec":"tG.rO.mR",
+        "cubed":"rG",
+        "cubee":"none",
+        "cubef":"bR",
+        "cubeg":"bB.lR",
+        "cubeh":"none", 
+        "cubei":"none"
+    },
+    "type":"PLL",
+    "algo":"R' F R' B2 R F' R' B2 R2"
+}
+}
+
+// AC
+// M U2 M' U2 M' U M'
+
+// ABCD
+// M' U2 M' U2 M' U M'
+
+// BCD
+// M' U M'
+
+// AD
+// M' U M' U2 M' U M'
+
+// AD
+// M' U M U' M' U M'
+
+// R U R' U' R' F R F'
+
+
+document.querySelector(`#selectType`).addEventListener("change",()=>{
+    document.querySelector(`#selectAlg`).innerHTML=`<option value="choose">choose</option>`
+    prevShape=""
+
+    Object.keys(algs).forEach((key,index)=>{
+    // algs[key].type
+    mytype = document.querySelector(`#selectType`).value
+    // debugger
+    if(algs[key].type == mytype){
+        if(algs[key].shape !== prevShape){
+            optgrp= document.createElement("optgroup")
+            optgrp.label=algs[key].shape
+            optgrp.id=algs[key].shape
+            document.querySelector(`#selectAlg`).append(optgrp)
+            prevShape=algs[key].shape
+        }
+            opt= document.createElement("option")
+            opt.value = key
+            opt.innerHTML = key
+            optgrp.append(opt)
+    }
+
+
+})
+})
+
+
+document.querySelector(`#selectAlg`).addEventListener("change",()=>{
+    selected= document.querySelector(`#selectAlg`).value
+    mykeys=Object.keys(algs[selected].color)
+    removeClass(mykeys)
+    mykeys.forEach(key=>{
+    // document.querySelector(`#${key}`).id=(algs[selected][key])
+    if(algs[selected].color[key].includes(".")){
+        algss=algs[selected].color[key].split(".")
+        document.querySelector(`#${key}`).classList.add(algss[0],algss[1])
+    }
+    else{
+        document.querySelector(`#${key}`).classList.add(algs[selected].color[key])
+    }
+    document.querySelector(`.textbox`).value=algs[selected]["algo"]
+    document.querySelector(`.title`).innerHTML=algs[selected]["type"]
+    
+    })
+})
+function removeClass(mykeys){
+    mykeys.forEach(key=>{
+    document.querySelector(`#${key}`).className="cube"
+    })
+}
+
+var style = document.querySelector('#hellostyle');
+
+
+function intBorCOl(abc){
+    if(abc.includes(".")){
+        abcd=abc.split(".")
+    mystyle=""
+    abcd.forEach(aaa=>{
+        abcde=aaa.split("")
+        console.log(aaa)
+        // // b,R
+        mystyle+=`${abbr[abcde[0]]}:${abbr[abcde[1]]} 5px dashed;`
+    })
+    style.innerHTML += `.${abc} { ${mystyle}  background-color: rgb(143, 143, 5); }`;
+
+    }
+    else{
+        abcd=abc.split("")
+            style.innerHTML += `.${abc} { ${abbr[abcd[0]]}:${abbr[abcd[1]]} 5px dashed; background-color: rgb(143, 143, 5); }`;
+        }
+}
+
+var colorList=["tG",
+"rG",
+"lG",
+"bR",
+"tR",
+"rR",
+"lR",
+"bR",
+"tB",
+"rB",
+"lB",
+"bB",
+"tO",
+"rO",
+"lO",
+"bO"
+// "tGilO",
+// "tGilR",
+// "tOilB",
+// "tRirG",
+// "bRirB",
+// "lBitR",
+// "tOirB",
+// "bBirO"
+]
+
+colorList.forEach(col=>{
+    intBorCOl(col)
+})
+// .rG{
+//     width:95px;
+//     border-right: 5px green dashed;
+//     background-color: rgb(138, 138, 3);
+// }
+// .bR{
+//     height:95px;
+//     border-bottom: 5px red dashed;
+//     background-color: rgb(138, 138, 3);
+// }
+
+
+
+
+
+</script>
+</body>
+</html>

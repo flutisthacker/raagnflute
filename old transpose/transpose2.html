@@ -1,0 +1,464 @@
+<html>
+
+<head>
+  <meta charset=" UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>change scale</title>
+  <link rel="shortcut icon" href="https://www.transparentpng.com/thumb/musical-notes/music-notes-png-pictures-3.png"
+    type="image/x-icon">
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+ -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="../../resources/perfect.css">
+  <link rel="stylesheet" href="transposenote.css">
+
+</head>
+
+<style>
+  .text {
+    font-size: 35px;
+    color: lightgreen;
+    text-align: center;
+    line-height: 1em;
+  }
+
+  .line {
+    background: #aaff12;
+    height: 4px;
+    border-radius: 4px;
+    width: 0%;
+    position: fixed;
+    top: 0px;
+    left: 0;
+  }
+  .line2 {
+    background: #aa1f12;
+    border-radius: 4px;
+    width: 4px;
+    height: 0%;
+    position: fixed;
+    top: 0px;
+    left: 0;
+  }
+
+</style>
+<body id="body">
+
+  <div class="toggle" id="toggle">
+    <i class="fa fa-folder-open"></i>
+  </div>
+  <div class="line" id="scrollIndicator"></div>
+  <div class="line2" id="scrollIndicator2"></div>
+  <div id="menu" class="menu">
+    <div class="select">
+      <ul id="songstwo">
+      </ul>
+    </div>
+  </div>
+  <div class="containerd">
+    <div class="title">
+      <div class="badge badge-primary" id="notesKey">saa</div>
+      <h1 id="titlename">Transpose</h1>
+    </div>
+    <div class="addSect">
+      <input type="text" id="notesearch" name="notesearch" placeholder="Enter your song name..." list="songsearch">
+      <select name="" id="songs" hidden></select>
+      <select name="" id="missing"></select>
+
+      <datalist id="songsearch">
+      </datalist>
+
+      <select name="" id="songkey">
+        <option selected value="C">C</option>
+        <option value="Cs">C#</option>
+        <option value="D">D</option>
+        <option value="Ds">D#</option>
+        <option value="E">E</option>
+        <option value="F">F</option>
+        <option value="Fs">F#</option>
+        <option value="G">G</option>
+        <option value="Gs">G#</option>
+        <option value="A">A</option>
+        <option value="As">A#</option>
+        <option value="B">B</option>
+        <option value="Nep">Nepali</option>
+      </select>
+
+      <button id="translate" class="add">translate</button>
+      <button id="staff" class="add">staff</button>
+    </div>
+    <div class="list" ></div>
+  </div>
+<div class="mutt d-flex">
+  <div id="sideMenu" class="fixRight">
+    <button type="button" class="btn btn-primary ">
+      <i class="fa fa-camera"></i>
+    </button>
+    <button type="button" class="btn btn-secondary" onclick="document.querySelector('.list').requestFullscreen().catch((err) => console.log('couldnt open in fullscreen'))">
+      <i class="fa fa-heart"></i>
+      </button>
+    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal3">
+      <i class="fa fa-info"></i>
+      </button>
+      <button type="button" class="btn btn-primary"  >
+      <i class="fa fa-gift"></i>
+    </button>
+    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal4">
+      <i class="fa fa-plus"></i>
+    </button>  
+    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal2">
+      <i class="fa fa-phone"></i>
+    </button>  
+
+  </div>
+  <!-- <button type="button" class="btn btn-primary fixRight" data-toggle="modal" data-target="#exampleModal">
+    <i class="fa fa-camera"></i>
+  </button> -->
+  <button type="button" class="btn btn-secondary fixRight posfull" onclick="document.querySelector('.list').requestFullscreen().catch((err) => console.log('couldnt open in fullscreen'))">
+    <i class="fa fa-heart"></i>
+    </button>
+  <button type="button" class="btn btn-secondary fixRight posRRR" data-toggle="modal" data-target="#exampleModal3">
+    <i class="fa fa-info"></i>
+    </button>
+    <button type="button" class="btn btn-primary fixRight posRR"  >
+    <i class="fa fa-gift"></i>
+  </button>
+    <button type="button" class="btn btn-secondary fixRight posR" data-toggle="modal" data-target="#exampleModal2">
+    <i class="fa fa-phone"></i>
+  </button>
+
+  <div class="modal fade bd-example-modal-lg" id="exampleModal2" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            Write for Json file
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <iframe src="tranpose2t.html" frameborder="0" id="myiframe" width="750px" height="500px"></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="modal fade bd-example-modal-lg" id="exampleModal3" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Info</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-dark noteInfo">
+          <!-- <ul class="list-group Rinfo">
+          </ul> -->
+          <div class="btn-group Rinfo" role="group" aria-label="Basic example">
+          </div>
+
+          <textarea name="" id="addThis" cols="30" rows="10"></textarea>
+          <button class="btn btn-success addToTable">Add to table</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Capture</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body notecapture">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade bd-example-modal-lg" id="exampleModal4" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-dark">
+      List songs
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body myscale">
+        </div>
+        <div class="modal-footer">
+          <input type="text" name="" id="keyInd" maxlength="2" value="C">
+          <input type="text" name="" id="localeInd" maxlength="9" placeholder="type...--">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    document.querySelector(".addToTable").addEventListener("click",()=>{
+      var addthis=document.querySelector("#addThis").value
+      maketable(8);
+      tabledisplay(addthis.split(" "), 8 ); 
+    }
+    )
+  </script>
+  <script>
+    document.querySelector("#songstwo").addEventListener("scroll", moveSCrollIndicator)
+
+    const scrollIndicatorElt = document.getElementById("scrollIndicator")
+    const scrollIndicatorEltw = document.getElementById("scrollIndicator2")
+    const maxHeight =  11918 - 606;
+    // const maxHeight =  document.querySelector("#songstwo").scrollHeight - window.innerheight ;
+
+
+    function moveSCrollIndicator(e) {
+      const percentage = (( document.querySelector("#songstwo").scrollTop) / maxHeight) * 100;
+      scrollIndicatorElt.style.width = percentage + "%";
+      scrollIndicatorEltw.style.height = percentage + "%";
+    }
+  </script>
+<!--
+       document.requestFullscreen().catch((err) => console.log("couldnt open in fullscreen"))
+ -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+
+  <!-- <script type="text/javascript" src="notes.json">
+  </script> -->
+  <script type="text/javascript" src="varnotes.js">
+  </script>
+  <script type="text/javascript" src="varnotes2.js">
+  </script>
+  <script type="text/javascript" src="../midi.js">
+  </script>
+<script>
+  var infoo={"total":0,"eng":0,"nep":0,"hin":0,"newa":0,"oth":0,"A":0,"B":0,"C":0,"D":0,"E":0,"F":0,"G":0,"S":0}
+  var infooo={"total":[],"eng":[],"nep":[],"hin":[],"newa":[],"oth":[],"A":[],"B":[],"C":[],"D":[],"E":[],"F":[],"G":[],"S":[]}
+  infoo.total=Object.keys(notex).length
+  Object.keys(notex).forEach(notea=>{
+    if(notex[notea].locale !=""){
+      if(notex[notea].locale == "english" ||notex[notea].locale == "English"){
+        infoo.eng+=1  
+        infooo.eng.push(notea) 
+      }
+      else if(notex[notea].locale == "nepali" ||notex[notea].locale == "Nepali"){
+        infoo.nep+=1  
+        infooo.nep.push(notea) 
+      }
+      else if(notex[notea].locale == "hindi" ||notex[notea].locale == "Hindi"){
+        infoo.hin+=1  
+        infooo.hin.push(notea) 
+      }
+      else if(notex[notea].locale == "newari" ||notex[notea].locale == "Newari"){
+        infoo.newa+=1  
+        infooo.newa.push(notea) 
+      }
+      else{
+        infoo.oth+=1  
+        infooo.oth.push(notea) 
+      }
+    }
+    if(notex[notea].key !=""){
+      if(notex[notea].key ==="A"){
+          infoo.A+=1
+          infooo.A.push(notea)
+        }
+        else if(notex[notea].key ==="B"){
+          infoo.B+=1
+          infooo.B.push(notea)
+        }
+        else if(notex[notea].key =="C"){
+          infoo.C+=1
+          infooo.C.push(notea)
+        }
+        else if(notex[notea].key =="D"){
+          infoo.D+=1
+          infooo.D.push(notea)
+        }
+        else if(notex[notea].key =="E"){
+          infoo.E+=1
+          infooo.E.push(notea)
+        }
+        else if(notex[notea].key =="F"){
+          infoo.F+=1
+          infooo.F.push(notea)
+        }
+        else if(notex[notea].key ==="G"){
+          infoo.G+=1
+          infooo.G.push(notea)
+        }
+        else {
+          infoo.S+=1
+          infooo.S.push(notea)
+        }
+    }
+  })
+
+
+Object.keys(infoo).forEach(inf=>{
+  document.querySelector(".Rinfo").innerHTML+= 
+  `<button type="button"  class="btn btn-primary" id="btn${inf}" onclick="filterNote('${inf}')">${inf}:${infoo[inf]}</button>`
+  /*   `<li class="list-group-item d-flex justify-content-between align-items-center">
+    ${inf}
+    <span class="badge bg-primary rounded-pill">${infoo[inf]}</span>
+    </li>` */
+    
+    // document.querySelector(".Rinfo").innerHTML+= `<li class="list-group-item list-group-item-action">${inf} : ${infoo[inf]}</li>`
+  })
+
+function filterNote(sae){
+  allNotes=Object.keys(notex)
+  if(sae=="total"){
+    clearFilter()
+  }
+  else{
+    clearFilter()
+    document.getElementById(`btn${sae}`).classList.replace("btn-primary","btn-success");
+    newOnes=infooo[sae]
+    newOnes.forEach(nO=>{
+      allNotesA=allNotes.splice(0,allNotes.indexOf(nO))
+      allNotesB=allNotes.splice(allNotes.indexOf(nO)+1,allNotes.length)
+      allNotes=allNotesA.concat(allNotesB)
+    })
+    console.log(allNotes.length)
+    allNotes.forEach(alns=>{
+      document.getElementById(`notex.${alns}.note`).setAttribute("hidden","hidden")
+    })
+  }
+}
+
+function clearFilter(){  
+  Object.keys(infoo).forEach(inf=>{
+    document.getElementById(`btn${inf}`).classList.replace("btn-success","btn-primary");
+  })
+
+  allNotes=Object.keys(notex)
+  allNotes.forEach(alns=>{
+      document.getElementById(`notex.${alns}.note`).removeAttribute("hidden")
+    })
+}
+
+</script>
+
+  <script>
+    // notex = notex + raagnotes;
+
+    var btn = document.getElementById("toggle");
+    var menu = document.getElementById("menu");
+    btn.addEventListener("click", toggleMenu)
+    menu.addEventListener("click", toggleMenu)
+
+    function toggleMenu() {
+      if (menu.classList.contains('open')) {
+        menu.classList.remove('open')
+      } else {
+        menu.classList.add('open')
+
+      }
+    }
+    btn.innerHTML+=Object.keys(notex).length
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="htmltocanvas.min.js"></script>
+  <script>
+    document.addEventListener("keyup", (e) => {
+      if (e.keyCode == 67 && e.keyCode == 16) {
+        // console.log(e.key, songs.value)
+        html2canvas(document.querySelector("#capture")).then(canvas => {
+          document.body.appendChild(canvas)
+          // $('.modal-body').append(canvas)
+          // $('#exampleModal').modal()
+        });
+      }
+    })
+    document.querySelector(".btn-primary").addEventListener("click", () => {
+      html2canvas(document.querySelector("#capture")).then(canvas => {
+        $('.notecapture').append(canvas)
+      });
+    })
+    // console.log(mydata[0].age);
+
+    document.querySelector("#staff").addEventListener("click", (e) => {
+      a = notesearch.value
+      console.log(notesearch.value)
+      totransposed = {
+        name: a,
+        notes: eval(`notex.${a}.note`)
+      }
+      let cccc = JSON.stringify(totransposed)
+      localStorage.setItem("totranslatenote", cccc);
+      location.href = "/raag and flute/transpose4.html"
+    });
+
+    function sort(){
+      var notehaikokey = [];
+    okn=Object.keys(notex)
+    okn.forEach(ookn=>{
+    cx=notex[ookn].key
+    cx=cx.toLowerCase()
+    notehaikokey.push(Ckey.indexOf(cx)+ookn)
+    })
+
+  notehaikokey.sort()
+
+  notehaikokey.forEach((key,index)=>{
+  notehaikokey[index]=key.slice(1,key.length)
+  })
+
+}
+
+    var ifr = document.querySelector("#myiframe");
+    const ifrwindow=ifr.contentWindow;
+    const ifrdocument=ifr.contentDocument;
+
+
+  </script>
+  <script type="text/javascript" src="transpose2.js">
+  </script>
+
+<!-- 
+
+Object.values(notex.reshamfiriri.note2)
+blankfour=["","","",""]
+blankEight=["","","","","","","",""]
+blankTwelve=["","","","","","","","","","","",""]
+ -->
+</body>
+
+</html>

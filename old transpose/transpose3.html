@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  canvas {
+    width: 100%;
+    height: 100vh;
+  }
+</style>
+
+<body>
+  <input type="text" id="notes"><button id="notebtn">print</button>
+  <canvas id="canvas"></canvas>
+  <div id="boo"></div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="transposecanvas.js"></script>
+<script src="transpose2.js"></script>
+<script>
+  var notes = document.querySelector("#notes");
+  var notebtn = document.querySelector("#notebtn");
+  var wochugalli = "g gb b b g gb b b a b c c b ba g"
+  var twochugalli = transpose(wochugalli.split(" "),
+    eval("Gkey"))
+  print(wochugalli);
+
+  function print(wochugalli) {
+    console.log("cllick", wochugalli);
+    var space = 20;
+    var line = 0;
+    var totalspace = 0;
+    var falseindex = 0;
+    wcg = wochugalli.split(" ")
+    for (let i = 0; i < wcg.length; i++) {
+      console.log(`${wcg[i]} is the natural key ${falseindex+1}`)
+      totalspace = totalspace + space;
+      if (totalspace >= 280 && falseindex > 8) {
+        line = 60;
+        falseindex = 0;
+      }
+      if (wcg[i] == "g") {
+        console.log(falseindex)
+        mainGkey((falseindex + 1) * space, "#000", line);
+      }
+      if (wcg[i] == "gb") {
+        doubleGBkey((falseindex + 1) * space, "#000", line);
+        space = 25
+      }
+      if (wcg[i] == "cd") {
+        doubleCDkey((falseindex + 1) * space, "#000", line);
+        space = 25
+      }
+      if (wcg[i] == "ce") {
+        doubleCEkey((falseindex + 1) * space, "#000", line);
+        space = 25
+      }
+      if (wcg[i] == "cf") {
+        doubleCFkey((falseindex + 1) * space, "#000", line);
+        space = 25
+      }
+      if (wcg[i] == "cg") {
+        doubleCGkey((falseindex + 1) * space, "#000", line);
+        space = 25
+      }
+      if (wcg[i] == "ca") {
+        doubleCAkey((falseindex + 1) * space, "#000", line);
+        space = 25
+      }
+      if (wcg[i] == "cb") {
+        doubleCBkey((falseindex + 1) * space, "#000", line);
+        space = 25
+      }
+      if (wcg[i] == "ba") {
+        doubleBAkey((falseindex + 1) * space, "#000", line);
+        space = 25
+      }
+      if (wcg[i] == "cc") {
+        doubleCkey((falseindex + 1) * space, "#000", line);
+        space = 25
+      }
+      if (wcg[i] == "dd") {
+        doubleDkey((falseindex + 1) * space, "#000", line);
+        space = 25
+      }
+      if (wcg[i] == "ee") {
+        doubleEkey((falseindex + 1) * space, "#000", line);
+        space = 25
+      }
+      if (wcg[i] == "ff") {
+        doubleFkey((falseindex + 1) * space, "#000", line);
+        space = 25
+      }
+      if (wcg[i] == "gg") {
+        doubleGkey((falseindex + 1) * space, "#000", line);
+        space = 25
+      }
+      if (wcg[i] == "aa") {
+        doubleAkey((falseindex + 1) * space, "#000", line);
+        space = 25
+      }
+      if (wcg[i] == "bb") {
+        doubleBkey((falseindex + 1) * space, "#000", line);
+        space = 25
+      }
+      if (wcg[i] == "c") {
+        mainCkey((falseindex + 1) * space, "#000", line);
+      }
+      if (wcg[i] == "e") {
+        mainEkey((falseindex + 1) * space, "#000", line);
+      }
+      if (wcg[i] == "d") {
+        mainDkey((falseindex + 1) * space, "#000", line);
+      }
+      if (wcg[i] == "a") {
+        mainAkey((falseindex + 1) * space, "#000", line);
+        // console.log((index + 1) * space)
+      }
+      if (wcg[i] == "b") {
+        mainBkey((falseindex + 1) * space, "#000", line);
+        // space = 20;
+        // console.log((index + 1) * space)
+      }
+      if (wcg[i] == "-") {
+        mainDashkey((falseindex + 1) * space, "#000", line);
+        // console.log((index + 1) * space)
+      }
+      if (falseindex > 0 && (falseindex) % 4 == 0) {
+        let result = ((falseindex + 1) * space + (falseindex - 1) * (space)) / 2
+        console.log(result, (falseindex + 1) * space, (falseindex - 1) * (space))
+        // drawbar((falseindex + 1) * (space))
+        drawbar(result + (space / 2))
+      }
+      falseindex++;
+
+    }
+    /*       wochugalli.split(" ").map((key, index) => {
+            console.log(`${key} is the natural key ${index+1}`)
+            totalspace = totalspace + space;
+            if (totalspace >= 280 && index > 8) {
+              line = 60;
+            }
+            if (key == "g") {
+              console.log(index)
+              mainGkey((index + 1) * space, "#000", line);
+            }
+            if (key == "gb") {
+              doubleGBkey((index + 1) * space, "#000", line);
+              space += 5
+            }
+            if (key == "cd") {
+              doubleCDkey((index + 1) * space, "#000", line);
+              space += 5
+            }
+            if (key == "ce") {
+              doubleCEkey((index + 1) * space, "#000", line);
+              space += 5
+            }
+            if (key == "cf") {
+              doubleCFkey((index + 1) * space, "#000", line);
+              space += 5
+            }
+            if (key == "cg") {
+              doubleCGkey((index + 1) * space, "#000", line);
+              space += 5
+            }
+            if (key == "ca") {
+              doubleCAkey((index + 1) * space, "#000", line);
+              space += 5
+            }
+            if (key == "cb") {
+              doubleCBkey((index + 1) * space, "#000", line);
+              space += 5
+            }
+            if (key == "cc") {
+              doubleCkey((index + 1) * space, "#000", line);
+              space += 5
+            }
+            if (key == "dd") {
+              doubleDkey((index + 1) * space, "#000", line);
+              space += 5
+            }
+            if (key == "ee") {
+              doubleEkey((index + 1) * space, "#000", line);
+              space += 5
+            }
+            if (key == "ff") {
+              doubleFkey((index + 1) * space, "#000", line);
+              space += 5
+            }
+            if (key == "gg") {
+              doubleGkey((index + 1) * space, "#000", line);
+              space += 5
+            }
+            if (key == "aa") {
+              doubleAkey((index + 1) * space, "#000", line);
+              space += 5
+            }
+            if (key == "bb") {
+              doubleBkey((index + 1) * space, "#000", line);
+              space += 5
+            }
+            if (key == "c") {
+              mainCkey((index + 1) * space, "#000", line);
+            }
+            if (key == "e") {
+              mainEkey((index + 1) * space, "#000", line);
+            }
+            if (key == "d") {
+              mainDkey((index + 1) * space, "#000", line);
+            }
+            if (key == "a") {
+              mainAkey((index + 1) * space, "#000", line);
+              // console.log((index + 1) * space)
+            }
+            if (key == "b") {
+              mainBkey((index + 1) * space, "#000", line);
+              // console.log((index + 1) * space)
+            }
+            if (key == "-") {
+              mainDashkey((index + 1) * space, "#000", line);
+              // console.log((index + 1) * space)
+            }
+            if (index > 0 && (index) % 4 == 0) {
+              let result = ((index + 1) * space + (index - 1) * (space)) / 2
+              console.log(result, (index + 1) * space, (index - 1) * (space))
+              // drawbar((index + 1) * (space))
+              drawbar(result + (space / 2))
+            }
+
+          })*/
+  }
+  notebtn.addEventListener("click", (e) => {
+    // console.log(e.key)
+    let printit = notes.value;
+    print(printit);
+    // switch (e.key) {
+    //   case "c" || "C":
+    //     mainCkey(10, "#000");
+    //     break;
+    //   case "d" || "D":
+    //     mainDkey(30, "#000");
+    //     break;
+    //   case "e" || "E":
+    //     mainEkey(50, "#000");
+    //     break;
+    //   case "f" || "F":
+    //     mainFkey(70, "#000");
+    //     break;
+    //   case "g" || "G":
+    //     mainGkey(90, "#000");
+    //     break;
+    //   case "a" || "A":
+    //     mainAkey(110, "#000");
+    //     break;
+    //   case "b" || "B":
+    //     mainBkey(130, "#000");
+    //     break;
+    //   default:
+    //     if (e.keyCode == "32")
+    //       drawbar(23)
+    //     break;
+    // }
+  })
+</script>
+
+</html>

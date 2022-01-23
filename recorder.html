@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.flute-container{
+    width:280px;
+    height:500px;
+}
+    .flute-outer{
+        position:relative;
+        display: flex;
+        flex-direction: column;
+        margin:90px;
+        border: 2px solid gray;
+        padding:10px;
+    }
+    .circle{
+        background-color:chocolate;
+        width:50px;
+        height:50px;
+        border: 2px solid black;
+        border-radius: 50%;
+        margin:2px;
+    }
+    .mar-R-5{
+        margin-right: 25px;
+    }
+    .mar-B-5{
+        margin-bottom: 50px;
+    }
+    .pinky1{
+        background-color:chocolate;
+        width:50px;
+        height:50px;
+        border: 2px solid black;
+        border-radius: 20% 20% 50% 50%;
+        margin:2px;
+        position: absolute;
+        top:70px;
+    }
+    .pinky1::after{
+        content: "";
+        position: absolute;
+        background-color:chocolate;
+        width:100px;
+        height:10px;
+        border: 2px solid black;
+        margin:2px;
+        position: absolute;
+        z-index: -3;
+    }
+    .thumb2{
+        background-color:chocolate;
+        width:60px;
+        height:40px;
+        border: 2px solid black;
+        border-radius: 0% 0% 50% 50%;
+        margin:2px;
+        position: absolute;
+        top:90px;
+        left:70px;
+    }
+
+    .thumb1{
+        background-color:chocolate;
+        width:30px;
+        height:30px;
+        border: 2px solid black;
+        border-radius: 50%;
+        margin:2px;
+        position: absolute;
+        top:190px;
+        left:50px;
+        /* transform: rotate(90deg); */
+    }
+
+    .pinky2{
+        background-color:chocolate;
+        width:50px;
+        height:50px;
+        border: 2px solid black;
+        border-radius: 20% 20% 50% 50%;
+        margin:2px;
+        position: absolute;
+        top:100px;
+        right:80px;
+        transform:  rotateZ(-90deg);
+    }
+    .pinky2::after{
+        content: "";
+        position: absolute;
+        background-color:chocolate;
+        width:100px;
+        height:10px;
+        border: 2px solid black;
+        margin:2px;
+        position: absolute;
+        z-index: 4;
+    }
+    .pinky3{
+        width:50px;
+        height:50px;
+        border: 2px solid rgb(153, 149, 149);
+        border-radius: 20% 20% 50% 50%;
+        margin:2px;
+        top:15px;
+        right:60px;
+    }
+    .pinky3A,.pinky3B,.pinky3C{
+        background-color: black;
+        width:100%;
+        height:20%;
+        margin:2px 0px;
+    }
+    .btn-open{
+        background-color: silver;
+    }
+    .btn-close{
+        background-color: blue;
+    }
+    .btn-half{
+        background: linear-gradient( silver, blue);
+    }
+    .btn{
+        width:70px;
+        height:20px;
+        margin:5px;
+        padding:5px;
+        box-shadow: 5px 5px 2px gray;
+    }
+</style>
+<body>
+    <select name="" id="keyrange">
+        <option value="choose">Choose</option>
+    </select>
+    <input type="text" id="cof" placeholder="find circle of fifth...">
+<p id="mycof"></p>    
+    <div class="btn btn-open">open</div>
+    <div class="btn btn-close">close</div>
+    <div class="flute-container">
+        <div class="flute-outer">
+            <div id="indexL" class="btn-flute btn-open circle"></div>
+            <div id="middleL" class="btn-flute btn-open circle"></div>
+            <div id="ringL" class="btn-flute btn-open circle mar-B-5"></div>
+            <div id="indexR" class="btn-flute btn-open circle"></div>
+            <div id="middleR" class="btn-flute btn-open circle"></div>
+            <div id="ringR" class="btn-flute btn-open circle"></div>
+            <div id="thumb1" class="btn-flute btn-open thumb1"></div>
+            <div id="pinky3" class="btn-open pinky3">
+            </div>
+        </div>
+
+</div>
+
+<script>
+    const circleoffifth={
+        "f":"b",
+        "c":"-",
+        "g":"#",
+        "d":"##",
+"a":"###",
+"e":"####",
+"b":"#####",
+"f#":"######",
+"c#":"#####",
+"ab/g#":"bbbb",
+"eb/d#":"bbb",
+"Bb/a#":"bb"
+}
+const cofEnt=Object.entries(circleoffifth)
+
+let cof=document.querySelector("#cof")
+cof.addEventListener("keypress",e=>{
+    if(e.keyCode===13){
+        cofEnt.forEach(c=>{
+            if(c[1]==cof.value){
+                document.querySelector("#mycof").innerHTML=c[0]
+            }
+})
+}
+})
+</script>
+<script src="music.js"></script>
+
+    <script>
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+var mytimint,mytimeout;
+
+function play(frequency,times){
+    // create Oscillator node
+    otype="triangle";
+    // sine square triangle sawtooth
+    const oscillator = audioCtx.createOscillator();
+    oscillator.frequency.setValueAtTime(frequency, audioCtx.currentTime);
+    let g = audioCtx.createGain();
+    oscillator.type = otype;        
+    oscillator.connect(g)
+    g.connect(audioCtx.destination)
+    oscillator.start()
+    g.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + 2 * times)
+    // create web audio api context
+}
+
+const obj={message:"h1",value:1}
+        const entries=Object.entries(obj)
+        entries1 = [["message",1],["value",1]]
+        object=Object.fromEntries(entries1)
+        key2={
+
+    "C4":{
+        "indexL":"close",
+        "middleL":"close",
+        "ringL":"close",
+        "thumb1":"close",
+        "pinky3":"close",
+        "indexR":"close",
+        "middleR":"close",
+        "ringR":"close",
+    },
+    "C#4":{
+        "indexL":"close",
+        "middleL":"close",
+        "ringL":"close",
+        "thumb1":"close",
+        "pinky3":"close",
+        "indexR":"close",
+        "middleR":"close",
+        "ringR":"half",
+    },
+    "D4":{
+        "indexL":"close",
+        "middleL":"close",
+        "ringL":"close",
+        "thumb1":"close",
+        "pinky3":"close",
+        "indexR":"close",
+        "middleR":"close",
+        "ringR":"open",
+    },
+    "D#4":{
+        "indexL":"close",
+        "middleL":"close",
+        "ringL":"close",
+        "thumb1":"open",
+        "pinky3":"close",
+        "indexR":"close",
+        "middleR":"close",
+        "ringR":"close",
+    },
+    "E4":{
+        "indexL":"close",
+        "middleL":"close",
+        "ringL":"close",
+        "thumb1":"close",
+        "pinky3":"close",
+        "indexR":"close",
+        "middleR":"open",
+        "ringR":"open",
+    },
+
+    "F4":{
+        "indexL":"close",
+        "middleL":"close",
+        "ringL":"close",
+        "thumb1":"close",
+        "pinky3":"open",
+        "indexR":"open",
+        "middleR":"close",
+        "ringR":"close",
+    },
+    "F#4":{
+        "indexL":"close",
+        "middleL":"close",
+        "ringL":"close",
+        "thumb1":"open",
+        "pinky3":"open",
+        "indexR":"open",
+        "middleR":"open",
+        "ringR":"close",
+    },
+    "G4":{
+        "indexL":"close",
+        "middleL":"close",
+        "ringL":"close",
+        "thumb1":"open",
+        "pinky3":"open",
+        "indexR":"open",
+        "middleR":"open",
+        "ringR":"open",
+    },
+    "G#4":{
+        "indexL":"close",
+        "middleL":"close",
+        "ringL":"close",
+        "thumb1":"open",
+        "pinky3":"open",
+        "indexR":"open",
+        "middleR":"open",
+        "ringR":"open",
+    },
+    "A4":{
+        "indexL":"close",
+        "middleL":"close",
+        "ringL":"open",
+        "thumb1":"close",
+        "pinky3":"open",
+        "indexR":"open",
+        "middleR":"open",
+        "ringR":"open",
+    },
+    "A#4":{
+        "indexL":"close",
+        "middleL":"open",
+        "ringL":"close",
+        "thumb1":"close",
+        "pinky3":"open",
+        "indexR":"close",
+        "middleR":"close",
+        "ringR":"open",
+    },
+    "B4":{
+        "indexL":"close",
+        "middleL":"open",
+        "ringL":"open",
+        "thumb1":"close",
+        "pinky3":"open",
+        "indexR":"open",
+        "middleR":"open",
+        "ringR":"open",
+    },
+    "C5":{
+        "indexL":"open",
+        "middleL":"close",
+        "ringL":"open",
+        "thumb1":"close",
+        "pinky3":"open",
+        "indexR":"open",
+        "middleR":"open",
+        "ringR":"open",
+    },
+    "C#5":{
+        "indexL":"close",
+        "middleL":"close",
+        "ringL":"open",
+        "thumb1":"open",
+        "pinky3":"open",
+        "indexR":"open",
+        "middleR":"open",
+        "ringR":"open",
+    },
+    "D5":{
+        "indexL":"open",
+        "middleL":"close",
+        "ringL":"open",
+        "thumb1":"open",
+        "pinky3":"open",
+        "indexR":"open",
+        "middleR":"open",
+        "ringR":"open",
+    },
+    "D#5":{
+        "indexL":"close",
+        "middleL":"close",
+        "ringL":"close",
+        "thumb1":"open",
+        "pinky3":"close",
+        "indexR":"close",
+        "middleR":"close",
+        "ringR":"close",
+    },
+    "E5":{
+        "indexL":"close",
+        "middleL":"close",
+        "ringL":"close",
+        "thumb1":"half",
+        "pinky3":"open",
+        "indexR":"close",
+        "middleR":"close",
+        "ringR":"open",
+    },
+
+    "F5":{
+        "indexL":"close",
+        "middleL":"close",
+        "ringL":"close",
+        "thumb1":"half",
+        "pinky3":"open",
+        "indexR":"close",
+        "middleR":"open",
+        "ringR":"close",
+    },
+    "F#5":{
+        "indexL":"close",
+        "middleL":"open",
+        "ringL":"close",
+        "thumb1":"half",
+        "pinky3":"close",
+        "indexR":"open",
+        "middleR":"open",
+        "ringR":"close",
+    },
+    "G5":{
+        "indexL":"close",
+        "middleL":"close",
+        "ringL":"close",
+        "thumb1":"half",
+        "pinky3":"open",
+        "indexR":"open",
+        "middleR":"open",
+        "ringR":"open",
+    },
+    "G#5":{
+        "indexL":"open",
+        "middleL":"close",
+        "ringL":"close",
+        "thumb1":"half",
+        "pinky3":"close",
+        "indexR":"open",
+        "middleR":"open",
+        "ringR":"open",
+    },
+    "A5":{
+        "indexL":"close",
+        "middleL":"close",
+        "ringL":"open",
+        "thumb1":"half",
+        "pinky3":"open",
+        "indexR":"open",
+        "middleR":"open",
+        "ringR":"open",
+    },
+    "A#5":{
+        "indexL":"close",
+        "middleL":"close",
+        "ringL":"open",
+        "thumb1":"half",
+        "pinky3":"half",
+        "indexR":"close",
+        "middleR":"close",
+        "ringR":"close",
+    },
+    "B5":{
+        "indexL":"close",
+        "middleL":"open",
+        "ringL":"open",
+        "thumb1":"half",
+        "pinky3":"open",
+        "indexR":"open",
+        "middleR":"open",
+        "ringR":"open",
+    }
+}
+Object.keys(key2).forEach(key=>{
+        document.querySelector("#keyrange").innerHTML += `<option value="${key}">${key}</option>`
+    })
+
+    document.querySelector("#keyrange").addEventListener("change",e=>{
+        merokey=document.querySelector("#keyrange").value
+        document.querySelectorAll(".btn-flute").forEach((btn,val)=>{
+            var mykkey=Object.keys(key2[merokey])
+            console.log(key2[merokey][mykkey[val]])
+                if(key2[merokey][mykkey[val]]=="close"){
+                    console.log(mykkey[val])
+                    toggleClass(mykkey[val],"add", "btn-close")
+                toggleClass(mykkey[val],"remove", "btn-open")
+                toggleClass(mykkey[val],"remove", "btn-half")
+
+                }
+                if(key2[merokey][mykkey[val]]=="open"){
+                toggleClass(mykkey[val],"add", "btn-open")
+                toggleClass(mykkey[val],"remove", "btn-close")
+                toggleClass(mykkey[val],"remove", "btn-half")
+                }
+                if(key2[merokey][mykkey[val]]=="half"){
+                    toggleClass(mykkey[val],"add", "btn-half")
+                toggleClass(mykkey[val],"remove", "btn-close")
+                toggleClass(mykkey[val],"remove", "btn-open")
+                }
+        })
+        play(noteFrequency[notesC.indexOf(merokey)],1)
+    })
+
+    function toggleClass(myId,actn,myClass){
+        if(actn=="add"){
+            document.getElementById(myId).classList.add(myClass)
+        }
+        else if(actn=="remove"){
+            document.getElementById(myId).classList.remove(myClass)
+        }
+    }
+    </script>
+</body>
+</html>

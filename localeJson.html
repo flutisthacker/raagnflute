@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="JsonA" cols="30" rows="10"></textarea>
+    <textarea name="" id="JsonB" cols="30" rows="10"></textarea>
+<button onclick="compare()">compare</button>
+<div class="result"></div>
+<script>
+function compare(){
+    myJA=document.querySelector("#JsonA").value
+myJA= JSON.parse(myJA)
+JAmainObj=Object.keys(myJA)
+JAObjs=[];
+
+JAmainObj.forEach(jao=>{
+    newArr=Object.keys(myJA[jao])
+    newArr.forEach(nA=>{
+        JAObjs.push(nA)
+    })
+})
+
+myJB=document.querySelector("#JsonB").value
+myJB= JSON.parse(myJB)
+JBmainObj=Object.keys(myJB)
+
+JBObjs=[];
+JBmainObj.forEach(Jbo=>{
+    newArr=Object.keys(myJB[Jbo])
+    newArr.forEach(nA=>{
+        JBObjs.push(nA)
+    })
+})
+
+compp(JAObjs,JBObjs);
+}
+function compp(a,b){
+    notTher=[];
+    console.log(a)
+    a.forEach(aa=>{
+        if((b.indexOf(aa)) ==-1 ){
+            notTher.push(aa);
+            document.querySelector(".result").innerHTML+= `${aa} </br>`
+        }
+    })
+}
+</script>
+</body>
+</html>

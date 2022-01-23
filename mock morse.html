@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>raag</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <meta name="theme-color" content="#9d4edd" />
+
+</head>
+<body>
+    <style>
+        .raags{
+            /* text-decoration: dashed; */
+            /* text-decoration: dotted; */
+            /* text-decoration: double; */
+            /* text-decoration:line-through; */
+            /* text-decoration:overline; */
+            /* text-decoration:solid; */
+            /* text-decoration:underline; this*/
+            /* text-decoration:wavy; */
+        }
+        .nav-link{
+            width:100%;
+        }
+    </style>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" onclick="history.go(0)">Raag and Flute</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex raags">
+            <li class="nav-item">
+                <button class="btn btn-outline-info nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    ->
+                </button>
+            </li>
+            <li class="nav-item pl-2">
+                <h5  class="btn btn-outline-success position-relative raagh5 mr-2">
+                    Raag
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    99+
+                    <span class="visually-hidden">unread messages</span>
+                    </span>
+                </h5>
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Click to Play</button>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="offcanvas offcanvas-start bg-dark text-light" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Select Raag and Song</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+    <ul class="list-group">
+        <li class="list-group-item">
+            <select class="nav-link" name="" id="chooseTime">
+                <option value="Empty">Choose the time</option>
+                <option value="Morning">Morning</option>
+                <option value="Afternoon">Afternoon</option>
+                <option value="Evening">Evening</option>
+                <option value="Dawn">Dawn</option>
+                <option value="Dusk">Dusk</option>
+                <option value="Midnight">Midnight</option>
+                <option value="Twilight">Twilight</option>
+                <option value="Night">Night</option>
+            </select>
+        </li>
+        <li class="list-group-item">
+            <select class="nav-link" name="" id="chooseThaat">
+                <option value="Empty">Choose the thaat</option>
+            </select>
+        </li>
+        <li class="list-group-item">
+            <select class="nav-link" name="" id="chooseRaag">
+                <option value="Empty">Choose the raag</option>
+            </select>
+        </li>
+        <li class="list-group-item">
+            <select class="nav-link" name="" id="RaagSong">
+                <option value="Empty">Choose the song</option>
+                <!-- <option value="saarang">Saarang</option>
+                <option value="bhoopali">bhoopali</option>
+                <option value="bhairav">bhairav</option> -->
+            </select>
+        </li>
+
+    </ul>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">play the song</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p id="timer"></p>
+            <p id="note"></p>
+        </div>
+        <div class="modal-footer">
+          <button onClick="mytimint=setInterval(myTimer, 60000/beat)" type="button" class="btn btn-secondary" ><i class="fa fa-play"></i>Play</button>
+          <button onClick="clearInterval(mytimint)" type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fa fa-pause"></i>Stop</button>
+          <button onClick="mytimdd=1" type="button" class="btn btn-primary"><i class="fa fa-trash"></i>Clear</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+         <div class="row jumbotron">
+            <div class="col-lg-3 col-md-6 col-sm-6 raginfo"></div>
+            <div class="col-lg-9 col-md-6 col-sm-6 list"></div>
+<textarea name="" id="myMorse" cols="30" rows="10"></textarea>
+        </div>        
+
+    <script src="aboutRaag.js"></script>
+    <!-- <script src="raagJson2.js"></script> -->
+    <script src="raagJson.js"></script>
+    <script src="transpose2.js"></script>
+    <script>
+        document.querySelector("#myMorse").addEventListener("keydown",(e)=>{
+            if(e.keyCode == 13){
+                mytimint=setInterval(myTimer, 60000/beat,)
+            }
+        })
+    </script>
+    <script src="music.js"></script>
+    
+    <script src="midi.js"></script>
+    <script>
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+var mytimint,mytimeout;
+
+function play(frequency,times){
+    // create Oscillator node
+    otype="triangle";
+    // sine square triangle sawtooth
+    const oscillator = audioCtx.createOscillator();
+    oscillator.frequency.setValueAtTime(frequency, audioCtx.currentTime);
+    let g = audioCtx.createGain();
+    oscillator.type = otype;        
+    oscillator.connect(g)
+    g.connect(audioCtx.destination)
+    oscillator.start()
+    g.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + 2 * times)
+    // create web audio api context
+}
+
+    var beat =120
+    var mytimd=1;
+    var mytimdd=-8;
+    var prevnote="";
+    var currnote="";
+    var mybeatcount=0;
+    var morseWord;
+    
+    function myTimer(){
+        if(mytimd>8){
+            document.getElementById("timer").innerHTML ="";
+            document.getElementById("note").innerHTML +="</br>";
+            mytimd=1;
+        }
+        document.getElementById("timer").innerHTML += mytimd++ + "    ";
+        // document.getElementById("note").innerHTML += `<button class="btn">${eval(raagSong.value)[mytimdd] || mytimd-1}</button> `+ "    " ;
+        mytimdd++;
+        morseWord= textToMorse(document.querySelector("#myMorse").value)
+        morseWord=morseWord.replace(" undefined ", "")
+        // console.log(noteFrequency[notes.indexOf(mynoted[mytimdd-1])])
+        // playnote(eval(raagSong.value),mytimdd)
+        console.log(morseWord)
+        playnote(morseWord.split(""),mytimdd)
+    }
+
+    var twonotes;
+    function myTimer1(){
+        mybeatcount++;
+        play(noteFrequency[notesB.indexOf(twonotes[mybeatcount])],.5)
+        if(mybeatcount == twonotes.length){
+            clearInterval(mytimeout)
+        }
+    }
+
+    function setDotDash(item){
+        if(item =="."){
+            play(440,.5)
+        }
+        else if(item == "-"){
+            play(440,1)
+        }
+        else{
+            play(0,1)
+        }
+    }
+    var morsed=[".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","  -.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--..-----",".----","..---","...--","....-",".....","-....","--...","---..","----."," "]
+var texted=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9"," "]
+
+    function morseToText(mors){
+    var morss=mors.split(" ")
+    var txtme="";
+    morss.forEach(mmors => {
+        var mytext=texted[morsed.indexOf(mmors)];
+        console.log(" my:"+mytext)
+        txtme += mytext 
+    });
+    return txtme;
+}
+
+function textToMorse(txt){
+    var txts=txt.split("")
+    var morsme="";
+    txts.forEach(ttxt => {
+        var mymorse=morsed[texted.indexOf(ttxt)];
+        console.log("has:"+mymorse)
+        morsme +=mymorse+" "
+    });
+    return morsme; 
+}
+
+    function playnote(mynotedd,mytimdd){
+        //..- - -- - - -
+        setDotDash(mynotedd[mytimdd])
+        // setDotDash
+        // console.log("mynotedd"+mynotedd)
+        if(mytimdd>=mynotedd.length){
+            // my current beat is greater than  the total note length
+            clearInterval(mytimint);
+        }
+        if(notesB.indexOf(mynotedd[mytimdd-1]) == (notesB.length-1)){
+            // index of the note in current beat is equal to the -
+            // without randomNOte the note is played twice rathe than extending
+            play(prevnote[randomNote],2)
+        }
+        else{
+            // previous note is stored in frequency and played on else
+            prevnote=noteFrequency[notesB.indexOf(mynotedd[mytimdd-1])]
+            // ["ab"]
+            if(mynotedd[mytimdd-1].length>1){
+                //if the length of current note is >1 suppose ab or bca
+                // console.log("else",mynotedd[mytimdd-1].length,mynotedd[mytimdd-1])
+                currnote=mynotedd[mytimdd-1]
+                // twonotes=mynotedd[mytimdd-1].split("");
+                mybeatcount=0;
+                twonotes=currnote.split("");
+                mytimeout= setInterval(myTimer1, 250)
+                    // var mytimeout=setInterval(play(440,1),250)
+                    // setTimeout(clearInterval(mytimeout),500)
+            }else{
+                play(prevnote,1)
+                // setDotDash(mynotedd[mytimdd-1])
+            }
+        }
+    }
+
+    </script>
+</body>
+</html>

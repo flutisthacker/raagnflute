@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Read File (via User Input selection)</title>
+ <script src="txtIO.js"></script>
+</head>
+<body onload="checkFileAPI();">
+    <div id="container">    
+        <input type="file" onchange='readText(this)' />
+        <br/>
+        <hr/>   
+        <h3>Contents of the Text file:</h3>
+        <div id="main" >
+            ...
+        </div>
+        <div class="list"></div>
+    </div>
+</body>
+</html>

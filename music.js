@@ -1,33 +1,32 @@
-const notes = ["b","c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "B","C","C#","D","D#", "E", "F", "F#", "G", "G#", "A", "A#","-"];
-// const notes = ["b","C", "c", "D", "d", "E", "F", "f", "G", "g", "A", "a", "B","C","-"];
+const notesA = ["b","c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "B","C","C#","D","D#", "E", "F", "F#", "G", "G#", "A", "A#","-"];
+const notesB = ["b","C", "c", "D", "d", "E", "F", "f", "G", "g", "A", "a", "B","C","-"];
+//for notesc recorder
+const notesC = ["b","C4", "C#4", "D4", "D#4", "E4", "F4", "F#4", "G4", "G#4", "A4", "A#4", "B4","C5","C#5","D5","D#5", "E5", "F5", "F#5", "G5", "G#5", "A5", "A#5","-"];
 /* 
 
  311.1, 329.6, 349.2, 370.0, 392.0, 415.3, 440, 466.2
 */
 let noteFrequency = [246.95,
   261.6, 277.2, 293.7, 311.1, 329.6, 349.2, 370.0, 392.0, 415.3, 440, 466.2,
-   493.9,523.2,554.4,587.4,622.2, 659.2, 698.4, 740, 784, 830.6, 880, 932.4];
-var mynoted=["a", "a", "B", "-", "a", "a", "B", "-",
- "a", "B", "C", "B", "a","Ba", "f", "-",
-  "e", "c", "e", "f", "e", "ec", "B", "-", "a", "a", "B", "-", "a", "a", "B", "-", "e", "f",
-"B",
-"a", "f", "e", "-", "-"]
+   493.9,523.2
+   ,554.4,587.4,622.2, 659.2, 698.4, 740, 784, 830.6, 880, 932.4
+];
+// var mynoted=["a", "a", "B", "-", "a", "a", "B", "-",
+//  "a", "B", "C", "B", "a","Ba", "f", "-",
+//   "e", "c", "e", "f", "e", "ec", "B", "-", "a", "a", "B", "-", "a", "a", "B", "-", "e", "f",
+// "B",
+// "a", "f", "e", "-", "-"]
+
+var mynoted=["G", "GB", "B", "B", "G", "GB", "B", "B", "A", "B", "C", "C", "B", "BA", "G"]
+
 const sarang=["d", "g", "f", "d", "-", "c", "b", "c", "d", "f", "g", "f", "g", "a#", "g", "f",
 "g", "C", "B", "C", "-", "a#", "g", "f", "g", "B", "C", "D", "-", "C", "a#", "g",
 "g", "D", "C", "D", "B", "C", "g", "a#", "f", "g", "d", "f", "d", "c", "b", "c",
 "f", "f", "f", "g", "-", "g", "B", "B", "C", "-", "C", "C", "D", "B", "C", "-",
 "B", "C", "D", "F", "D", "C", "-", "D", "B", "C", "-", "D", "C", "a#", "g", "-",
 "C", "B", "C", "a#", "a#", "g", "a#", "g", "g", "f", "g", "f", "d", "c", "b", "c"]
-// var mynoted=["c", "c", "g", "g",
-// "a", "a", "g", "-",
-// "f", "f", "e", "e",
-// "d", "d", "c", "-",
-// "g", "g", "f", "f",
-// "e", "e", "d", "-",
-// "g", "g", "f", "e",
-// "ef", "de", "c", "-"
-// ]
 let frequency = 0;
+
 
 
 const addBtn = document.querySelector(".add")
@@ -39,7 +38,8 @@ let otype = "sine";
 let octave = 4;
 let quasiOctave = 0;
 
-addBtn.addEventListener("click", startOccilation())
+
+// addBtn.addEventListener("click", startOccilation())
 typeSelect.addEventListener("change", function () {
   otype = typeSelect.value;
 });

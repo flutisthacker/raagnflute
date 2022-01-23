@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app='kudo'>
+<head>
+<title>KUDO meeting extract</title>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="lAjNbaEPweHfoeW11W4mknjdnDEYQMPKKFSV78GnZQCCvF4uAesW3LMF-fC9UgQu0kHZmEDVOE6UpQQDoRuTrQ" />
+
+<script crossorigin='anonymous' src='https://statics.teams.microsoft.com/sdk/v1.4.2/js/MicrosoftTeams.min.js'></script>
+<link rel="stylesheet" media="screen" href="https://preprodassets.meetkudo.com/assets/pages/polls/styles-01f13790a71db8d615a4be3e64a16c0f52da03d4f50b44972475026da59a36c4.css" />
+
+</head>
+<body>
+<textarea placeholder="put old data....." name="textarea" cols="40" rows="40"  id="type1">
+</textarea>
+<textarea placeholder="put new data....." name="textarea" cols="40" rows="40"  id="type2">
+</textarea>
+<button onClick="showDiff()">
+show diff
+</button>
+<div id="mydiv">
+
+</div>
+<script>
+
+function showDiff(){
+    ak=document.querySelector("#type1").value
+    aj=document.querySelector("#type2").value
+akk=JSON.parse(ak)
+ajj=JSON.parse(aj)
+
+akkkk=[];
+akk.data.forEach(akkk=>{
+akkkk.push(akkk.id)
+})
+
+ajjjj=[];
+ajj.data.forEach(ajjj=>{
+ajjjj.push(ajjj.id)
+})
+akkkk.sort()
+ajjjj.sort()
+
+ajjjj.forEach(ja=>{
+akkkk.forEach(ka=>{
+if(ja!= ka){
+console.log(ja)
+}
+})
+})
+
+ajjjj.forEach(ka=>{
+console.log(akkkk.lastIndexOf(ka),ka)
+if(akkkk.lastIndexOf(ka) <0){
+document.querySelector("#mydiv").innerHTML +=ka + "<br>"
+}
+})
+}
+
+
+
+
+</script>
+</body>
+</html>

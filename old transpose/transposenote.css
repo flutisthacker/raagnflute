@@ -1,0 +1,733 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    /* background-color: #03ba9e;
+     */
+    /* background: url("../../gamemaybe/headphone.jpg"); */
+    background: url("../../gamemaybe/flute.jpg");
+    background-size:auto;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+  }
+#songstwo li{
+  font-size: 16px;
+}
+  #staffnotation {
+    background: white;
+    height: 100vh;
+    width: 100%;
+  }
+
+  form {
+    max-width: 40vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  form label {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+
+  form input {
+    border: 2px solid lightslategray;
+    height: 40px;
+    border-radius: 3ox;
+    padding: 5px;
+    font-size: 1rem;
+    outline: none;
+  }
+
+
+#sidemenu{
+  /* background-color: #0c9463; */
+  width: 50px;
+  height:30px;
+  display: block;
+  transition: .5s ease;
+  justify-content: center;
+}
+
+#sidemenu:hover{
+  width: 290px;
+}
+  .fixRight{
+    position:fixed;
+    bottom:0;
+    right:0;
+  }
+  .posR{
+    bottom:40px;
+  }
+  .posRR{
+    bottom:80px;
+  }
+  .posRRR{
+    bottom:120px;
+  }
+  .posfull{
+    bottom:160px;
+  }
+  .d-flex{
+    display:flex;
+  }
+  @media screen and (max-width:584px) {
+
+    .containerd {
+      width: 95%;
+      height: 80%;
+      background-color: rgba(222, 222, 222, .5);
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0px 30px 55px 2px rgba(22, 22, 29, 0.46);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      cursor: default;
+    }
+
+    .title {
+      width: 100%;
+      height: 25%;
+      background: url("../../gamemaybe/headphone.jpg");
+      background-size: cover;
+      background-position: right;
+      color: #aaa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .addSect {
+      width: 100%;
+      height: 15%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      border-bottom: 1px solid #dbdbdb;
+    }
+
+    .taskInput {
+      margin: 10px 0 10px 10px;
+      padding: 10px;
+      width: 180px;
+      height: 40px;
+      border-radius: 15px 0 0 15px;
+      border: 1px solid #dbdbdb;
+      border-right: none;
+      outline: none;
+    }
+
+
+    .add {
+      width: 65px;
+      height: 40px;
+      margin: 5px 5px 5px 0;
+      padding: 5px 5px 5px 0;
+      background-color: #f7b71d;
+      color: white;
+      border: none;
+      outline: none;
+      border-radius: 0 15px 15px 0;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: .8rem;
+      text-transform: capitalize;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .add:hover {
+      box-shadow: 2px 2px 2px 2px gray;
+      background-color: #ffa600;
+    }
+
+    .list {
+      width: 100%;
+      height: 70%;
+      padding: 0 10px 10px 10px;
+      overflow: auto;
+      background: url("../../gamemaybe/flute.png") ;
+
+    }
+
+
+    /* dom element */
+    .taskContainer {
+      border-bottom: 1px solid #dbdbdb;
+      padding: 5px 0 5px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .task {
+      width: 170px;
+    }
+
+
+    i.fas.fa-check,
+    i.fas.fa.trash-alt {
+      opacity: 0;
+      cursor: pointer;
+      transition: all .1s ease-in-out;
+    }
+
+    i.fas.fa-check:hover {
+      color: #0c9463;
+
+    }
+
+    i.fas.fa-trash-alt:hover {
+      color: #ff0000;
+    }
+
+    i.fas.fa-check:active {
+      transform: translateY(3px);
+    }
+
+    i.fas.fa-trash-alt:active {
+      transform: translateY(3px);
+    }
+
+    .taskContainer:hover i.fas.fa-check,
+    .taskContainer:hover i.fas.fa-trash-alt {
+      opacity: 1;
+    }
+
+
+    .toggle {
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      cursor: pointer;
+      transition: left .5s ease, font 1s ease;
+    }
+
+    .toggle i {
+      width: 3.5rem;
+      z-index: 2;
+      color: #a82acb;
+    }
+
+    .menu {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 40vw;
+      height: 100vh;
+      background-color: #5f9c5fd7;
+      transform: translateX(-101%);
+      will-change: transform;
+      transform: all .2s ease-in;
+      color: black
+    }
+
+    .menu.open {
+      transform: translateX(0%);
+    }
+
+    .menu.open+.toggle {
+      left: 5rem;
+      font-size: 2rem;
+    }
+
+    .menu-v {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 10vh;
+      /* background-color: #8f928f80; */
+      transform: translateX(-101%);
+      will-change: transform;
+      transform: all .2s ease-in;
+    }
+
+    .menu-v.open {
+      transform: translateX(0%);
+    }
+
+    .home {
+      min-height: 100vh;
+      width: 100%;
+      padding: 8rem;
+
+    }
+
+
+    .select ul {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: scroll;
+      margin-top: 60px;
+      padding: 2px 0;
+    }
+
+    .select ul li {
+      width: 100%;
+      height: 40px;
+      font-size: 1rem;
+      text-transform: capitalize;
+      margin: 5px 5px;
+      cursor: pointer;
+    }
+
+    .select ul li.active {
+      box-shadow: 1px 1px 5px gray;
+      background: rgba(0, 245, 0, 0.11);
+    }
+
+    .select ul li:hover {
+      box-shadow: 1px 1px 5px gray;
+      background: rgba(255, 0, 0, 0.11);
+    }
+
+    .select ul::-webkit-scrollbar {
+      background: transparent;
+    }
+  }
+
+  @media screen and (max-width: 1024px) and (min-width: 584px) {
+
+    .containerd {
+      width: 600px;
+      height: 600px;
+      background-color: rgba(222, 222, 222, .5);
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0px 30px 55px 2px rgba(22, 22, 29, 0.46);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      cursor: default;
+    }
+
+    .title {
+      width: 100%;
+      height: 25%;
+      background: url("../../gamemaybe/headphone.jpg");
+      background-size: cover;
+      background-position: right;
+      color: #aaa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .addSect {
+      width: 100%;
+      height: 15%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      border-bottom: 1px solid #dbdbdb;
+    }
+
+    .taskInput {
+      margin: 10px 0 10px 10px;
+      padding: 10px;
+      width: 180px;
+      height: 40px;
+      border-radius: 15px 0 0 15px;
+      border: 1px solid #dbdbdb;
+      border-right: none;
+      outline: none;
+    }
+
+
+    .add {
+      width: 65px;
+      height: 40px;
+      margin: 5px 5px 5px 0;
+      padding: 5px 5px 5px 0;
+      background-color: #f7b71d;
+      color: white;
+      border: none;
+      outline: none;
+      border-radius: 0 15px 15px 0;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: .8rem;
+      text-transform: capitalize;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .add:hover {
+      box-shadow: 2px 2px 2px 2px gray;
+      background-color: #ffa600;
+    }
+
+    .list {
+      width: 100%;
+      height: 70%;
+      padding: 0 10px 10px 10px;
+      overflow: auto;
+      background: url("../../gamemaybe/flute.png") ;
+    }
+
+
+    /* dom element */
+    .taskContainer {
+      border-bottom: 1px solid #dbdbdb;
+      padding: 5px 0 5px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .task {
+      width: 170px;
+    }
+
+
+    i.fas.fa-check,
+    i.fas.fa.trash-alt {
+      opacity: 0;
+      cursor: pointer;
+      transition: all .1s ease-in-out;
+    }
+
+    i.fas.fa-check:hover {
+      color: #0c9463;
+
+    }
+
+    i.fas.fa-trash-alt:hover {
+      color: #ff0000;
+    }
+
+    i.fas.fa-check:active {
+      transform: translateY(3px);
+    }
+
+    i.fas.fa-trash-alt:active {
+      transform: translateY(3px);
+    }
+
+    .taskContainer:hover i.fas.fa-check,
+    .taskContainer:hover i.fas.fa-trash-alt {
+      opacity: 1;
+    }
+
+
+    .toggle {
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      cursor: pointer;
+      transition: left .5s ease, font 1s ease;
+    }
+
+    .toggle i {
+      width: 3.5rem;
+      z-index: 2;
+      color: #a82acb;
+    }
+
+    .menu {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 40vw;
+      height: 100vh;
+      background-color: #8f928f80;
+      transform: translateX(-101%);
+      will-change: transform;
+      transform: all .2s ease-in;
+      color: black
+    }
+
+    .menu.open {
+      transform: translateX(0%);
+    }
+
+    .menu.open+.toggle {
+      left: 5rem;
+      font-size: 2rem;
+    }
+
+    .menu-v {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 10vh;
+      /* background-color: #8f928f80; */
+      transform: translateX(-101%);
+      will-change: transform;
+      transform: all .2s ease-in;
+    }
+
+    .menu-v.open {
+      transform: translateX(0%);
+    }
+
+    .home {
+      min-height: 100vh;
+      width: 100%;
+      padding: 8rem;
+
+    }
+
+
+    .select ul {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: scroll;
+      margin-top: 60px;
+      padding: 2px 0;
+    }
+
+    .select ul li {
+      width: 100%;
+      height: 40px;
+      font-size: 1rem;
+      text-transform: capitalize;
+      margin: 5px 5px;
+      cursor: pointer;
+    }
+
+    .select ul li.active {
+      box-shadow: 1px 1px 5px gray;
+      background: rgba(0, 245, 0, 0.11);
+    }
+
+    .select ul li:hover {
+      box-shadow: 1px 1px 5px gray;
+      background: rgba(255, 0, 0, 0.11);
+    }
+
+    .select ul::-webkit-scrollbar {
+      background: transparent;
+    }
+  }
+
+  @media screen and (min-width:1024px) {
+    .containerd {
+      width: 900px;
+      height: 600px;
+      background-color: #fff;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0px 30px 55px 2px rgba(22, 22, 29, 0.46);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      cursor: default;
+    }
+
+    .title {
+      width: 100%;
+      height: 25%;
+      background: url("../../gamemaybe/headphone.jpg");
+      background-size: cover;
+      background-position: right;
+      color: #aaa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .addSect {
+      width: 100%;
+      height: 15%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      border-bottom: 1px solid #dbdbdb;
+    }
+
+    .taskInput {
+      margin: 10px 0 10px 10px;
+      padding: 10px;
+      width: 180px;
+      height: 40px;
+      border-radius: 15px 0 0 15px;
+      border: 1px solid #dbdbdb;
+      border-right: none;
+      outline: none;
+    }
+
+
+    .add {
+      width: 65px;
+      height: 40px;
+      margin: 5px 5px 5px 0;
+      padding: 5px 5px 5px 0;
+      background-color: #f7b71d;
+      color: white;
+      border: none;
+      outline: none;
+      border-radius: 0 15px 15px 0;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: .8rem;
+      text-transform: capitalize;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .add:hover {
+      box-shadow: 2px 2px 2px 2px gray;
+      background-color: #ffa600;
+    }
+
+    .list {
+      width: 100%;
+      height: 70%;
+      padding: 0 10px 10px 10px;
+      overflow: auto;
+      background: url("../../gamemaybe/flute.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+
+    /* dom element */
+    .taskContainer {
+      border-bottom: 1px solid #dbdbdb;
+      padding: 5px 0 5px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .task {
+      width: 170px;
+    }
+
+
+    i.fas.fa-check,
+    i.fas.fa.trash-alt {
+      opacity: 0;
+      cursor: pointer;
+      transition: all .1s ease-in-out;
+    }
+
+    i.fas.fa-check:hover {
+      color: #0c9463;
+
+    }
+
+    i.fas.fa-trash-alt:hover {
+      color: #ff0000;
+    }
+
+    i.fas.fa-check:active {
+      transform: translateY(3px);
+    }
+
+    i.fas.fa-trash-alt:active {
+      transform: translateY(3px);
+    }
+
+    .taskContainer:hover i.fas.fa-check,
+    .taskContainer:hover i.fas.fa-trash-alt {
+      opacity: 1;
+    }
+
+    .toggle {
+      position: absolute;
+      top: 2.5rem;
+      left: 2.5rem;
+      cursor: pointer;
+      transition: left .5s ease, font 1s ease;
+    }
+
+    .toggle i {
+      width: 3.5rem;
+      z-index: 2;
+      color: #a82acb;
+    }
+
+    .menu {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 20vw;
+      height: 100vh;
+      /* background-color: #8f928f80; */
+      transform: translateX(-101%);
+      will-change: transform;
+      transform: all .2s ease-in;
+      color: black
+    }
+
+    .menu.open {
+      transform: translateX(0%);
+    }
+
+    .menu.open+.toggle {
+      left: 8rem;
+      font-size: 2rem;
+    }
+
+    .menu-v {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 10vh;
+      /* background-color: #8f928f80; */
+      transform: translateX(-101%);
+      will-change: transform;
+      transform: all .2s ease-in;
+    }
+
+    .menu-v.open {
+      transform: translateX(0%);
+    }
+
+    .home {
+      min-height: 100vh;
+      width: 100%;
+      padding: 8rem;
+
+    }
+
+
+    .select ul {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: scroll;
+      margin-top: 80px;
+      padding: 2px 0;
+    }
+
+    .select ul li {
+      width: 100%;
+      height: 40px;
+      font-size: 1.5rem;
+      text-transform: capitalize;
+      margin: 5px 5px;
+      cursor: pointer;
+    }
+
+    .select ul li.active {
+      box-shadow: 1px 1px 5px gray;
+      background: rgba(0, 245, 0, 0.11);
+    }
+
+    .select ul li:hover {
+      box-shadow: 1px 1px 5px gray;
+      background: rgba(255, 0, 0, 0.11);
+    }
+
+    .select ul::-webkit-scrollbar {
+      background: transparent;
+    }
+  }

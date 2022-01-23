@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app='kudo'>
+<head>
+
+
+</script>
+<link rel="stylesheet" media="screen" href="https://uniccassets.meetkudo.com/assets/pages/sessions/styles-4dd5e5e43f6a479ec2968dee9309a531a1b002f14337db689bfd0b93e329ec84.css" />
+<style>
+ul {
+  list-style: none;
+}
+
+.buttons-list li {
+  display: inline-block;
+}
+
+button {
+  border: 1px solid #333;
+  background: #DDD;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+#tetris {
+  background: #4466ff;
+  color: #FFF;
+}
+</style>
+</head>
+<body>
+
+
+<textarea placeholder="put old data....." name="textarea" cols="40" rows="20"  id="type1">
+e e e - e e e - e g c d e - - - f f f - e e e - d d d e d - -</textarea>
+<textarea placeholder="put new data....." name="textarea" cols="40" rows="20"  id="type2">
+</textarea>
+<div class='clearfix'></div>
+<div class='container-fluid p-4 content'>
+<ul class="buttons-list">
+    <li><button id="convert">Convert</button></li>
+    <li><button id="tetris">Play Tetris</button></li>
+    <li><button id="typesine">Sine</button></li>
+    <li><button id="typesquare">Square</button></li>
+    <li><button id="typesaw">Sawtooth</button></li>
+    <li><button id="typetriangle">Triangle</button></li>
+</ul>
+
+<ul id="midi-list">
+
+</ul>
+<div id="debug"></div>
+</div>
+<script src="transpose2.js"></script>
+<!-- <script src="../varnotes.js"></script>  -->
+
+<!-- <script src="music.js"></script> -->
+<script src="midi.js"></script>
+
+</form></div>
+</div>
+
+</div>
+</div>
+
+
+</body>
+</html>

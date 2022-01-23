@@ -1,6 +1,5 @@
-abcd = "c#d#f#"
-console.log(splitnotes(abcd));
-
+// abcd = "c#d#f#"
+// console.log(splitnotes(abcd));
 function splitnotes(abcd) {
   defg = [];
   bcde = abcd.split("")
@@ -10,7 +9,7 @@ function splitnotes(abcd) {
 
     }
   })
-
+  
   for (j = 0; j < bcde.length; j++) {
     for (i = 0; i < defg.length; i++) {
       if (j == defg[i]) {
@@ -18,7 +17,7 @@ function splitnotes(abcd) {
       }
     }
   }
-
+  
   w = 0;
   for (i = 0; i < defg.length; i++) {
     bcde.splice(defg[i] - w, 1)
@@ -28,6 +27,7 @@ function splitnotes(abcd) {
   // return bcde.join().split(", ,");
 }
 
+const keey = ["c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b", "-"];
 const Ckey = ["C", "c", "D", "d", "E", "F", "f", "G", "g", "A", "a", "B", "-"];
 const Nepnotes = ["सा", "रेे।", "रे", "ग|", "ग", "म", "म।", "प", "ध।", "ध", "नि।", "नि", "-"];
 const Newanotes = ["न", "माे।", "माे", "बा।", "बा।", "गे", "म।", "साे", "ध।", "रा", "नि।", "क", "-"];
@@ -88,7 +88,7 @@ function transpose(note, key, beat) {
       const searchRegExp = /,/g;
       const replaceWith = '';
       const result = notej.join().replace(searchRegExp, replaceWith);
-      console.log("result"+result)
+      // console.log("result"+result)
       newscale.push(result);
 
     } else {
@@ -147,10 +147,12 @@ function maketable(numoftab) {
   tbody.className = "tbody"
   theadtr = document.createElement('tr');
   var tds = [];
+  
   for (var i = 0; i < numoftab; i++) {
     tds[i] = document.createElement("td");
     tds[i].innerHTML = i + 1;
   }
+
   table.prepend(tbody)
   for (var i = (numoftab - 1); i >= 0; i--) {
     theadtr.prepend(tds[i])
@@ -159,3 +161,5 @@ function maketable(numoftab) {
   table.prepend(thead)
   body.prepend(table)
 }
+
+// export default splitnotes;

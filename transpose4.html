@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff notation</title>
+  <link rel="shortcut icon" href="https://www.transparentpng.com/thumb/musical-notes/music-notes-png-pictures-3.png"
+    type="image/x-icon">
+</head>
+<style>
+  #boo {
+    width: 100%;
+    height: 100vh;
+  }
+</style>
+
+<body>
+  <input type="text" name="notes" id="takekey">
+  <div id="staffnotation"></div>
+</body>
+
+<!-- <script src="../resources/console.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vexflow/3.0.9/vexflow-min.js"></script>
+<script src="stave.js"></script>
+<script src="notesshow2.js"></script>
+<!-- <script src="notesshow.js"></script> -->
+<!-- <script src="sayHi.js"></script> -->
+
+<script>
+  // adds notes/
+  twinkle = ["c", "c", "G", "G", "A", "A", "G", "-", "f", "f", "e", "e", "d", "d", "c", "-", "G", "G", "f", "f", "e",
+    "e", "d", "-", "G", "G", "f", "e", "f", "d", "c", "-"
+  ]
+  var slicednote = [];
+  var keepslicednote = [];
+  var a;
+  document.querySelector("#takekey").addEventListener("keyup", (w) => {
+    a = document.querySelector("#takekey").value.split(" ")
+    if (w.keyCode == 13) {
+      putnotes(a);
+    }
+    if (w.keyCode == 27) {
+      haitnotes(a);
+    }
+
+  })
+
+  function haitnotes(a) {
+    while (a.length) {
+      slicednote.push(a.splice(0, 4));
+    }
+    console.log(a.length,slicednote);
+    
+    slicednote.forEach(slice => {
+      for (i = 0; i < slice.length; i++) {
+        if (i == 3) {
+          if (slice[0].length == 2 || slice[1].length == 2 || slice[3].length == 2 || slice[2].length == 2) {
+            // ssplice = slice[i].split("")
+          }
+          acc = slice[0].split("");
+          addtwonotes([slice[0].split("")], [slice[1].split("")], [slice[2].split("")], [slice[3].split("")])
+          // [a + "/4"]
+        }
+      }
+    })
+
+  }
+
+  function putnotes(a) {
+    // a = twinkle
+    // divide notes into 4 for staff
+    while (a.length) {
+      slicednote.push(a.splice(0, 4));
+    }
+    console.log("slicednote"+slicednote);
+
+    slicednote.forEach(slice => {
+      addbadnotes(slice);
+      for (i = 0; i < slice.length; i++) {
+        if (i == 3) {
+          // addlines(slice[0], slice[1], slice[2], slice[3])
+        }
+      }
+    })
+
+  }
+
+  function keepnote(a) {
+    // a = cc
+    // divide notes into 4 for staff
+    while (a.length) {
+      slicednote.push(a.splice(0, a.length));
+    }
+    console.log(slicednote);
+
+    keepslicednote.forEach(slice => {
+      for (i = 0; i < slice.length; i++) {
+        if (i == a.length - 1) {
+          // if (slice[0].length == 2 || slice[1].length == 2 || slice[3].length == 2 || slice[2].length == 2) {
+          //   // ssplice = slice[i].split("")
+          // }
+          addlines(slice[0], slice[1], slice[2], slice[3])
+        }
+      }
+    })
+
+  }
+
+  var totranslatenote = localStorage.getItem("totranslatenote");
+  if (totranslatenote != null) {
+    debugger
+    totranslatenote = JSON.parse(totranslatenote)
+    putnotes(totranslatenote.notes)
+    hone = document.createElement("h1")
+    hone.innerText = totranslatenote.name.replace("note.", "")
+    document.querySelector("body").prepend(hone)
+    localStorage.removeItem("totranslatenote");
+  }
+</script>
+
+</html>

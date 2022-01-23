@@ -14,9 +14,15 @@
             margin:2px;
         }
     </style>
-    <script src="raagJson.js"></script>
+    <script type="module" src="raagJson.js"></script>
 <textarea name="" id="takenote" cols="30" rows="10"></textarea>
 <textarea name="" id="givenote" cols="30" rows="10"></textarea>
+<select name="" id="typeSelect">
+    <option value="sine">sine</option>
+    <option value="triangle">triangle</option>
+    <option value="sawtooth">sawtooth</option>
+    <option value="square">square</option>
+</select>
 <button class="change">change</button>
 <input type="text" name="" id="idmaker" placeholder="put to make ids">
 <div class="mybtn">
@@ -34,20 +40,32 @@
     var mytimint,mytimeout;
     
     function play(frequency,times){
-        // create Oscillator node
-        otype="triangle";
-        // sine square triangle sawtooth
-        const oscillator = audioCtx.createOscillator();
-        oscillator.frequency.setValueAtTime(frequency, audioCtx.currentTime);
-        let g = audioCtx.createGain();
-        oscillator.type = otype;        
-        oscillator.connect(g)
-        g.connect(audioCtx.destination)
-        oscillator.start()
-        g.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + 2 * times)
-        // create web audio api context
-    }
+        navigator.mediaDevices.getUserMedia({
+        audio: true
+        }).then(function (localStream) {
+            // create Oscillator node
+            otype="sine";
+            // sine square triangle sawtooth
+            const oscillator = audioCtx.createOscillator();
+            oscillator.frequency.setValueAtTime(frequency, audioCtx.currentTime);
+            let g = audioCtx.createGain();
+            oscillator.type = otype;        
+            oscillator.connect(g)
+            g.connect(audioCtx.destination)
+            oscillator.start()
+            g.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + 2 * times)
+            // create web audio api context
 
+        })
+        .catch(function () {
+        //Handle error
+        });
+    }
+        play(8782,.5)
+        play(8782/2,.5*2)
+        play(8782/4,.5*2)
+        play(8782/8,.5*2)
+        play(8782/16,.5*1)
         var beat =120
         var mytimd=1;
         var mytimdd=-8;
@@ -74,10 +92,10 @@
             playnote(mynoted,mytimdd)
         }
 
-        var twonotes;
+        var twonotes,mytimeout;
         function myTimer1(){
+            play(noteFrequency[notesA.indexOf(twonotes[mybeatcount])],.5)
             mybeatcount++;
-            play(noteFrequency[notes.indexOf(twonotes[mybeatcount])],.5)
             if(mybeatcount == twonotes.length){
                 clearInterval(mytimeout)
             }
@@ -89,33 +107,36 @@
                 // my current beat is greater than  the total note length
                 clearInterval(mytimint);
             }
-            if(notes.indexOf(mynotedd[mytimdd-1]) == (notes.length-1)){
+            else if(notesA.indexOf(mynotedd[mytimdd-1]) == (notesA.length-1)){
                 // index of the note in current beat is equal to the -
                 // without randomNOte the note is played twice rathe than extending
                 play(prevnote[randomNote],2)
             }
             else{
                 // previous note is stored in frequency and played on else
-                prevnote=noteFrequency[notes.indexOf(mynotedd[mytimdd-1])]
+                prevnote=noteFrequency[notesA.indexOf(mynotedd[mytimdd-1])]
                 // ["ab"]
                 if(mynotedd[mytimdd-1].length>1){
+                    mybeatcount=0;
                     //if the length of current note is >1 suppose ab or bca
-                    // console.log("else",mynotedd[mytimdd-1].length,mynotedd[mytimdd-1])
                     currnote=mynotedd[mytimdd-1]
                     // twonotes=mynotedd[mytimdd-1].split("");
-                    mybeatcount=0;
                     twonotes=currnote.split("");
                     mytimeout= setInterval(myTimer1, 250)
                         // var mytimeout=setInterval(play(440,1),250)
                         // setTimeout(clearInterval(mytimeout),500)
-                }else{
+                }
+                else{
                     play(prevnote,1)
+
                 }
             }
         }
 
+
 </script>
 <script src="transpose2.js"></script>
+
 <script>
         // const Ckey = ["C", "c", "D", "d", "E", "F", "f", "G", "g", "A", "a", "B", "-"];
         // const keey = ["c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b", "-"];
@@ -125,19 +146,21 @@
         /* 
         धं निं सां रें गं मं पं 
         पँ धँ निँ सा
-            */
-
-            
-        document.querySelector("#takenote").value=["BC", "CA", "A", "G", "-", "f", "d", "f", "G", "-", "-", "f", "d", "D", "C", "-", "CB", "C", "d", "f", "G", "A", "G", "G", "B", "B", "C", "A", "G", "f", "d", "f", "G", "G", "B", "C", "E", "F", "F", "C", "-", "D", "-", "C", "B","fE", "f", "G", "-", "fG", "A", "G", "f", "d", "f", "G", "B", "C", "-", "-", "d", "D", "D", "C", "-", "f", "d", "D", "C", "D", "C", "-", "C", "B", "B", "C", "C", "A", "A", "G", "G", "G", "f", "G", "f", "d", "F", "G", "B", "C","dD", "BC", "AG", "AG", "FE", "FE", "DC"]
+            */            
+        document.querySelector("#takenote").value= songraag["bhairavi"].note   
         acd=document.querySelector("#takenote").value
         acdd=acd.split(",")
         newxx=transpose(acdd,keey,8)
-        document.querySelector("#givenote").value=newxx
+        newxx.forEach(nx=>{
+            document.querySelector("#givenote").value+=`"${nx}",`
+        })
         document.querySelector(".list").innerHTML=""
-
-    toChange.forEach(note=>{
-        newNote.push(Ckey[neey.indexOf(note)])
-    })
+        dsa = document.querySelector("#givenote").value
+        console.log(dsa.split(","))
+        
+        toChange.forEach(note=>{
+            newNote.push(Ckey[neey.indexOf(note)])
+        })
 
 /* 
 var id=""

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .card{
+        width:200px;
+        height:200px;
+        background-color: #cccccc9f;
+    position: relative;
+    transition: transform 2s ease;
+    }
+    .card::before{
+        content:"";
+        position: absolute;
+        bottom: -20px;
+        right:-20px;
+        width:100px;
+        height:100px;
+        background-color: red;
+        border-radius: 50%;
+    }
+    .card:hover{
+        background-color: red;
+    }
+    .card:hover::before{
+        content:"";
+        position: absolute;
+        bottom: -20px;
+        right:-20px;
+        width:100px;
+        height:100px;
+    border-radius: 50%;
+        background-color: #cccccc9f;
+
+    }
+</style>
+<body>
+    
+    <div class="card"></div>
+
+
+    <script>
+        const rgbTOHEx = (r,g,b)=> "#" +((1<<24) + (r<<16) +(g<<8) + b).toString(16).slice(1);
+
+        console.log(rgbTOHEx(245,132,14))
+    </script>
+</body>
+</html>
