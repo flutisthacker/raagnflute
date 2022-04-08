@@ -25,7 +25,7 @@ notex = {
   "sakura": {
     "note": ["a", "a", "b", "-", "a", "a", "b", "-", "a", "b", "c", "b", "a",
       "ba", "f", "-","a", "b", "c", "b", "a",
-      "ba", "f", "-", "e", "c", "e", "f", "e", "ec", "b", "-", "a", "a", "b", "-", "a", "a", "b", "-", "e", "f",
+        "ba", "f", "-", "e", "c", "e", "f", "e", "ec", "b", "-", "a", "a", "b", "-", "a", "a", "b", "-", "e", "f",
       "ba",
       "f", "e", "-", "-", "-"
     ],
@@ -640,8 +640,8 @@ notex = {
     "note": ["cb", "cb", "cb", "cb", "cb", "cb", "cb", "cd", "cde", "def", "ed", "cb", "cb", "cb", "cb", "cb", "cb", "cb", "cbc", "ed",
       "c", "b", "g", "-", "-", "-", "-", "-ag", "f", "e", "g", "-", "-", "-", "-", "-", "f", "a", "c", "b", "-", "-", "-", "-", "f", "a", "c", "b", "-", "-", "-", "-", "g", "a", "g", "e", "d", "e", "f", "e", "-", "-", "-", "-", "g", "gg", "gg", "g", "gg", "gg", "e", "f", "g", "cb", "cb", "cd", "f", "ff", "ff", "f", "ff", "ff", "f", "a",
       "b", "cb", "ag", "fe", "b", "c", "g", "f", "e", "-", "-", "-", "-", "-", "-", "-",
-      "e", "f", "g", "b", "a", "-", "-", "-", "c", "e", "f", "a", "g", "-", "-", "-", "e", "f", "g", "c", "b", "-", "-", "-", "b", "cb", "a", "b", "c", "-", "-", "-"
-      // "e", "f", "g", "a#", "a", "-", "-", "-", "c", "e", "f", "a", "g", "-", "-", "-", "e", "f", "g", "a#", "a", "-", "-", "-", "b", "cb", "a", "b", "c", "-", "-", "-"
+      // "e", "f", "g", "b", "a", "-", "-", "-", "c", "e", "f", "a", "g", "-", "-", "-", "e", "f", "g", "c", "b", "-", "-", "-", "b", "cb", "a", "b", "c", "-", "-", "-"
+      "e", "f", "g", "a#", "a", "-", "-", "-", "c", "e", "f", "a", "g", "-", "-", "-", "e", "f", "g", "a#", "a", "-", "-", "-", "b", "cb", "a", "b", "c", "-", "-", "-"
     ],
     "key": "C",
     "beat": "8",
@@ -1455,7 +1455,7 @@ notex = {
   },
   "tuhire": {
     "note": ["aa","b","-","-","aad","b","-","-","ab","cd","c","ba","aa","f","-","-","fa","g","-","-","ga","gad","-","-","dd","g-g","g","ag","ed","ddc","d","de","-","dc","cd","cdb","bb","dd","d","ec","ba","a","-","-","gf","gg","ga","-","gf","ge","-","-","ee","ef","g","af","ed","d","gf","g","-","-","gf","gfe","-","-","ee","gg","af","ed","d","bdfe","dcb","cd","gf","ef","fd","dd","cd","cded","c","b","a","cd","gf","dd","d","de","aa","a","aa","a","ga","aa","gag","ed","de","ga","cb","aa","gg","ge","egg","fe","cc","cd","eg","ed","cb","a"],
-    "key": "G",
+    "key": "A",
     "beat": "8",
     "locale": "hindi",
     "bpm":"90",
@@ -2726,7 +2726,8 @@ notex = {
       "c", "d", "e", "-", "-", "c", "b", "g",
       "e", "c", "d", "-", "-", "-", "-", "-",
       "e", "g", "a", "-", "-", "c", "b", "a",
-      "e", "d", "c", "-", "-", "-", "-", "-"
+      "e", "d", "c", "-", "-", "-", "-", "-",
+      "a","a","a-a","gaba","ge","-","-","-","a","a","a-a","ga","b","-","-","-","a","a","a-a","gaba","ge","-","-","eg","c","-d","bg","ec","a","-","-","-"
     ],
     "key": "G#",
     "beat": "8",
@@ -4621,7 +4622,9 @@ notex = {
     "title":"Take five"
         }
       ,"phulbuttesari": {
-        "note": ["a","aa","ad","ca","gg","g","g","a","ff","f","fa","ga","gf","-","-","-","fg","a","c","c","gc","d","d","d","ac","d","fd","fa","g","g","g","-","-","ag","a","gf","d","gf","g","fd","c","dc","d","ca","af","g","g","g","-","fg","a","ca","f","gf","f","f","-","fg","ag","ag","a","f","gaa","f","gaa","f","gaa","ag"],
+        "note": ["a","aa","ad","ca","gg","g","ga","g","ff","f","fa","ga","gf","cd","fg","agf",
+        "a","aa","ad","ca","gg","g","gc","ag","ff","f","fa","ga","gf","-","-","-"
+        ,"fg","a","c","c","ac","d","cd","d","ac","d","fd","fa","g","g","ga","gf","-","ag","a","gf","d","gf","g","fd","c","dc","d","ca","af","g","g","g","-","fg","a","ca","f","gf","f","f","-","fg","ag","ag","a","f","gaa","f","gaa","f","gaa","ag"],
         "key": "G#",
         "beat": "8",
         "locale": "nepali",
@@ -4887,7 +4890,7 @@ notex = {
           "note": ["cc","ced","fe","dbc","cc","ced","f","g","cc","ga","fe","bc","c","cc","ced","f","dbdc","bce","d","f","g","cc","ga","fe","ded","f","gg","gag","fe","bc","de","de","bc","g","f","e","bc","e","g"],
           "key": "G",
           "beat": "8",
-          "locale": "telegu",
+          "locale": "telugu",
           "bpm":"90",
           "artist":"abc",
           "title":"Dear Comrade"
@@ -5229,7 +5232,7 @@ notex = {
         "note": ["fg","ad","c","ba","gf","d","fe","dc","bc","d","fg","ad","c","ba","gf","e","f","e","d","e","d","c","b","a","f","g","a","d","c","b","a","ffc","b","a","f","g","f","a","aa","aa","aa","a","fg","a","g","f","b","e","d","c","df","g","a","d","c","b","a","b","c","d","f","e","f","e","d","d","a","f","g","f","e","d","g","b","c","d","c","b","a","g","g","f","e","d","g","b","g","f","e","d","c","b","a","d","c","b","a","b","c","d","f","e","f","e","d","dc","d","f","a","a","g","f","e","d","f","e","d","c","b","d","d","b","a","g","gb","cf","e","ce","gb","a","gf","ef","cba","ba","g","ec","a","d","b","c","d","f","e","d","c","f","fe","gf","dd","d","cd","ab","dd","d"],
         "key": "E",
         "beat": "8",
-        "locale": "telegu",
+        "locale": "telugu",
         "bpm":"90",
         "artist":"abc",
       "title":"Seemanthepoo"
@@ -5472,7 +5475,7 @@ notex = {
           }
         ,"pehlanasha": {
           "note": ["ee","g","ga","f","ed","gg","ee","g","ga","f","ed","ed","cb","ab","c","fe","e","cb","ab","c","fe","e","cd","e","cd","-","cb","cg","ab","a","a","gf","d","a","-","g","g","cb","c","g","ab","a","ag","f","d","a","gg","gf","ga","-","-","b","ag","gf","g","gf","g","-","a","b","-","c","f","f","ef"],
-          "key": "G",
+          "key": "F",
           "beat": "8",
           "locale": "hindi",
           "bpm":"90",
@@ -5892,6 +5895,82 @@ notex = {
       "artist":"saman",
       "title": "Monta re"      
       }
+      ,"srivalli": {
+        "note": [
+          "c","de","dc","b","c","de","d","c","c","de","dc","b","cd","gf","e","-","c","de","dc","b","c","de","d","c","c","de","dc","b","cdg","fg","e","-","c","gg","gg","fgg","gg","fg","fe","-","c","gg","gg","fgg","gg","fg","fe","-","eff","gf","ed","e","eff","gf","ed","e","eff","gf","ed","e","c","ed","cb","c","c","c-c","cc","cd","e","ed","de","fe","d","b","b","b","ab","ab","ag","-","-","c","cc","c","ba","g","gag","fe","gg","c","cc","c","ba","g","gag","fe","f","c","cc","c","ba","g","gag","fe","gg","c","cc","dc","ba","ag","gag","eg","f","ga","ba","ga","ba","ga","bc","ba","gf","ga","ba","ga","ba","c","cc","c-c","c",
+          "c","cc","cc","dd","de","c","cc","cc","dd","df","e","c","gg","e","ff","de","e","cd","ef","gf","ed","de","fgg"
+        ],
+        "key": "E",
+        "beat": "8",
+        "locale": "telugu",
+        "bpm":"90",
+        "artist":"srid sriram",
+        "title": "Srivalli"
+        }
+        ,"kalavathi": {
+      "note": ["g","g","g","e","f","d","c","-","c","-","b","c","d","gg","g","b","a","-","-","-","-","g","g","g","e","f","d","c","-","c","-","b","c","d","g","g","e","f","d","c","-","-","dd","dd","dd","dd","dd","dd","dd","dd","dddd","dc","dc","c","-","-g","g","c","-","c","c","g","g","c","-","dff","dff","dff","gf","de","dff","dff","dff","gf","de","gg","gf","ff","fe","ee","ed","dd","de","de","de","de","de","de","d","-","ce","fg","gf","fg","e","e","e","f","g","e","d","c","gg","fg","ef","gb","gf","dc","cc","bc","d","ef","g","ed","dff","fd","dff","fd","df","gb","gf","de","gg","gf","ff","fe","ee","ed","dd","de","fe","de","fe","de","fe","d","-"],
+      "key": "C",
+      "beat": "8",
+      "locale": "telugu",
+      "bpm":"90",
+      "artist":"sri sidram",
+      "title": "kalavathi"      
+    }
+    ,"nagumomutharale": {
+      "note": ["a","ab","cf","ef","ce","fg","fgfe","dc","ce","fg","fgfe","dc","","cg","ab","a","-","a","b","g","cbc","=","ab","ag","a","=","a","bg","f","ed","c","cd","ef","cc","f","cc","fg","fg","a","f","c","aga","ba","g","-","aa","ba","g","-","ac","ded","bb","ag","acba","gf","ff","ff","ag","ac","ded","bb","ag","acba","gf","ff","ff","af","cc","gb","a","-","cc","gb","a","-","aa","ba","g","gg","ag","f","a","cb","gb","a","fg","ga","fg","ga","fg","ga","cd","ef","aa","c","ag","fe","ff","f","aa","c","ag","fe","ff","f","ce","fg","f","e","dc","ce","fg","f","e","dc","fg","bab","cc","cc","cd","cba","bag"],
+      "key": "E",
+      "beat": "8",
+      "locale": "telugu",
+      "bpm":"90",
+      "artist":"sri sidram",
+      "title": "nagumomu tharale"      
+    }
+    ,"komurambhhem": {
+      "note": ["ddf","ga","a","aac","ag","g","aac","ag","gf","fg","a","gg","g","ff","df","g","ff","fd","da","g","f","c","d","f","c","d","f","g","dd","df","ff","f","dd","f","ff","f","dd","aa","aa","ag","ac","af","d"],
+      "key": "F",
+      "beat": "8",
+      "locale": "telugu",
+      "bpm":"90",
+      "artist":"saman",
+      "title": "komuram bhhem"      
+    }
+    ,"ramamraghavam": {
+      "notea": ["c","d","f","g","fg","a","g","f","e","c","d","e","f","edc","b","c","d","c","b","c","c","c","b","g","b","d","e","d","c","c","b","g","d","c"],
+      "note": ["c","d","f","g","fg","a","g","f","e","c","d","e","f","edc","a#","c","c#","c","a#","c","c","c","a#","g","a#","d#","d#","c#","c","c","a#","g","c#","c"],
+      "key": "A",
+      "beat": "8",
+      "locale": "telugu",
+      "bpm":"90",
+      "artist":"saman",
+      "title": "ramamraghavam"      
+    }
+    ,"undhiporadhey": {
+      "note": ["ac","dd","e","ec","d","de","c","ag","ac","cd","eg","g","fe","d","ed","ga","cb","ga","cb","ga","ed","cb","cd","ee","gf","fe","ccd","ee","cded","cb","ab","cb","d","ab","ce","d","ed","e","ed","e","ed","ef","ec","-","ed","e","ed","e","-d","ef","ec","ad","d","dba","ad","d","dba","ad","d","dba","ac","b","e","ee","ded","c","ce","d","cc","bcb","ad","dd","cdc","a","ac","b"],
+      "key": "C#",
+      "beat": "8",
+      "locale": "telugu",
+      "bpm":"90",
+      "artist":"saman",
+      "title": "undhiporadhey"      
+    }
+    ,"padipadilechhe": {
+      "note": ["ga","bc","d","d","cd","f","ed","c","dcd","cd","f","ed","c","dcd","cd","f","edc","dc","a","agfg","d","dd","cdd","dd","cd","cb","gf","gc","b","gf","gf","g","gd","df","g","ffd","gd","df","g","ffd","gd","df","g","ffd","ddf","aa","ag","fg","fg","bag","g","gf","fg","g","fg","bgg","g","fg","bgg","g","fg","bgg","g","fg","bgg","g","fg","c","cb","c","cb","c","cb","d","fg","fg","fg","fg","bg","gd","cd","cb","c","cd","cb","c","d","cb","ag","g","fefd","d","fe","fd","fefd","d","fe","fd","cc","c","c","fe","fd","fefd","d","fe","fd","fefd","d","fe","fd","cc","c","c","ef","g"],
+      "key": "G",
+      "beat": "8",
+      "locale": "telugu",
+      "bpm":"90",
+      "artist":"saman",
+      "title": "padipadilechhe"      
+    },
+    "srivennala": {
+      "note": ["c","dc","c","dc","c","cd","e","dc","cd","e","dc","cd","ee","dc","cg","gf","fe","defe","f","dd","ab","cd","cba","a","gga","bb","a","ggg","ggg","gg","abb","a","ggg","ggg","gg","abb","a","ggg","ggg","gg","gd","dc","cb","ba","bcd","bcd","d","bcd","d","bc","df","g","ga"],
+      "key": "G#",
+      "beat": "8",
+      "locale": "telugu",
+      "bpm":"90",
+      "artist":"saman",
+      "title": "srivennala"      
+    }
     } //endofnote
 
 
