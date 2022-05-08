@@ -13,7 +13,7 @@ notex = {
   "lilbrownjug": {
     "note": [
       "ac", "c", "cb", "dd", "ee", "de", "fg", "a",
-      "ac", "c", "cb", "dd", "ee", "de", "af", "f"
+      "ac", "c", "cb", "dd", "ee", "de", "Af", "f"
     ],
     "key": "G",
     "beat": "8",
@@ -196,7 +196,13 @@ notex = {
     "title":"Jasmine flower"
   },
   "riverflowsintoyou": {
-    "note": ["eg", "c", "b", "c", "b", "c", "g", "-", "f", "e", "f", "g", "e", "d", "-", "-", "cb", "c", "-", "-g", "cd", "e", "-", "-", "ef", "g", "-", "-", "fe", "d", "-", "-", "eg", "c", "b", "c", "b", "c", "g", "-", "f", "e", "f", "g", "e", "d", "-", "-", "dcb", "c", "-", "-b", "cd", "e", "-", "-", "ef", "g", "-", "-", "efe", "d", "-", "-", "cd", "cb", "c", "g", "cd", "cb", "c", "g", "cd", "cb", "cd", "ef", "ge", "dc", "b", "-", "cd", "cb", "c", "g", "cd", "cb", "c", "g", "cd", "cb", "cd", "ef", "g", "-", "ga", "gf", "ed", "cb", "c", "g", "cd", "cb", "c", "g", "cd", "cb", "cd", "ef", "ge", "dc", "b", "a", "b", "g", "-", "-"],
+    "note": ["eg", "C", "b", "C", "b", "C", "g", "C", "f", "e", "f", "g", "e", "d", "-", "-", 
+    "Cb", "C", "-", "-g", "cd", "e", "-", "-", "ef", "g", "-", "-", "fe", "d", "-", "-", 
+    "eg", "C", "b", "C", "b", "C", "g", "-", "f", "e", "f", "g", "E", "D", "-", "-",
+     "DCb", "C", "-", "-b", "cd", "e", "-", "-", "ef", "g", "-", "-", "efe", "d", "-", "-", 
+     "CD", "Cb", "C", "g", "CD", "Cb", "C", "g", "CD", "Cb", "CD", "EF", "GE", "DC", "b", "-", 
+     "CD", "Cb", "C", "g", "CD", "Cb", "C", "g", "CD", "Cb", "CD", "EF", "G", "-", "GA", "GF", "ED", "Cb", "C",
+      "G", "cd", "cb", "c", "g", "cd", "cb", "cd", "ef", "ge", "dc", "b", "a", "b", "g", "-", "-"],
     "key": "A",
     "beat": "8",
     "locale": "english",
@@ -233,7 +239,7 @@ notex = {
     "title":"Farewell to ireland"
   },
   "binkssake": {
-    "note": ["eg", "gg", "-", "ag", "e", "g", "-", "-", "eg", "gg", "-", "ag", "e", "c", "-", "-", "ge", "dc", "ab", "c", "ge", "dc", "ab", "g", "ab", "gg", "ab", "cd", "ee", "dc", "d", "-", "ge", "dc", "ab", "c", "ge", "dc", "ab", "g", "ab", "gg", "ab", "cd", "ec", "dd", "c", "-"],
+    "note": ["eg", "gg", "-", "ag", "e", "g", "-", "-", "eg", "gg", "-", "ag", "e", "c", "-", "-", "g-e", "dc", "a-b", "c", "g-e", "dc", "a-b", "g", "a-b", "gg", "a-b", "cd", "ee", "dc", "d", "-", "g-e", "dc", "a-b", "c", "g-e", "dc", "a-b", "g", "ab", "gg", "ab", "cd", "ec", "dd", "c", "-"],
     "key": "E",
     "beat": "8",
     "locale": "japanese",
@@ -251,7 +257,7 @@ notex = {
     "title":"Sima uta"
   },
   "prayas": {
-    "note": ["ed", "d-c", "-cb", "ab", "dc", "cb", "a-g", "-", "g-e", "dd", "cc", "bc", "e", "-", "-", "-d", "a-g", "g-e", "f-e", "de", "g-f", "e-ge", "f-d", "gf", "fe", "dd", "gg", "edc", "-g", "cd", "fe", "e", "dc", "bc-a", "-", "-", "-a", "cd", "fe", "e", "dc", "bc-e", "-", "-", "eg", "fa", "ggf", "ee", "eg", "-", "f", "-", "-e", "gf", "fe", "dd", "-d", "c", "-", "-",    "-e", "-fe ", "gf", "fe", "ed", "cd", "fe", "ed", "c", "-ee", "fe", "ed", "cc", "b", "cc", "ed", "-e", "-fe ", "gf", "f", "ed", "cd", "fe", "ed", "c", "-ee", "fe", "ed", "cc", "b", "ca", "-", "g", "c", "e", "-", "e", "f", "e", "c", "-", "-gb", "d", "-", "e", "f", "e", "c", "-", "-gd", "c", "-", "e", "f", "e", "c", "-", "-gf", "d", "-", "e", "f", "e", "c", "-", "-bg", "c", "-"],
+    "note": ["ed", "d-c", "-cb", "ab", "dc", "cb", "a-g", "-", "g-e", "dd", "cc", "bc", "e", "-", "-", "-d", "a-g", "g-e", "f-e", "de", "g-f", "e-ge", "f-d", "gf", "fe", "dd", "gg", "edc", "-g", "cd", "fe", "e", "dc", "bc-a", "-", "-", "-a", "cd", "fe", "e", "dc", "bc-e", "-", "-", "eg", "fa", "ggf", "ee", "eg", "-", "f", "-", "-e", "gf", "fe", "dd", "-d", "c", "-", "-",    "-e", "-fe", "gf", "fe", "ed", "cd", "fe", "ed", "c", "-ee", "fe", "ed", "cc", "b", "cc", "ed", "-e", "-fe", "gf", "f", "ed", "cd", "fe", "ed", "c", "-ee", "fe", "ed", "cc", "b", "ca", "-", "g", "c", "e", "-", "e", "f", "e", "c", "-", "-gb", "d", "-", "e", "f", "e", "c", "-", "-gd", "c", "-", "e", "f", "e", "c", "-", "-gf", "d", "-", "e", "f", "e", "c", "-", "-bg", "c", "-"],
     "key": "D",
     "beat": "8",
     "locale": "nepali",
@@ -368,7 +374,7 @@ notex = {
     "title":"titanic"
   },
   "gurjupaltan": {
-    "note": ["ga", "f", "ga", "f", "ga", "f", "d", "c", "ga", "f", "ga", "f", "g", "c", "c", "c", "ga", "f", "ga", "f", "ga", "f", "d", "c", "cd", "dc", "c", "c", "c", "-", "-", "-", "cd", "df", "f", "f", "cd", "dc", "c", "c", "c", "-", "-", "-", "-", "-", "-", "-", "f", "-g", "a", "a", "g", "ag", "f", "f", "f", "-g", "a", "a", "g",
+    "note": ["GA", "f", "GA", "f", "GA", "f", "d", "c", "GA", "f", "GA", "f", "g", "c", "c", "c", "ga", "f", "ga", "f", "ga", "f", "d", "c", "cd", "dc", "c", "c", "c", "-", "-", "-", "cd", "df", "f", "f", "cd", "dc", "c", "c", "c", "-", "-", "-", "-", "-", "-", "-", "f", "-g", "a", "a", "g", "ag", "f", "f", "f", "-g", "a", "a", "g",
       "ag", "-f", "c", "a", "ag", "f", "f", "f", "-", "-", "-",
       "a-c", "dd", "cd", "ff", "gg", "fd", "d-c", "c", "a-c", "dd", "cd", "ff", "gg", "fd", "f", "f", "c", "a", "c", "-a", "cc", "a", "c", "-"
     ],
@@ -718,7 +724,7 @@ notex = {
     "title":"Roop tera mastana"
   },
   "korakagaztha": {
-    "note": ["ga", "cd", "ded", "-c",  "ag", "ad", "-", "-", "ga", "cd", "ed", "-c", "ba", "bc", "-", "-", "ed", "ed", "c", "ag", "ga", "cd", "ec", "d", "ed", "ed", "cb", "ag", "ga", "cc", "d", "c", "ee", "ef", "ef", "ed", "dd", "de", "de", "c", "cc", "d", "-", "c", "a", "-", "-", "-"],
+    "note": ["ga","CD","DED","-C","ag","aD","-","-","ga","CD","ED","-C","ba","bC","-","-","ED","ED","C","ag","ga","CD","EC","D", "ed", "ed", "cb", "ag", "ga", "cc", "d", "c", "ee", "ef", "ef", "ed", "dd", "de", "de", "c", "cc", "d", "-", "c", "a", "-", "-", "-"],
     "key": "G",
     "beat": "8",
     "locale": "hindi",
@@ -810,8 +816,8 @@ notex = {
       "-", "a", "a", "e", "a", "b", "c", "d",
       "b", "-", "-", "-", "-", "-", "-", "-",
       "-", "f", "f", "f", "f", "a", "a", "c",
-      "c ", "-g", "f", "e",
-      "c", "d", "g", "e", "c", "-g ", "f", "e",
+      "c", "-g", "f", "e",
+      "c", "d", "g", "e", "c", "-g", "f", "e",
       "c", "d", "c", "c", "ga", "c", "-", "-", "ed", "c", "-", "-", "c", "g", "a", "g", "ed", "c", "-", "-", "c", "b", "g", "a", "g", "edc", "-", "-", "ee", "edc", "-", "-", "gf", "e", "fe", "d", "ga", "bc", "bc", "d", "e", "c", "-", "-", "-", "c", "cd", "ec", "ag", "ga", "cbc", "d"
     ],
     "key": "E",
@@ -868,9 +874,9 @@ notex = {
   },
   "prempatra": {
     "note": ["-", "g", "g", "-ga", "b", "d", "-", "-",
-      "c", "c", "d", "b", "a", "-", "b ", "-",
-      "-", "g ", "g", "-g", "b ", "d", "-", "-",
-      "c", "c", "d", "b", "a", "-", "b ", "-",
+      "c", "c", "d", "b", "a", "-", "b", "-",
+      "-", "g", "g", "-g", "b", "d", "-", "-",
+      "c", "c", "d", "b", "a", "-", "b", "-",
       "-g", "a", "-", "g", "-", "d", "a", "-",
       "b", "-", "b", "c", "-", "b", "c", "-",
       "-", "b", "ab", "-", "a", "-", "b", "d",
@@ -891,8 +897,8 @@ notex = {
       "a", "b", "c", "e", "d", "dd", "-", "bd",
       "d", "c", "-", "-", "-", "-", "-", "-",
       "g", "c", "b", "c", "ce", "ed", "b", "c",
-      "c ", "e ", "d", "f", "e", "-", "-", "-",
-      "e ", "f", "g", "b", "a", "ag", "f", "g",
+      "c", "e", "d", "f", "e", "-", "-", "-",
+      "e", "f", "g", "b", "a", "ag", "f", "g",
       "a", "g", "-", "-",
       "e", "f", "g", "a", "-a", "b", "ba", "gf",
       "-f", "g", "-f", "g", "e", "ed", "c", "-",
@@ -950,7 +956,7 @@ notex = {
       "c", "-b", "cb", "a", "-", "-", "-", "-",
       "d", "-c", "dc", "b", "c", "-b", "cb", "a",
       "d", "c", "b", "c", "c", "b", "a", "g",
-      "d", "g", "b", "bd", "c", "ba", "g ", "fe",
+      "d", "g", "b", "bd", "c", "ba", "g", "fe",
       "d", "e", "c", "d", "c", "b", "-", "-",
       "d", "d", "a", "-", "b", "cb", "a", "b",
       "e", "ef", "d", "e", "g", "g", "-", "-",
@@ -1061,15 +1067,15 @@ notex = {
       "-", "dfa", "aba", "ggf", "g", "-gf", "g", "g",
       "gf", "fe", "ed", "dc", "cda", "-ca", "g", "acde",
       "-ed", "ed", "c", "g", "ag", "ed", "e", "-",
-      "c", "c", "-", "ba", "-", "gaca", "e ", "dc",
+      "c", "c", "-", "ba", "-", "gaca", "e", "dc",
       "cd", "a", "-", "ag", "-", "gagf", "g", "-",
       "-bc", "dg", "f", "ed", "-f", "ed", "c", "b",
       "-bc", "df", "dfg", "ag", "-fe", "db", "c", "-",
       "ee", "ff", "ee", "dd", "ee", "ff", "ee", "e",
       "-eg", "cb", "bdb", "ag", "ag", "fg", "a", "-",
       "-gb", "dc", "ba", "d", "ba", "gae", "g", "-",
-      "g ", "ed", "e", "dc", "dc", "ae", "d", "-",
-      "g ", "ed", "e", "dc", "dc", "ad", "c", "-",
+      "g", "ed", "e", "dc", "dc", "ae", "d", "-",
+      "g", "ed", "e", "dc", "dc", "ad", "c", "-",
       "c", "de", "g", "ed", "ce", "dc", "a", "-",
       "c", "de", "g", "ed", "ce", "da", "c", "-",
       "-eg", "cb", "bdb", "ag", "ag", "fg", "a", "-",
@@ -1158,8 +1164,8 @@ notex = {
     "note": ["cc", "-d", "ee", "dgdg", "bc", "ba", "dg", "-",
       "de", "f", "ed", "cb", "c", "-", "-", "-",
       "dg", "dgcc", "c", "c", "b-b", "c", "b", "adg",
-      "e ", "aa", "cb", "adg", "dg", "-", "-", "-",
-      "ea", "aa", "a ", "a ", "dgb", "bb", "b", "b",
+      "e", "aa", "cb", "adg", "dg", "-", "-", "-",
+      "ea", "aa", "a", "a", "dgb", "bb", "b", "b",
       "b", "b-b", "b", "db", "c", "-", "-", "-"
     ],
     "key": "G",
@@ -1485,7 +1491,7 @@ notex = {
       "g", "f", "e", "d", "c",
       "gg", "ff", "e",
       "cc", "ce", "ef", "dd", "cc", "gg", "ff", "e",
-      "-", "-", "-", "-", "a", "ga", "gf", "ff", "ff", "d ", "edc ", "bc", "e", "d", "ed", "cb",
+      "-", "-", "-", "-", "a", "ga", "gf", "ff", "ff", "d", "edc", "bc", "e", "d", "ed", "cb",
       "c", "ba", "ga", "ba", "ga", "b", "a", "b", "c", "g", "ag", "e", "f", "c", "-", "b", "a",
       "g", "ag", "f", "e", "f", "g", "-", "-", "gg",
       "f", "e", "d", "ee", "db", "c", "def", "gg", "ff", "ee", "dgf", "ee", "db", "c", "-",
@@ -2154,7 +2160,7 @@ notex = {
     "title":"Mohabatein"
   },
   "meresamne": {
-    "note": ["cd", "-e", "c", "c", "c", "a", "d", "d", "cd", "-e", "c", "c", "c", "a", "c", "c", "gg", "e", "-d", "e", "c", "-f", "fe", "f", "ca", "a", "a", "cd", "edc", "c", "c", "c", "cd", "-g", "-g", "ag", "fe", "ed", "g", "g", "g", "gd", "dd", "e", "ag", "fe", "ee", "cd", "f", "bc", "d", "dd", "f", "ed", "d", "-d", "g", "f", "e", "de", "d", "c", "c"],
+    "note": ["cd", "e", "c", "c", "c", "a", "d", "d", "cd", "e", "c", "c", "c", "a", "c", "c", "gg", "-e", "-d", "e", "c", "-f", "fe", "f", "ca", "a", "a", "cd", "edc", "c", "c", "c", "cd", "-g", "-g", "ag", "fe", "ed", "g", "g", "g", "gd", "dd", "e", "ag", "fe", "ee", "cd", "f", "bc", "d", "dd", "f", "ed", "d", "-d", "g", "f", "e", "de", "d", "c", "c"],
     "key": "G#",
     "beat": "8",
     "locale": "hindi",
@@ -2317,14 +2323,16 @@ notex = {
     "title":"Ko Hau timi"
   },
   "reshamfiriri": {
-    "note": ["c", "cd", "e", "A", "G", "-", "-", "e",
+    "note": [
+      "edca","-","-","ga","d-e","d-e","d-e","edca","-","-","ga","c-d","c-d","c-d",
+      "c", "cd", "e", "A", "G", "-", "-", "e",
       "G", "GA", "G", "e", "d", "-e", "de", "dc",
       "c", "cd", "e", "A", "G", "Gf", "ed", "e",
       "d", "dc", "a", "d", "c", "-", "-", "-",
 
-      "edc", "-c", "edc", "-c", "edc", "-c", "edc", "edc",
-      "cba", "-a", "cba", "-a", "cba", "-a", "cba", "cba",
-      "g", "-", "a", "d", "c", "-", "-", "-",
+      "edc", "cc", "edc", "cc", "edc", "cc", "edc", "edc",
+      "dca", "aa", "dca", "aa", "dca", "aa", "dca", "dca",
+      "g", "-", "a", "e", "d", "-", "-", "-",
       "g", "-", "a", "d", "c", "-", "e", "-",
 
       "e", "ee", "d", "ed", "c", "cb", "ab", "ga",
@@ -2426,7 +2434,7 @@ notex = {
       "d", "-c", "d", "-", "-", "-", "-", "-",
       "ec", "eg", "e", "-", "-", "g", "ac", "ag",
       "fe", "d", "c", "-", "-", "-", "-", "-",
-      "cac", "g ", "a", "c", "-", "-", "-", "-",
+      "cac", "g", "a", "c", "-", "-", "-", "-",
       "c", "de", "de", "-", "-", "-", "-", "-",
       "c", "de", "g", "-", "-", "-", "-", "-",
       "e", "d", "ca", "c", "-", "-", "-", "-",
@@ -2539,7 +2547,7 @@ notex = {
       "bc", "-b", "c", "-c", "b", "cd", "bc", "-c",
       "b", "cd", "bc", "bb", "d", "c", "b", "-c",
       "b", "c", "-c", "b", "cd", "bc", "-c", "b",
-      "cd", "bc", "-a", "a", "c", "bab", "g ", "a",
+      "cd", "bc", "-a", "a", "c", "bab", "g", "a",
       "a", "a", "cb", "g", "-", "a", "ba", "f",
       "-", "f", "gf", "e", "b", "b", "a", "-",
       "a", "cb", "g", "-", "g", "ba", "f", "-",
@@ -2608,7 +2616,7 @@ notex = {
       "g", "ag", "ed", "e", "c", "d", "e", "-",
       "g", "ag", "ed", "e", "c", "d", "e", "-",
       "a", "ae", "de", "-", "c", "a", "a", "-",
-      "e", "eg", "f", "g", "f", "f्", "e", "-",
+      "e", "eg", "f", "g", "f", "f", "e", "-",
       "e", "eg", "f", "g", "f", "fe", "a", "-",
       "a", "ae", "de", "-", "c", "a", "a", "-",
       "ae", "ce", "d", "ed", "edc", "ag", "a", "-",
@@ -2764,7 +2772,7 @@ notex = {
     "note": ["egg", "-e", "gg", "a", "gag", "ec", "d", "-",
       "dd", "-e", "de", "g", "de", "dc", "c", "-",
       "eee", "dedc", "de", "-", "ag", "ec", "de", "-",
-      "gggg", "eeee", "dddd", "cccc", "सa", "aed", "cc", "c",
+      "gggg", "eeee", "dddd", "cccc", "ca", "aed", "cc", "c",
       "cc", "d", "cb", "a", "ab", "de", "gg", "ed",
       "dee", "dc", "ab", "dc", "c", "-", "-", "-",
       "cc", "cd", "cb", "aa", "ab", "de", "g", "e",
@@ -3638,7 +3646,7 @@ notex = {
   "beat":"8",
   "locale": "newari",
   "bpm":"90",
-  "artist":"SIma ",
+  "artist":"SIma",
     "title":"SIma kacha"
   }
   , "ganawonetyena":{"note":[
@@ -4072,7 +4080,7 @@ notex = {
     "title":"Pahachare"
         }
       ,"sitalamaju": {
-      "note": ["fd","df","f","g","-","ga","ad","c","-","-","c","b","a","–b","g","-","ga","f","e","d","–e","c","-","-","c","d","f","–e","d","-","dc","c","-","-","-","ga","cd","e","-","d","f","e","d","–e","c","-","-","b","a","g","–a","d","-","-","f","e","d","–e","c","-","-","a","ag","f","–g","a","c","-","c","-","c","-","cd","d","-","de","f","e","d","e","d","dc","c","-","c","-","c","-","b","g","a","c","–d","e","d","-","c","b","a","–b","g","-","ga","f","e","de","dc","d","df","f"],
+      "note": ["fd","df","f","g","-","ga","ad","c","-","-","c","b","a","-b","g","-","ga","f","e","d","-e","c","-","-","c","d","f","-e","d","-","dc","c","-","-","-","ga","cd","e","-","d","f","e","d","-e","c","-","-","b","a","g","-a","d","-","-","f","e","d","-e","c","-","-","a","ag","f","-g","a","c","-","c","-","c","-","cd","d","-","de","f","e","d","e","d","dc","c","-","c","-","c","-","b","g","a","c","-d","e","d","-","c","b","a","-b","g","-","ga","f","e","de","dc","d","df","f"],
           "key": "G",
           "beat": "7",
           "locale": "newari",
@@ -4081,7 +4089,7 @@ notex = {
     "title":"Sitala maju"
         }
       ,"soliseswemaga": {
-        "note": ["e","a","-","bc","b","ag","a","-","a","ag","e","dc","d","d","c","-","cd","eg","-","ag","a","ag","e","dc","cd","ed","–d","d","d","–e","de","dc","cd","eg","-","ag","a","ag","e","dc","cd","ed","–d","d","d","-","-","-","d","d","c","c","d","dd","d","-","d","d","c","c","de","ee","e","-","cd","eg","-","ag","a","ag","e","dc","cd","ed","–d","d","d","-","-","-","-","de","–g","g","a","a","–a","a","-","ga","–g","e","e","-","d","-","-","de","–g","g","ab","cb","–a","a","-","ga","–g","e","e","-","d","c","cd","eg","-","ag","a","ag","e","dc","cd","ed","–d","d","d","–e","de","dc","cd","eg","-","ag","a","ag","e","dc","cd","ed","–d","d","d","-","-","-"],
+        "note": ["e","a","-","bc","b","ag","a","-","a","ag","e","dc","d","d","c","-","cd","eg","-","ag","a","ag","e","dc","cd","ed","-d","d","d","-e","de","dc","cd","eg","-","ag","a","ag","e","dc","cd","ed","-d","d","d","-","-","-","d","d","c","c","d","dd","d","-","d","d","c","c","de","ee","e","-","cd","eg","-","ag","a","ag","e","dc","cd","ed","-d","d","d","-","-","-","-","de","-g","g","a","a","-a","a","-","ga","-g","e","e","-","d","-","-","de","-g","g","ab","cb","-a","a","-","ga","-g","e","e","-","d","c","cd","eg","-","ag","a","ag","e","dc","cd","ed","-d","d","d","-e","de","dc","cd","eg","-","ag","a","ag","e","dc","cd","ed","-d","d","d","-","-","-"],
             "key": "G",
             "beat": "8",
             "locale": "newari",
@@ -4117,7 +4125,7 @@ notex = {
     "title":"Chhitthi vitra"
         }
     ,"gerua": {
-      "note": ["ab","ac","-","-","cb","af","-","-","ga","gb","-","-","ba","ge","-","-","fg","fa","-","-","ag","fd","-","-","de","fe","-","de","dc","b","-","-","c","ba","be","-","g","fe","gc","c","dc","bb","c","-","a","dc","ab","-","b","c","df","ec","b","c","gf","ec","b","cd","fe","-","cd","dd","-","-","c","ed","fe","bcc","c","ed","fe","cdd","a","-","ag","g","fe","f","g","g","-","-","-","-","e","ee","de","ecba","ac","ef","-","-","dd","cd","cb","ag","gg","ef","-","-","de","de","de","ded","cb","ag","bc","bc","bc","bcb","ag","ef","ga","ga","ga","gag","fe","cd","g","aed","c","b","a","fg","ef","fg","ef","-","b","a","g","ef","de","ef","de","fed","a","g","f","ed","cd","de","cd","-","ef","age","efg","aga","bab","cbc","dcd","e"],
+      "note": ["ab","aC","-","-","Cb","af","-","-","ga","gb","-","-","ba","ge","-","-","fg","fa","-","-","ag","fd","-","-","de","fe","-","de","dc","b","-","-","C","ba","be","-","g","fe","gc","c","dc","bb","c","-","a","dc","ab","-","b","c","df","ec","b","c","gf","ec","b","cd","fe","-","cd","dd","-","-","c","ed","fe","bcc","c","ed","fe","cdd","a","-","ag","g","fe","f","g","g","-","-","-","-","e","ee","de","ecba","ac","ef","-","-","dd","cd","cb","ag","gg","ef","-","-","de","de","de","ded","cb","ag","bc","bc","bc","bcb","ag","ef","ga","ga","ga","gag","fe","cd","g","aed","c","b","a","fg","ef","fg","ef","-","b","a","g","ef","de","ef","de","fed","a","g","f","ed","cd","de","cd","-","ef","age","efg","aga","bab","cbc","dcd","e"],
           "key": "D",
           "beat": "8",
           "locale": "hindi",
@@ -4622,9 +4630,11 @@ notex = {
     "title":"Take five"
         }
       ,"phulbuttesari": {
-        "note": ["a","aa","ad","ca","gg","g","ga","g","ff","f","fa","ga","gf","cd","fg","agf",
-        "a","aa","ad","ca","gg","g","gc","ag","ff","f","fa","ga","gf","-","-","-"
-        ,"fg","a","c","c","ac","d","cd","d","ac","d","fd","fa","g","g","ga","gf","-","ag","a","gf","d","gf","g","fd","c","dc","d","ca","af","g","g","g","-","fg","a","ca","f","gf","f","f","-","fg","ag","ag","a","f","gaa","f","gaa","f","gaa","ag"],
+        "note": ["A","AA","AD","CA","G","GG","GA","Gf","ff","f","fA","GA","Gf","cdf","agf","-",
+        "A","AA","AD","CA","G","GG","GA","G","ff","f","fA","GA","Gf","-","-","-"
+        ,"-f","GA","C","C","-A","CD","CD","D","-A","CD","fD","fA","G","G","GA","Gf","-",
+        "-A","GA","Gf","D","-G","fG","fD","C","-D","CD","CA","Af","G","G","G","-","fg","a","ca","f","gf","f","f","-",
+        "fg","ag","ag","a","f","gaa","f","gaa","f","gaa","ag"],
         "key": "G#",
         "beat": "8",
         "locale": "nepali",
@@ -4714,7 +4724,7 @@ notex = {
     "title":"Girls like you"
         }
       ,"memories": {
-        "note": ["d","bc","d","bc","d","-","-","-","b","ga","b","ga","b","ga","b","-","a","gee","ee","e","ed","edd","d","ee","","e","eg","f#","d","bc","d","bc","d","-","-","-","b","ga","b","ga","b","ga","b","-","a","gee","ee","e","ed","edd","d","ee","e","eg","f#","f#f#","f#","g","g","ga","bd","d","d","be","b","ab","c","c","c","b","g","ab","cc","c","b","bg","ge","gg","bg","a","ga","bd","d","be","b","gb","cd","cb","g","cb","cc","c","b","bg","ge","ga","b","ca","g","gg","gg","b","g","g","gg","gg","b","g","f#","f#","g"],
+        "note": ["d","bc","d","bc","d","-","-","-","b","ga","b","ga","b","ga","b","-","a","gee","ee","e","ed","edd","d","ee","e","eg","f#","d","bc","d","bc","d","-","-","-","b","ga","b","ga","b","ga","b","-","a","gee","ee","e","ed","edd","d","ee","e","eg","f#","f#f#","f#","g","g","ga","bd","d","d","be","b","ab","c","c","c","b","g","ab","cc","c","b","bg","ge","gg","bg","a","ga","bd","d","be","b","gb","cd","cb","g","cb","cc","c","b","bg","ge","ga","b","ca","g","gg","gg","b","g","g","gg","gg","b","g","f#","f#","g"],
         "key": "G#",
         "beat": "8",
         "locale": "english",
@@ -4732,7 +4742,7 @@ notex = {
     "title":"Senorita"
         }
       ,"dilhaichota": {
-        "note": ["gf","ef","g","-","fe","f","-","-","gf","ef","gc","g","-","-","-","-","fe","f","e","c","-","-","-","-","g","g","gg","ga","c","b","ba","ag","g","g","g","ga","gf","ed","dc","de","e","c","gg","ec","c","gg","-","-","-","ce","df","e","e","df","e","e","e","gg","ag","a","a","ab","ab","b","-","ga","gf","f","f","df","e","e","e","e","g","gg","edc","c","d","ef","ded","gg","ag","aa","","gab","ab","b","ag","ab","ge","f","f","ed","dg","fe","ee","dc"],
+        "note": ["gf","ef","g","-","fe","f","-","-","gf","ef","gc","g","-","-","-","-","fe","f","e","c","-","-","-","-","g","g","gg","ga","c","b","ba","ag","g","g","g","ga","gf","ed","dc","de","e","c","gg","ec","c","gg","-","-","-","ce","df","e","e","df","e","e","e","gg","ag","a","a","ab","ab","b","-","ga","gf","f","f","df","e","e","e","e","g","gg","edc","c","d","ef","ded","gg","ag","aa","gab","ab","b","ag","ab","ge","f","f","ed","dg","fe","ee","dc"],
         "key": "D",
         "beat": "8",
         "locale": "hindi",
@@ -4768,7 +4778,7 @@ notex = {
     "title":"Dil diyan galla"
         }
       ,"mainterabanjaunga": {
-        "note": ["cd","dfe","dc","-","cd","dfe","-","-","cd","dfe","dc","-","gg","gag","-","-","cb","dc","cb","ba","ag","ga","a","-","c","cc","cg","a","aca","g","-","-","ag","ag","ed","cd","aa","ab","ag","-","ag","ag","acd","de","e","e","-","-","cc","bg","a","ag","-","-","-","-","-",""],
+        "note": ["cd","dfe","dc","-","cd","dfe","-","-","cd","dfe","dc","-","gg","gag","-","-","cb","dc","cb","ba","ag","ga","a","-","c","cc","cg","a","aca","g","-","-","ag","ag","ed","cd","aa","ab","ag","-","ag","ag","acd","de","e","e","-","-","cc","bg","a","ag","-","-","-","-","-"],
         "key": "B",
         "beat": "8",
         "locale": "hindi",
@@ -4896,7 +4906,12 @@ notex = {
           "title":"Dear Comrade"
           }
         ,"mohmohkdhaage": {
-          "note": ["gc","ccc","gc","ccc","gc","ccc","gcc","de","gc","ccc","gc","ccc","gc","cc","efgb","c","ed-e", "d-ed", "ed-c", "bg","ed-e", "d-ed", "ed-e", "-","efg","c-bg","efg","c","bd","ee-e","e-fd","cb","bd","gd-e","d-cb","c","-e","d","-e","d","-e","d","-","-","-g","fee","ffff","ga","-","-","-gf","ge","-g","fee","ffff","ga","b","ba","c-ba","g","-","-","-","-","-g","bc","-","-ee","dc","-dc","bc","a","-","ga","b-a","g","-f","gf","e","-","dc","dc","-","c","dc","c","dg","fe","de","c","-","c","dc","c","dg","fe","de","c","-","c","dc","c","dg","fe","de","c","-","c","dc","c","dc","-","b-d","e-g","a","c","b","gg","d","e","d","cc","-","-","c","b","g","gg","gb","c","d","-","dc","cd","eg","-d","bc","-","-","-","b-d","e-g","a","c","b","gg","f","g","f","ee","-","-","g","-f","e-f","e","e","f-g","a","-","gf","ge","b","bb","ba","ac","b","a","g","-","-","-","cf","efg","a","-ga","b","ag","ag","-","fd","ef","e","d","ed","ac","e","-","cf","efg","a","-ga","c","ag","ag","-","fed","edc","ab","cd","ef","ga","g","-","efg","bc","e","-","c","-","d","-","b","-","ab","cd","ab","cd","abcd","cbag","fgag","edc","aa","aa","aa","aa","cc","cc","cc","cc","dd","dd","dd","dd","ff","ff","ff","ff","fg","fg","cbag","fgag","c","cbag","fgag","c","cbag","fgag","c","-","-","-"],
+          "note": [
+            // "g-c","-c","-c","c","g-c","-c","-c","c","g-c","-c","-c","c","gc","-c","d","e",
+          // "g-c","-c","-c","c","g-c","-c","-c","c","g-c","-c","-ef","gbc",
+          ,"e","d-e", "-d","ed", "e","d-C","B", "g","-"
+          //,"ed-e", "d-ed", "ed-e", "-","efg","c-bg","efg","c","bd","ee-e","e-fd","cb","bd","gd-e","d-cb","c","-e","d","-e","d","-e","d","-","-","-g","fee","ffff","ga","-","-","-gf","ge","-g","fee","ffff","ga","b","ba","c-ba","g","-","-","-","-","-g","bc","-","-ee","dc","-dc","bc","a","-","ga","b-a","g","-f","gf","e","-","dc","dc","-","c","dc","c","dg","fe","de","c","-","c","dc","c","dg","fe","de","c","-","c","dc","c","dg","fe","de","c","-","c","dc","c","dc","-","b-d","e-g","a","c","b","gg","d","e","d","cc","-","-","c","b","g","gg","gb","c","d","-","dc","cd","eg","-d","bc","-","-","-","b-d","e-g","a","c","b","gg","f","g","f","ee","-","-","g","-f","e-f","e","e","f-g","a","-","gf","ge","b","bb","ba","ac","b","a","g","-","-","-","cf","efg","a","-ga","b","ag","ag","-","fd","ef","e","d","ed","ac","e","-","cf","efg","a","-ga","c","ag","ag","-","fed","edc","ab","cd","ef","ga","g","-","efg","bc","e","-","c","-","d","-","b","-","ab","cd","ab","cd","abcd","cbag","fgag","edc","aa","aa","aa","aa","cc","cc","cc","cc","dd","dd","dd","dd","ff","ff","ff","ff","fg","fg","cbag","fgag","c","cbag","fgag","c","cbag","fgag","c","-","-","-"
+        ],
           "key": "D",
           "beat": "8",
           "locale": "hindi",
@@ -5022,8 +5037,10 @@ notex = {
     "title":"Aaoge jab tum"
       }
       ,"abhimujhmein": {
-        "note": ["eg","-","-","ag","fed","eg","-","-","gag","fe","fgag","efa","gfee","eg","ab","cbc","bag","eg","ab","cbc","bag","eg","abc","ba","b","cb","d","cde","ed","dc","ba","cde","ed","dc","ba","bc","bac","a","b","c","b","bc"],
-        "key": "B",
+        "note": ["eg","-","-","ag","fed","eg","-","-","gag","fe","fgag","efa","gfee","eg","ab","cbc","bag","eg","ab","cbc","bag","eg","abc","ba","b","cb","d","cde","ed","dc","ba","cde","ed","dc","ba","bc","ab","e","db","c","bc","-","-",
+        "cg","ac","ac","fc","cb","ca","-","-","bc","ed","fe","-","cb","ca","-","-","bc","dc","ed","cb","a","ba","bg","-","-ab","cb","dc","ba","g","ag","bf","-","-","-","ef","gf","ag","b","cb","g","aa#","a","gf","ef","g","g","a","ea","g","ed","e","cd","g","fg","fg","fg","f","e","de","c","ga","ba","gf","e","e","bc","ab","e","db","c","bc","-","-"
+      ],
+        "key": "D",
         "beat": "8",
         "locale": "hindi",
         "bpm":"90",
@@ -5085,7 +5102,7 @@ notex = {
     "title":"Rain"
       }
     ,"kanhasojajara": {
-      "note": ["cd","eg","aa","c","-","-","-","-","aa","dd","dd","c","ef","gf","ee","d","ef","ga","aa","g","e","g","a","c","c","ac","ad","c","c","cbab","ag","-","-","ga","ba","ga","ag","ef","ed","e","g","cdeg","gg","cbag","e","ff","fed","edc","-","gcbc","bagf","gagf","edc","gcbc","bagf","gaba","gfed","eg","fe","d","-","c","b","d","-","cde","deg","ega","-","eg","fe","d","-","c","b","c","-","cde","edf","efg","-","ga","-","-","-ga","ca","gfed","ee","g","ga","-","-","-ga","ca","gfed","ea","g","ac","ca","ad","dc","cd","ed","ca","ag","ga","ca","ga","gfe","ed","de","g","-","G","C","A","D","C","B","","E","G","F","E","D","G","F","ED","C","f","G","C","B","A","G","E","F","D","E","A","G","E","F","ED","A","AG","C","B","A","D","B","C","A","E","D","C","B","A","AC","AC","D","ED","C","B","A","C","-","A","G","F","ED","A","FG","F","E","D","C","G","E","C","G","E","CG","C","G","C","CD","EG","AD","C"],
+      "note": ["cd","eg","aa","c","-","-","-","-","aa","dd","dd","c","ef","gf","ee","d","ef","ga","aa","g","e","g","a","c","c","ac","ad","c","c","cbab","ag","-","-","ga","ba","ga","ag","ef","ed","e","g","cdeg","gg","cbag","e","ff","fed","edc","-","gcbc","bagf","gagf","edc","gcbc","bagf","gaba","gfed","eg","fe","d","-","c","b","d","-","cde","deg","ega","-","eg","fe","d","-","c","b","c","-","cde","edf","efg","-","ga","-","-","-ga","ca","gfed","ee","g","ga","-","-","-ga","ca","gfed","ea","g","ac","ca","ad","dc","cd","ed","ca","ag","ga","ca","ga","gfe","ed","de","g","-","G","C","A","D","C","B","E","G","F","E","D","G","F","ED","C","f","G","C","B","A","G","E","F","D","E","A","G","E","F","ED","A","AG","C","B","A","D","B","C","A","E","D","C","B","A","AC","AC","D","ED","C","B","A","C","-","A","G","F","ED","A","FG","F","E","D","C","G","E","C","G","E","CG","C","G","C","CD","EG","AD","C"],
       "key": "D",
       "beat": "8",
       "locale": "hindi",
@@ -5104,7 +5121,7 @@ notex = {
       }
     ,"oremanwa": {
       "note": ["b","b","b","c","b","c","-","g","a","g","a","-","-","-","-","-","b","b","b","c","b","c","-","g","a","g","a","-","-","-","-","-","b","b","b","c","b","c","-","g","a","g","a","-","f","e","d","-","c","d","c","d","-","g","f","e","-","f","e","d","-","c","c","-","c","cc","-","ee","e","f","f","a","a","-","b","c","a","g","f","f","g","g","-","-","d","-","d","e","d","c","b","b","c","c","-","-","b","c","a","g","b","b","c","a","g","f","-","f","g","g","e","d","-","c","c","-","cb","b","d","d","dc","cc","cc","cc","cc","cb","b","d","d","gc","cc","cc","cc","-","-e","d","-d","c","c","c","ga","g","-e","d","-d","c","b","c","-","-","g","a","a","g","f","a","a","b","-","-","b","c","d","c","c","-"],
-      "key": "A",
+      "key": "G",
       "beat": "8",
       "locale": "hindi",
       "bpm":"90",
@@ -5202,7 +5219,7 @@ notex = {
     "title":"batasai le "
         }
       ,"starving": {
-        "note": ["gg","gg","ggg","gg","gg","ga","gf","e","","e","c","d","a","c","g","-g","ga","cd","e","c","d","a","c","g","-g","ga","cc","-g","ga","cd","ec","dcd","c","d","dd","dd","ca","dd","de","dc","c","dee","-","cdd","-","d","dd","de","d","-","c","-"],
+        "note": ["gg","gg","ggg","gg","gg","ga","gf","e","e","c","d","a","c","g","-g","ga","cd","e","c","d","a","c","g","-g","ga","cc","-g","ga","cd","ec","dcd","c","d","dd","dd","ca","dd","de","dc","c","dee","-","cdd","-","d","dd","de","d","-","c","-"],
         "key": "C",
         "beat": "8",
         "locale": "english",
@@ -5366,7 +5383,7 @@ notex = {
     "title":"Lonliness"
         }
       ,"hotarunohikari": {
-        "note": ["f","g","a","-","ad","aa","ag","e","f","g","g","ge","ce","ef","f","f","g","a","-","ad","aa","ag","gd","aa","gf","fg","bb","a","fef","f","efg","gfe","f","c","a","a","gf","gf","f","g","a","-","af","dg","gg","e","f","g","g","ge","cf","ff","","f","g","a","a","af","dg","gg","g","d","aa","gff","g","cdd","C","C","Cde","e","efe"],
+        "note": ["f","g","a","-","ad","aa","ag","e","f","g","g","ge","ce","ef","f","f","g","a","-","ad","aa","ag","gd","aa","gf","fg","bb","a","fef","f","efg","gfe","f","c","a","a","gf","gf","f","g","a","-","af","dg","gg","e","f","g","g","ge","cf","ff","f","g","a","a","af","dg","gg","g","d","aa","gff","g","cdd","C","C","Cde","e","efe"],
         "key": "F",
         "beat": "8",
         "locale": "japanese",
@@ -5599,7 +5616,7 @@ notex = {
       "singer":"saman"
       }
 ,"hukkamero": {
-      "note": ["dd","c","d","c","e","g","gg","ag","dd","ed","c","c","dd","ddc","","ff","ff","dd","db","a","ab"],
+      "note": ["dd","c","d","c","e","g","gg","ag","dd","ed","c","c","dd","ddc","ff","ff","dd","db","a","ab"],
       "key": "C",
       "beat": "8",
       "locale": "nepali",
@@ -5850,7 +5867,7 @@ notex = {
       "title": "yo paju yo malju"      
     }
     ,"pohorsaal": {
-      "note": ["ef","gb","ce","-","cc","-","bc","cc","gb","ag","fe","-","bb","bb","ce","-","cc","-","bc","cc","gb","ag","fe","-","ef","ge","cc","-","gfe","-","e","ed","fe","e","ed","fe","dc","c","-","bc","bg","bc","-","-b","g","bc","bg","ce","-","dd","-","dd","dd","dc","-e","d","-","bc","bg","bd","-","cc","-","bc","bg","bc","-","-b","g","","bc","bg","bg","-","fe","-","ef","ge","cc","-","gfe","-","e","ed","fe","e","ed","fe","dc","c","-"],
+      "note": ["ef","gb","ce","-","cc","-","bc","cc","gb","ag","fe","-","bb","bb","ce","-","cc","-","bc","cc","gb","ag","fe","-","ef","ge","cc","-","gfe","-","e","ed","fe","e","ed","fe","dc","c","-","bc","bg","bc","-","-b","g","bc","bg","ce","-","dd","-","dd","dd","dc","-e","d","-","bc","bg","bd","-","cc","-","bc","bg","bc","-","-b","g","bc","bg","bg","-","fe","-","ef","ge","cc","-","gfe","-","e","ed","fe","e","ed","fe","dc","c","-"],
       "key": "C",
       "beat": "6",
       "locale": "nepali",
@@ -5917,7 +5934,7 @@ notex = {
       "title": "kalavathi"      
     }
     ,"nagumomutharale": {
-      "note": ["a","ab","cf","ef","ce","fg","fgfe","dc","ce","fg","fgfe","dc","","cg","ab","a","-","a","b","g","cbc","=","ab","ag","a","=","a","bg","f","ed","c","cd","ef","cc","f","cc","fg","fg","a","f","c","aga","ba","g","-","aa","ba","g","-","ac","ded","bb","ag","acba","gf","ff","ff","ag","ac","ded","bb","ag","acba","gf","ff","ff","af","cc","gb","a","-","cc","gb","a","-","aa","ba","g","gg","ag","f","a","cb","gb","a","fg","ga","fg","ga","fg","ga","cd","ef","aa","c","ag","fe","ff","f","aa","c","ag","fe","ff","f","ce","fg","f","e","dc","ce","fg","f","e","dc","fg","bab","cc","cc","cd","cba","bag"],
+      "note": ["a","ab","cf","ef","ce","fg","fgfe","dc","ce","fg","fgfe","dc","cg","ab","a","-","a","b","g","cbc","-","ab","ag","a","-","a","bg","f","ed","c","cd","ef","cc","f","cc","fg","fg","a","f","c","aga","ba","g","-","aa","ba","g","-","ac","ded","bb","ag","acba","gf","ff","ff","ag","ac","ded","bb","ag","acba","gf","ff","ff","af","cc","gb","a","-","cc","gb","a","-","aa","ba","g","gg","ag","f","a","cb","gb","a","fg","ga","fg","ga","fg","ga","cd","ef","aa","c","ag","fe","ff","f","aa","c","ag","fe","ff","f","ce","fg","f","e","dc","ce","fg","f","e","dc","fg","bab","cc","cc","cd","cba","bag"],
       "key": "E",
       "beat": "8",
       "locale": "telugu",
@@ -5971,6 +5988,25 @@ notex = {
       "artist":"saman",
       "title": "srivennala"      
     }
+    ,"jokerandthequeen": {
+      "note": ["bc","b","g","e","-","-","-","bc","b","g","f","-","-","-","a","ab","c","c","-","-","b","-","-","bc","b","g","f","-","-","-","bc","b","g","e","-","-","-","bc","b","g","a","-","-","-","a","ab","c","c","-","-","b","-","-","dd","d","d","e","-","-","g","c","c","cd","e","f","ed","ed","cd","dd","de","f","f","e","de","cg","c","c","cde","d","ed","ed","dd","g","e","d","c"],
+      "key": "C",
+      "beat": "8",
+      "locale": "english",
+      "bpm":"90",
+      "artist":"ed sheeran",
+      "title": "jokerandthequeen"      
+    }
+    ,"gudilomudilo": {
+      "note": ["aa","acc","aa","agg","aa","acc","aa","g","aa","acc","cc","cdd","ee","e","gag","fe","dde","eee","eee","eee","e-ag","e","ee","dde","aa","acc","aa","agg","aa","acc","aa","g","","dde","eee","fee","eee","egag","e","ee","dde","dde","eee","ffe","eee","egag","e","ee","dde","ac","ee","e","ge","ee","e","ac","e","ed","cd","ce","d","aa","gee","ee","dd","d","aa","gg","cc","a"],
+      "key": "G#",
+      "beat": "8",
+      "locale": "telugu",
+      "bpm":"90",
+      "artist":"saman",
+      "title": "gudilo mudilo"      
+    }
+
     } //endofnote
 
 
