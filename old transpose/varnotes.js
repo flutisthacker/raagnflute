@@ -6006,7 +6006,20 @@ notex = {
       "artist":"saman",
       "title": "gudilo mudilo"      
     }
-
+,"aakhamasapanakesari": {
+      "note": [
+        "aG","dd","d","de","-c","b-d","-","-","a","-","g","-","e","-","d","-","a","-","g","-",
+      "b","bb","b","ag","g","a-a","-","-","a","aa","a","ge","e","g-d","-","-",
+      "d","dd","g","gg","ba","b","-","b","bg","a","ag","eg","g","-",
+      // "bg","gab","d","aba","ga","gf","ef","ed",
+      "gg","g","gg","f","fa","g","ee","d","gg","g-a","fg","gg","g-a","fg","gb","a","bc","bg","fg"],
+      "key": "G#",
+      "beat": "8",
+      "locale": "nepali",
+      "bpm":"90",
+      "artist":"saman",
+      "title": "aakhamasapanakesari"      
+    }
     } //endofnote
 
 
