@@ -6208,6 +6208,78 @@ notex = {
     "artist":"saman",
     "title": "canthelpfalling"      
   }
+  ,"eutasapanacha": {
+    "note": ["cd","cb","ccd","e","-","df","ed","bag","ga","ga","cdc","e","d","c","|cd","g","fe","d","e","ef","gf","ef","gf","df","ed","bb","aag","ga","cd","d","d","dc","c","fe","dc","b","ab","g","dd","cc","cc","c","de","de","de","dc","d","ca","dcd","cd","cd","cd","ca","c","c","ca","ce","d","d","ca","ce","d","cd","cd","fe","dc","d","fg","fe","de","f","ed","cde","da","bcd","bag"],
+    "key": "G",
+    "beat": "8",
+    "locale": "nepali",
+    "bpm":"90",
+    "artist":"saman",
+    "title": "eutasapanacha"      
+  }
+  ,"saluguagcha": {
+    "note": ["c","d","e","d","c","b","a","g","a","c","c","c","c","d","e","d","e","g","g","e","g","a","a","a","a","ac","cb","aab","agg","gg","ga","ag","ag","ec","dd","dd","edc","cd","eg","ed","de","dcc","cc"],
+    "key": "G",
+    "beat": "8",
+    "locale": "newari",
+    "bpm":"90",
+    "artist":"saman",
+    "title": "saluguagcha"      
+  }
+  ,"ghodeypesawar": {
+    "note": ["bbc","ge","ef","g","d","c","b","a","g","a","b","a","g","f","e","g","g","f","e","d","efe","gabc","c","cc","bcd","cb","a","ag","ef","agf","ed","de","c","cd","de","e-ef","ed","de","e-ef","ed","de","e-ef","ga","gf","e","cb","cd","cce","de","dc","c","-","-","ab","cb","cb","c","baga","ba","ba","b","agfg","ag","ag","a","agf","ef","g","-","eee","fff","ggg","ab","ccd","baa","gg","ab","bbc","baa","gee","efg","ccd","baa","gg","ab","bbc","ba","ag","cdefg","aa","a-g","fe","ef","efg","cc","edc","ce","dc","c","-","-","aed","e","ed","g","ed","e","ea","gf","ed","ef","d","dc","ba","g","a","aa","ab","cd","de","d"],
+    "key": "G",
+    "beat": "8",
+    "locale": "hindi",
+    "bpm":"90",
+    "artist":"saman",
+    "title": "ghodeypesawar"      
+  }
+  ,"ambarsetoda": {
+    "note": ["c","de","d","bc","c","c","de","d","bc","c","c","de","c","bc","c","f","edc","cc","cc","cd","cd","g","fe","ded","bc","cde","ed","dcb","bc","cc","c","cde","ed","dcb","bc","cc","c","cc","cc","cd","fe","d","-","-","-","ce","ed","d","cb","bc","c","cc","ee","dd","cb","b","c","cc","cc","ee","dd","cb","d"],
+    "key": "F",
+    "beat": "8",
+    "locale": "telugu",
+    "bpm":"90",
+    "artist":"saman",
+    "title": "ambarsetoda"      
+  }
+  ,"ambarsetoda2": {
+    "note": ["df","g","aag","aac","a","ag","a","ac","a","ag","g","fg","a","gf","df","g","ff","d","aaca","gfc","cag","df","g","b","a","ac","a","ad","c","ac","a","","g","a","gf","ag","ad","ag","abc","ag","ad","ag","ag","ag","age","abd","a","dd","df","ff","f","dd","f","ff","f","dd","aa","aa","ag","gg","gg","d","df","f","fd","aa","c","cc","c","g","ga","aa","a","gac","dc","ag","gg","g","g","gg","dd","f","ffd"],
+    "key": "B",
+    "beat": "8",
+    "locale": "telugu",
+    "bpm":"90",
+    "artist":"saman",
+    "title": "ambarsetoda2"      
+  }
+  ,"kesariya": {
+    "note": ["gg","e","-","-","de","fe","dc","bc","ga","gg","e","efed","de","fe","ddc","bc","cd","e","fg","fe","dc","e","fg","fe","dc","e","fg","fe","dc","d","cd","e","fg","fe","dc","e","fg","fe","dc","gg","ac","c","dee","d","cc","c","ed","cb","gg","ga","fe","dd","bbd","","dd","bd","ef","dc","dedc","gf","ef","ec","de","cde","fg","fe","cde","ab","fe","c","gf","ef","ef","efg","cde","cde","cf","e","e","ee","g","cdd","dd","cd","de","dee","eg","e","ee","g","cdd","dd","cd","de","dee","ee","e","ee","g","cdd","dd","cd","de","dee","eg","e","ee","g","cdd","dd","cd","de","de","bd","e","fg","fe","dc","e","fg","fe","dc","gg","ac","c","dee","d"],
+    "key": "C",
+    "beat": "8",
+    "locale": "hindi",
+    "bpm":"90",
+    "artist":"brahmastra",
+    "title": "kesariya"      
+  }
+  ,"barishonmein": {
+      "note": ["dd","ef","d","ef","a#","a","fg","","c","de","c","de","a","g","ef","aa","aa#","ag","fe","ef","g","aa#a","g","aa","aa#","ag","fe","fg","ge","aga","a#","a","a","e","e","dc","d","ef","f","ed","c","a#","a#","c","d","g","","a","b","a","ff","ga","fg","a","gf","ff","ga","fg","a","faga","f","faga","f","ef","df","e","faga","f","faga","f","ef","ec","d","cc","de","cd","e","dc","cc","de","cd","e","cede","c","cede","c","bc","ac","b","cede","c","cede","c","bc","bg","a","aabag","abag","efg","cde","fe","agf","ed","ff","aabag","abdc","bag","cde","agf","ed","ff"],
+      "key": "G",
+      "beat": "8",
+      "locale": "hindi",
+      "bpm":"90",
+      "artist":"darshanrawal",
+      "title": "barishonmein"      
+    }
+    ,"jotennudhoop": {
+      "note": ["c","cd","g","-","fe","de","-","-","cd","g","-","-","fe","de","c","-","cd","gg","f","de","cd","gg","fe","dc","ga","cd","ed","c","a","-","-","-","ga","cd","eg","d","-","ga","cd","ed","ca","ed","c","a","d","-","-","e","de","cc","c","ded","ca","c","e","de","cc","c","fed","ca","ag","e","de","cc","c","dd","ca","ga","ac","cd","e","g","ga","cd","e","g","e","cd","e","g","ga","cd","e","d","c","cg","gf","efe","ee","edc","bab","bg","bc","d","cb","edc","bc","cc","edc","bc","cc","c","ca","aaf","ag","g","ga","cd","ed","c","a","-","-","-","ga","cd","eg","d","-","ga","cd","ed","ca","ed","c","a","d","-","-","de","de","cbc","fe"],
+      "key": "A",
+      "beat": "8",
+      "locale": "hindi",
+      "bpm":"90",
+      "artist":"saman",
+      "title": "jotennudhoop"      
+    }
 } //endofnote
 
 
