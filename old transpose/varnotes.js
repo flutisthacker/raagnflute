@@ -4161,7 +4161,8 @@ notex = {
     "title": "wa maya wa"
   },
   "jiguthwoman": {
-    "note": ["-g", "g", "b", "c", "-", "-", "-", "-", "-b", "cd", "cb", "-g", "b", "-", "-", "-", "-a", "bc", "b", "ag", "f", "-", "-", "-", "-a", "bc", "b", "ag", "c", "b", "a", "g", "g", "-g", "g", "d", "c", "-", "-", "-", "-", "-f", "-e", "-c", "a", "-", "-", "-", "-", "-a", "a", "bc", "d", "-", "-", "-", "-", "-g", "-e", "-d", "c", "-", "-", "-",
+    "note": ["-","-b","bc","db","c","-","-","-","-","-c","cb","ag","a","-","-","-","-","-a","ba","ga","b","-","-","-","-","-b","bc","de","c","-","-","-","-","-","-","-","-","-","-","-",
+             "-g", "g", "b", "c", "-", "-", "-", "-", "-b", "cd", "cb", "-g", "b", "-", "-", "-", "-a", "bc", "b", "ag", "f", "-", "-", "-", "-a", "bc", "b", "ag", "c", "b", "a", "g", "g", "-g", "g", "d", "c", "-", "-", "-", "-", "-f", "-e", "-c", "a", "-", "-", "-", "-", "-a", "a", "bc", "d", "-", "-", "-", "-", "-g", "-e", "-d", "c", "-", "-", "-",
       "-", "-g", "ge", "-d", "e", "-e", "ee", "g", "a", "-a", "aa", "b", "c", "-e", "ed", "cb", "c", "-c", "c", "d", "e", "-c", "dc", "bc", "d", "-a", "a", "b", "c", "-e", "ed", "cb", "c", "-", "-", "-"
     ],
     "key": "G",
@@ -6279,6 +6280,69 @@ notex = {
       "bpm":"90",
       "artist":"saman",
       "title": "jotennudhoop"      
+    }
+    ,"tumerakoi": {
+      "note": ["c","cd","fe","d","d","ed","cb","bc","b","bb","bc","c","g","gg","af","e","gg","g","faga","gfe","ef","d","dee","ee","dee","ee","dee","eagf","ed","dee","ee","dee","ec","dd","de","dc","cd","bcd","cb","-d","cb","-d","cb","ae","ee","dc","bab","dd","ae","e","def","ed","d"],
+      "key": "B",
+      "beat": "8",
+      "locale": "hindi",
+      "bpm":"90",
+      "artist":"arjit",
+      "title": "tumerakoi"      
+    }
+    ,"jechautimi": {
+      "note": ["ee","d","d#b","a","ab","c#d","ab","c#c#d","c#","ab","e","ee","a","gf","e","dc","cd","e","ab","c#c#","db","a","a","bc#c#","ab","c#c#","db","a","a#","a#a","ff","fg","a#a#","gf","fg","a","","fe","gf","dd","ed","b","bc#","ab","cc","c#b","aa#a"],
+      "key": "A",
+      "beat": "8",
+      "locale": "nepali",
+      "bpm":"90",
+      "artist":"swopna",
+      "title": "jechautimi"      
+    }
+    ,"practice1": {
+      "note": ["cdef","defc","efcd","fcde","edcf","dcfe","cfed","fedc","cbag","bagc","agcb","gcba","bcfg","bcga","cgab","gabc",
+      "cdfg","dfgc","fgcd","gcdf","fdcg","dcgf","cgfd","gfdc","cbgf","bgfc","gfcb","fcbg","gbcf","bcfg","cfgb","fgbc",
+      "cdeg","degc","egcd","gcde","edcg","dcge","cged","gedc","cbaf","bafc","afcb","fcba","abcf","bcfa","cfab","fabc",
+      "cefg","efgc","fgce","gcef","fecg","ecgf","cgfe","gfec","cagf","agfc","gfca","fcag","gacf","acfg","cfga","fgac",
+      "cdfe","dfec","fecd","ecdf","fdce","dcef","cefd","efdc","cbga","bgac","gacb","acbg","gbca","bcag","cagb","agbc",
+      "cdgf","dgfc","gfcd","fcdg","gdcf","dcfg","cfgd","fgdc","cbfg","bfgc","fgcb","gcbf","fbcg","bcgf","cgfb","gfbc"],
+      "key": "G",
+      "beat": "8",
+      "locale": "nepali",
+      "bpm":"90",
+      "artist":"saman",
+      "title": "name"      
+    }
+    ,"puwachanipucha": {
+      "note": ["c","d","f","f","e","d","-","e","d","-","c","-","c","-","-","-","g","a","c","c","b","a","-","b","a","-","g","-","g","-","-","-","g","-a","c","c","b","-","a","ag","-","ga","-g","-f","e","d","-","e","f","e","d","c","c","-","-","-","gc","-c","-c","-c","ga","bc","cd","ba","gb","-b","-b","-b","ab","ga","c","c","bc","d","bd","-","ab","c","ab","-","ga","b","ga","-","cb","ag","fe","dc"],
+      "key": "G",
+      "beat": "8",
+      "locale": "newari",
+      "bpm":"90",
+      "artist":"saman",
+      "title": "puwacha nipucha",
+      "sirsak": "puwacha nipucha"  
+    }
+    ,"gulibalananicha": {
+      "note": ["-","-","-","-","-","-","c","d","g","-","f","e","e","-","c","d","g","fg","e","-","-","ef","-e","d","c","c","b","b","-","gg","-b","b","ce","de","-d","-c","c","-","c","d",
+      "-","c","-ce","-f","g","-","g","g","-","f","-f","g","f","-","e","-","-","c","ce","-e","-f","f","e","e","-","d","fe","-d","c","c","b","b","-","gg","-b","b","ce","de","-d","-c","c","-","-","-",
+      "-","-","-","-","-","-","c","d","g","-","-","-","-","-","fa","ga","f","e","-","-","-","-","c","d","f","-","-","-","-","-","df","ed","c","b","-","-","-","-","b","c","a","-","-","-","-","-","b","c","g","-","-","-","-","-","-","-","-","g","fe","-f","e","ed","b","b","c","-","-","g","fg","ef","d","-"
+    ],
+      "key": "G",
+      "beat": "8",
+      "locale": "newari",
+      "bpm":"90",
+      "artist":"saman",
+      "title": "guli bala nanicha"      
+    }
+  ,"taanbanepa": {
+      "note": ["cb","ab","-a","-g","-f","ed","cd","ef","ed","ce","-d","-c","-","-","-","-","edef","gg","g","-","edef","gg","g","-","edef","edef","edef","gg","g","-","-","-","edef","gg","g","-","edef","edef","edef","gg","g","-","-","-","edef","gg","g","-","edef","gg","g","-","cb","ag","ba","gf","gf","ed","cb","c","cd","ed","eg","bg","bc","db","cc","c","cd","ag","ag","ed","c","-","c","-"],
+      "key": "G",
+      "beat": "4",
+      "locale": "newari",
+      "bpm":"90",
+      "artist":"saman",
+      "title": "taanbanepa"      
     }
 } //endofnote
 
