@@ -268,7 +268,7 @@ function maketable(numoftab) {
   tdsname = document.createElement("td");
   tdsname.setAttribute("colspan","8")
   tdsname.className="table-dark text-info text-center notename"
-  tdsname.innerHTML = `${notesearched}[${notex[notesearched].key}]` || "Music";
+  // tdsname.innerHTML = `${notesearched}[${notex[notesearched].key}]` || "Music";
   trsname.append(tdsname)
   thead.append(trsname)
   table.append(thead)
