@@ -31,15 +31,19 @@
     </div>
     <div class="offcanvas-body">
       <div>
-        Some text as placeholder.
+        Notes will be listed here...
       </div>
       <ul class="list-group list-songs">
       </ul>
     </div>
   </div>
 
-<div class="list">
-  a
+<div class="row">
+  <div class="col-lg-3 col-md-12 col-sm-12 noteInfo">            
+  </div>
+    <div class="list col-lg-9 col-md-12 col-sm-12">
+    a
+  </div>
 </div>
 
   <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark bg-dark">
@@ -131,18 +135,47 @@ document.querySelector(".select-songs").addEventListener("change",a=>{
   })
 
   function translateMe(key){
-    newscale=notex[notesearched].note
-    transpose(newscale, eval(key), 8)
+        if(url.search!=""){
+      urlSearch=(url.search).split("=")
+      newscale=notex[urlSearch[1]].note
+    transpose(newscale, eval(key), notex[urlSearch[1]].beat)
+    }
+    else{
+      newscale=notex[notesearched].note
+    transpose(newscale, eval(key), notex[notesearched].beat)
+
+    }
   }
+  
 function showSong(notesearched){
     // notesearched = "mohmohkdhaage";
     newscale=notex[notesearched].note
-    maketable(8)
-    tabledisplay(newscale, 8);
+    maketable(notex[notesearched].beat)
+    tabledisplay(newscale, notex[notesearched].beat);
     console.log(notex[notesearched].title)
     document.querySelector(".table-dark.text-info.text-center").innerText=notesearched
 }
 
+
+  function showInfo(notesearched){
+    // notesearched = "mohmohkdhaage";
+    newscale=notex[notesearched].note
+    newCard=`<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">${notex[notesearched].title|| notesearched}</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">${notex[notesearched].locale}</li>
+    <li class="list-group-item">${notex[notesearched].key}</li>
+    <li class="list-group-item">${notex[notesearched].artist}</li>
+  </ul>
+</div>
+<p id="timer"></p>
+    <p id="note"></p>
+    `
+    document.querySelector(".noteInfo").innerHTML=newCard
+}
+  
 listOfKeys=["Ckey",
 "Cskey",
 "Dkey",
@@ -157,7 +190,7 @@ listOfKeys=["Ckey",
 "Nepkey",
 "Bkey"]
   Object.keys(notex).forEach(note=>{
-    newDiv= `<button type="button" class="list-group-item list-group-item-action" onclick="showSong('${note}')">${note}</button>`
+    newDiv= `<button type="button" class="list-group-item list-group-item-action" id="B_${note}" onclick="showSong('${note}')">${note}</button>`
     // newDiv2= `<option value="${note}">${note}</option>`
     document.querySelector(".list-songs").innerHTML +=newDiv
     // document.querySelector(".select-songs").innerHTML +=newDiv2
