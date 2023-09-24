@@ -26,7 +26,6 @@
             <select class="form-select select-songs" aria-label="Default select example">
               <option selected>Open this select menu</option>
             </select>
-
           </li>
           <li class="nav-item">
             <button class="btn btn-outline-primary btn-sm nav-link" href="#"><i class="fa fa-camera"></i>Capture</button>
@@ -81,18 +80,26 @@
 <script src="transpose2.js">
 </script>
 <script>
+    let DOM_surprise=document.querySelector("#surprise");
+  let DOM_selectSongs=document.querySelector(".select-songs");
+  let DOM_listSongs=document.querySelector(".list-songs");
+  let DOM_noteSearch=document.querySelector("#notesearch");
+let DOM_translateBtn=document.querySelector("#translated");
+let DOM_filterCheck=document.querySelector(".filterCheck");
+let searchBtn= document.querySelector("#searchBtn");
+
    const url = new URL(window.location.href)
     if(url.search!=""){
       urlSearch=(url.search).split("=")
       showSong(urlSearch[1])
     }  
-    document.querySelector("#translated").addEventListener("click",a=>{
+    DOM_translateBtn.addEventListener("click",a=>{
     translateMe("Nepnotes")
     })
-let searchBtn= document.querySelector("#searchBtn");
-document.querySelector("#notesearch").addEventListener("keyup",a=>{
+
+DOM_noteSearch.addEventListener("keyup",a=>{
     let myNotes=Object.keys(notex)
-    let notesearchval = document.querySelector("#notesearch").value;
+    let notesearchval = DOM_noteSearch.value;
     // notesearchval= notesearchval.
     console.log(notesearchval)
     if(myNotes.includes(notesearchval)){
@@ -107,17 +114,17 @@ document.querySelector("#notesearch").addEventListener("keyup",a=>{
 
 
 searchBtn.addEventListener("click",e=>{
-  let notesearchval = document.querySelector("#notesearch").value;
+  let notesearchval = DOM_noteSearch.value;
   showSong(notesearchval);
 })
 
-  document.querySelector("#surprise").addEventListener("click",a=>{
+  DOM_surprise.addEventListener("click",a=>{
     let myNotes=Object.keys(notex)
     notesearched=  myNotes[Math.floor(Math.random()*myNotes.length)]
     showSong(notesearched);
   })
-document.querySelector(".select-songs").addEventListener("change",a=>{
-  notesearched = document.querySelector(".select-songs").value;
+DOM_selectSongs.addEventListener("change",a=>{
+  notesearched = DOM_selectSongs.value;
   showSong(notesearched);
     
   })
@@ -182,16 +189,16 @@ listOfKeys=["Ckey",
     <span class="badge bg-dark">${notex[note].key}</span>
     </button>`
     // newDiv2= `<option value="${note}">${note}</option>`
-    document.querySelector(".list-songs").innerHTML +=newDiv
-    // document.querySelector(".select-songs").innerHTML +=newDiv2
+    DOM_listSongs.innerHTML +=newDiv
+    // DOM_selectSongs.innerHTML +=newDiv2
   })
   
   listOfKeys.forEach(Lok=>{
     newDiv2= `<option value="${eval(Lok)}">${Lok}</option>`
-    document.querySelector(".select-songs").innerHTML +=newDiv2
+    DOM_selectSongs.innerHTML +=newDiv2
   })
-  document.querySelector(".select-songs").addEventListener("change",a=>{
-    myKey=document.querySelector(".select-songs").value
+  DOM_selectSongs.addEventListener("change",a=>{
+    myKey=DOM_selectSongs.value
   })
 
 </script>

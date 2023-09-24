@@ -6619,6 +6619,17 @@ notex = {
     "title": "tuthodider",
     "created_at":"20th August 2023"
   }
+  ,"terenaina": {
+    "id": "865",
+    "note": ["ef","ef","g","ca","ef","ef","e","dc","ee","dc","c","cdd","cac","ee","dc","c","c","eg","f","edc","cd","eg","f","edc","bc","d","bc","dd","f","ac","fga","ag","fdd","cdd","fga","ag","fgb","abg","gb","cd","cbc","a#a","ca","g","fg","ag","fg","bc","g","fe","d","bc","g","fe","d","ef","gbb","ag","ef","gbb","ag","gag","eg","ffe","gb","cd","cb","ag","bc","gf","ed","c"],
+    "key": "G",
+    "beat": "8",
+    "locale": "hindi",
+    "bpm":"90",
+    "artist":"saman",
+    "title": "tere naina",   
+    "created_at": "27th August 2023"      
+  }
 } //endofnote
 
 
