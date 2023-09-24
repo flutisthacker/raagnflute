@@ -176,7 +176,9 @@ listOfKeys=["Ckey",
 "Nepkey",
 "Bkey"]
   Object.keys(notex).forEach(note=>{
-    newDiv= `<button type="button" class="list-group-item list-group-item-action" id="B_${note}" onclick="showSong('${note}')">${note}</button>`
+    newDiv= `<button type="button" class="list-group-item list-group-item-action" id="B_${note}" onclick="showSong('${note}')">${note}
+    <span class="badge bg-dark">${notex[note].key}</span>
+    </button>`
     // newDiv2= `<option value="${note}">${note}</option>`
     document.querySelector(".list-songs").innerHTML +=newDiv
     // document.querySelector(".select-songs").innerHTML +=newDiv2
