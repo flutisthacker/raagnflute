@@ -171,7 +171,8 @@
         <div class="modal-body text-dark noteInfo">
           <!-- <ul class="list-group Rinfo">
           </ul> -->
-          <div class="btn-group Rinfo" role="group" aria-label="Basic example">
+          <div class="btn-group-vertical m-2 Rinfo" role="group" aria-label="Basic example">
+              <select name="" id="filterKeyNotes" class="filterKeyNotes" onchange="filterNote(this.value)"></select>
           </div>
 
           <textarea name="" id="addThis" cols="30" rows="10"></textarea>
@@ -332,6 +333,7 @@
 
 
 Object.keys(infoo).forEach(inf=>{
+    document.querySelector("#filterKeyNotes").innerHTML+=`<option value="${inf}">${inf}:${infoo[inf]}</option>`
   document.querySelector(".Rinfo").innerHTML+= 
   `<button type="button"  class="btn btn-primary" id="btn${inf}" onclick="filterNote('${inf}')">${inf}:${infoo[inf]}</button>`
   /*   `<li class="list-group-item d-flex justify-content-between align-items-center">
