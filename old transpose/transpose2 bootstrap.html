@@ -148,7 +148,7 @@ function showSong(notesearched){
     maketable(notex[notesearched].beat)
     tabledisplay(newscale, notex[notesearched].beat);
     console.log(notex[notesearched].title)
-    document.querySelector(".table-dark.text-info.text-center").innerText=notesearched
+    document.querySelector(".table-dark.text-info.text-center").innerText=`${notex[notesearched].title ||notesearched} (${notex[notesearched].key})`;
 }
 
 
