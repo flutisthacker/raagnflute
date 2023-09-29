@@ -28,6 +28,25 @@ function splitnotes(abcd) {
   // return bcde.join().split(", ,");
 }
 
+document.addEventListener('keyup', (e) => {
+    if (e.key == 'PrintScreen') {
+        toBlur(true);
+        console.log("print")
+        navigator.clipboard.writeText('');   
+    }
+});
+
+function toBlur(autoBlur){
+        if (autoBlur){
+            document.querySelector("html").style.cssText="-webkit-filter: blur(5px);-moz-filter: blur(5px);-ms-filter: blur(5px);-o-filter: blur(5px);filter: blur(5px);"
+            setTimeout(toClear,2000)
+        }
+    }
+
+    function toClear(){
+    document.querySelector("html").style.cssText="-webkit-filter: blur(0px);-moz-filter: blur(0px);-ms-filter: blur(0px);-o-filter: blur(0px);filter: blur(0px);"
+}
+
 
 const Ckey = ["c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b", "-"];
 const Nepnotes = ["सा", "रेे।", "रे", "ग|", "ग", "म", "म।", "प", "ध।", "ध", "नि।", "नि", "-"];
