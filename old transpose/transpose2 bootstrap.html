@@ -56,12 +56,13 @@
   
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Notes list</h5>
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Notes list <span id="noteCount">0</span></h5>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
       <div>
         Notes will be listed here...
+
       </div>
       <ul class="list-group list-songs">
       </ul>
@@ -111,8 +112,11 @@
   let DOM_noteSearch=document.querySelector("#notesearch");
 let DOM_translateBtn=document.querySelector("#translated");
 let DOM_filterCheck=document.querySelector(".filterCheck");
+let noteCount= Object.keys(notex).length
 let searchBtn= document.querySelector("#searchBtn");
 
+  DOM_noteCount.innerText=`(${noteCount})`
+  
    const url = new URL(window.location.href)
     if(url.search!=""){
       urlSearch=(url.search).split("=")
