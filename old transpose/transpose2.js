@@ -71,6 +71,7 @@ songs = document.querySelector("#songs");
 songstwoli = document.querySelectorAll("#songstwo li");
 songkey = document.querySelector("#songkey");
 translate = document.querySelector("#translate");
+DOM_noteSearch=DOM_noteSearch;
 // Ckey.map(key => console.log(`${key} is the natural key`))
 var cursongtwo = "";
 var notesearched;
@@ -96,9 +97,9 @@ songstwoli.forEach(songl => {
     songlid2 = songlid
     document.querySelector("#notesKey").innerText =eval(songlid2.replace(".note",".key"))
     document.querySelector("#titlename").innerHTML =songlid2.replace("notex.", "").replace(".note","")
-    document.querySelector("#notesearch").value=songlid2.replace("notex.", "").replace(".note","")
+    DOM_noteSearch.value=songlid2.replace("notex.", "").replace(".note","")
     songlid.replace("note.", "")
-    notesearched=document.querySelector("#notesearch").value
+    notesearched=DOM_noteSearch.value
     if (cursongtwo == "") {
       cursongtwo = songlid;
     } else {
@@ -123,9 +124,9 @@ function supriseme(){
 
 
 document.querySelector(".fa-gift").addEventListener("click", ()=>{supriseme()});
-document.querySelector("#notesearch").addEventListener("keyup", (e) => {
+DOM_noteSearch.addEventListener("keyup", (e) => {
   if (e.keyCode == 13) {
-    noteserchval = document.querySelector("#notesearch").value;
+    noteserchval = DOM_noteSearch.value;
     notesearched = noteserchval.replaceAll(" ", "")
     songstwoli.forEach(songl => {
     songl.className="";
