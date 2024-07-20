@@ -64,6 +64,7 @@ const Gskey = ["g#", "a", "a#", "b", "c", "c#", "d", "d#", "e", "f", "f#", "g", 
 const Akey = ["a", "a#", "b", "c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "-"];
 const Askey = ["a#", "b", "c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "-"];
 const Bkey = ["b", "c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "-"];
+const Numkey = [ "1", "1.5", "2", "2.5", "3", "4", "4.5", "5", "5.5", "6", "6.5","7", "-"];
 
 songs = document.querySelector("#songs");
 songstwoli = document.querySelectorAll("#songstwo li");
