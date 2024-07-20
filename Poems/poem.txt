@@ -42,14 +42,8 @@ var nepali= `# Poem
 - बिरामीको अवस्थाम पनि उन्कै नाम गुन्गुनाए
 ---
 ### 7
-- उस आखोँसे तुम अगर नमी हतादो
-- तो उन आखोँमे कुछ कमी नही है
-- उन लब्जोँ से अगर तुम प्यार भुलादो
-- फिर भी वो हँसि मेँ बातेँ  कुछ अन्कहि है
-- मिलेँ तो नही है पर ये थोरी दुरी तो हता दो
-- तो हम दोनो मिल्ने के लिए ये लम्हा बदी सहि है
 ---
-### 8
+### 8 Bus
 - आखाँ  को नजर उन्को चन्द्रमा जस्तो
 - माया नै लाग्ला है ओँथ को लाली जस्तो
 - सुबस उन्को थियो यस्तो
@@ -95,6 +89,67 @@ var nepali= `# Poem
 - केहि त जादु छ, तिम्रो सारी मा, अदृस्य डोरीले बादी दियौ नि तिमीले मलाई
 - केहि त जादु छ, त्यो मुस्कान मा, अब मनको कामना मात्र तिमि एक्लै 
 ---
+### 14
+- हाँगा भरि काडा छ यो गुलाबी फुलको
+- तर त्यो राम्रो रातो फुल फुलेको हेरन
+- जीवन भरि पिडा सहेको मान्छेको माया हो
+- मायालु ! एक फेर माया गरेर हेरन 
+---
+### 15
+- के तिम्रो पाउ मा पाउजु लगुना दिन्छौ त मलाई
+- अनि कालो टिका लागे दिन्छु  म  तिम्रो पाउ समाई
+- के लक्ष्मी झैँ आउछौ त मेरो मुटुको दैलोमा सबै दुख भुलाई
+- कैयौ जुनी बितौनेछु म मात्र तिम्रो आखामा टोली 
+---
+### 16
+- उनि बस्छिन अलि टाडा उनलाई खोज्दै म आफ्नो दिन बिताउ
+- मैले उनलाई देखे जब, लग्यो की उनलाई आफ्नै बनाउ
+- लग्क्ष उनि सुन्दै को लागि मेरो मुटुको बाटो फुलाई फुल ले सजाउ
+- र तेही बाटोको बिचमा उभि म उनको कमलो हाथ समाउ
+- नजरले कुरा परोस एस्तो की उनि मेरो नजिक आउ
+---
+- उनको त्यो गाजलु आखा देखेरै गयो मेरो हुस
+- यतिकै त घायल थिए उनि मेरो समू आउदा झन्डै भयो यो मुटु बेहोस
+- मेरै क्लास को अगाडी उनि पर्खि बसिरख्थी कसैलाई
+- उनले पर्खिने मै हु की सोचेर भाग्यमानी सोच्थे आफैलाई
+- यो मान्न नि कस्तो बेमान उनि समू हुदा होस हरायो
+- उनि अर्कै ठाउँ म गएर बस्दा यो  नाराम डरायो
+- सो आज को दिन पनि सक्कियो, रति its prom night
+- तिमि नै हौ त्यो sweet girl my crush at first sight
+- college म त just लग्थियो you were so cute
+- डर लग्छ तिमि हुन्क्षौ  competetor of my flute
+- तिम्रो नाम सोध्न म कति तद्पिये you wont know
+- त्यो रति तिम्रो blue लेहेंगा र हसिलो मुहार what's that glow
+- चित्त दुख्यो you came in like a couple कोहि अरु संग 
+- मेरो रिस देख्दा लग्यो वायो ऋषि मुनिजी को तपस्या वंगा 
+- its funny that it was so romantic when I stepped on your dress
+- I hate my cowardice but love your damn beautiful face
+- you were like a disney's princess तिमि भित्र आउदा खेरि 
+- I imagined we danced like तिमि हौ only मेरी 
+- तर i really hoped you were just an illusion
+- now every time when i think of you I am in delusion
+- It didn;t took me like a week or a month तिम्रो नाम थाहा पाउन
+- राम्रो सुर वयेको वाए चाहन्छु तिम्रो लागि हरेक गीत हरु गाउन 
+- ghadi ko tyo harek hour lagna thalyo a couple seconds
+-  timro foto herda hunxa mero 6th sense awakened
+-  so you were sitting on a chair right infront of me
+-  you sounded so swwt like an angel to be
+-  sochchhu k paap garechhu mutu ma baseki timlai chahera pani pauna sakina
+-  tesaile yo mutu aaba timi kaha nai rakha ma yeslai ghar lagdina
+---
+- आज मैले online मा देखे तिमीलाई
+- १ day २ week but you wont reply
+- Everytime I see you तिमि कति राम्रो
+- if you reply then कुरा बढ्छ हाम्रो
+- ढुक ढुकी बढ्यो तिमि त्यो दिन लड्दा
+- I was so lucky तिमि संग कुरा गर्दा 
+- on social networks खोजे तिमीलाई  everywhere 
+- तिमि मेरो crush and this is what i really swear 
+- तिम्रो सुन्दरता ले मोहनी जलाई मा पर्यो नि
+- करेक पल मा तिम्रो त्यो मुस्कान ले मर्यो नि
+- You are better than her cause you won't even care
+- But the way you act is like a devil's snare
+---
 `;
 
 var hindi= `
@@ -111,15 +166,23 @@ var hindi= `
 - काटें भरि है इसमे जिसे मेरे दिल मे खिली है आप 
 - जैसे मुस्कुराने पे आपकी गाल होती है गुलाब 
 ---
-
+- उस आखोँसे तुम अगर नमी हतादो
+- तो उन आखोँमे कुछ कमी नही है
+- उन लब्जोँ से अगर तुम प्यार भुलादो
+- फिर भी वो हँसि मेँ बातेँ  कुछ अन्कहि है
+- मिलेँ तो नही है पर ये थोरी दुरी तो हता दो
+- तो हम दोनो मिल्ने के लिए ये लम्हा बदी सहि है
+---
 `;
 
 var english= `
+### 1
   - it will be hard for me
   - To look at you and not ask you out
   - if it really ther and it shall be
   - lets find another time and clear all the doubts
 ---
+### 2
  - when i see your eyes it feels like, i'm looking back into my heart
  - now that we've met each other, it still feels like we have never been apart
  - i waved at you, I think you were in a shock
@@ -133,6 +196,7 @@ var english= `
  - The warmth of you hand just spread over me lie a virus
  - A jolt of lightning ran through my body and i believe you are my iris
 ---
+### 3
 - how would you not feel jealous when someone is living your dream
 - wouldn't your body and mind shout out and bloody scream
 - knowing that you could never achieve what they have
@@ -152,12 +216,14 @@ var english= `
 - every time i say no something changes within me
 - Should I accept the darkness and let it be a fantsy
 ---
+### 4
 - At first she wasn't even my crush
 - As the time flew our relationship was too rush
 - really every moment with her still makes me blush
 - just what went wrong between us, we both went hush
 - usually i made the mistakes and now you have made it ultra plus
 ---
+### 5 assignment
 - I was riding my cycle and it was a stary night
 - I was in a vest waiting under those moon light
 - You came out in such a hurry like someone will caught the sight
@@ -167,6 +233,7 @@ var english= `
 -  I changed directions with all my might
 -  Reaching home I checked the paper turned bright 
 ---
+### 6 dream
 - Today i woke up this reality felt like a flurkin dream
 - the dream that i had seen was sort of my chocolate dream
 - I would want to be the sleeping beast rather than wake up
@@ -186,6 +253,7 @@ var english= `
 - genjitsu was kanojo wa watashi no aaoi sora
 - mom ko ra usko smile dekhna payeko bhagyamani mora 
 ---
+### 7
 - Did someone stopped there breath just for me
 - would the time freeze for the love to be
 - does it feel like a poison or to be free
@@ -211,5 +279,26 @@ var newari=`
 - मिखा वुयेगु आजलँ स्वोया जी नाप मतिना यनाबिउ
 - हाकु पतासी फिना तगु छन्गु वो न्हिलख्वा गुलिबाँला
 - छन्त खुया येन्का छ नाप ब्या या थे जुल आला 
-
+---
+### 2
+- ल्हाते भातिचा अबिर काया छंगु न्हासे उलाबिला
+- मिखाए छंगु आजः उल बाँ लक बिला
+- अजः उल तगु छंगु मिखाँ थो नख झ झ धा
+- माया दुगु ख सा, छंगु ल्हा ज्वोने बले ख ख धा
+- म्हुतुसी लाली तय वे मते जिगु  न्ह्याने छ 
+- आ छंगु लाली यु रंग उला बिउ चासे जित 
+### 3
+- मिखा बोयेके बले जिउ मिखा न छन्त खन
+- छौँ मिखा ये सोया सोया जिगु नुग छन्थ्या हे वोन
+- छन्त स्वोयेत जि वोथे थासे पिया च्वोना
+- छौँ न सिकेत छौ न्ह्यने वोया छन्गु न न्यना न्यना
+- वो्या जिछन्त जिगु थो मतिन तया
+- अथे हे चोन्चोने मते जिउ ख्वा स्वोया
+- न्हिला न्हिला धालः छँ जि न छौँ मतिना धया
+- वोने त्येल जि थौ जिउ मतिना य मे चोया
+### 4
+- मिर्ग या थेँ छन्गु मिखा
+- जी सोय हे छन्त मतिन यना च्वोना
+- छन्त येइका छौ लिउ लिउ वैत
+- छ वैगु लँ ये पिया च्वोना 
 --- `;
