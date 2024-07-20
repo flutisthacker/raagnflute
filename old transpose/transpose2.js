@@ -71,7 +71,6 @@ songs = document.querySelector("#songs");
 songstwoli = document.querySelectorAll("#songstwo li");
 songkey = document.querySelector("#songkey");
 translate = document.querySelector("#translate");
-DOM_noteSearch=DOM_noteSearch;
 // Ckey.map(key => console.log(`${key} is the natural key`))
 var cursongtwo = "";
 var notesearched;
@@ -97,9 +96,9 @@ songstwoli.forEach(songl => {
     songlid2 = songlid
     document.querySelector("#notesKey").innerText =eval(songlid2.replace(".note",".key"))
     document.querySelector("#titlename").innerHTML =songlid2.replace("notex.", "").replace(".note","")
-    DOM_noteSearch.value=songlid2.replace("notex.", "").replace(".note","")
+    document.querySelector("#notesearch").value=songlid2.replace("notex.", "").replace(".note","")
     songlid.replace("note.", "")
-    notesearched=DOM_noteSearch.value
+    notesearched=document.querySelector("#notesearch").value
     if (cursongtwo == "") {
       cursongtwo = songlid;
     } else {
@@ -124,9 +123,9 @@ function supriseme(){
 
 
 document.querySelector(".fa-gift").addEventListener("click", ()=>{supriseme()});
-DOM_noteSearch.addEventListener("keyup", (e) => {
+document.querySelector("#notesearch").addEventListener("keyup", (e) => {
   if (e.keyCode == 13) {
-    noteserchval = DOM_noteSearch.value;
+    noteserchval = document.querySelector("#notesearch").value;
     notesearched = noteserchval.replaceAll(" ", "")
     songstwoli.forEach(songl => {
     songl.className="";
@@ -245,7 +244,13 @@ function transpose(note, key, beat) {
   totbeat=beat
   maketable(beat);
   tabledisplay(newscale, beat);
-  ifrdocument.querySelector("#givenote").innerText=totranspose
+  try{
+    ifrdocument.querySelector("#givenote").innerText=totranspose
+  }
+  catch(e){
+    console.error(e)
+  }
+  console.log(newscale)
   return newscale;
 }
 /* 
