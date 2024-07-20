@@ -85,6 +85,10 @@ document.querySelectorAll(".v1Nh3.kIKUG._bz0w").forEach(ddd=>{
 abcd.push(ddd.firstChild.href)
 })
 */
+
+
+notesX={"g" : "घु","n" : "ना","N" : "न्","r" : "रा","k" : "खाे","t" : "ता","d" : "ध्याँ",
+"c" : "चा","-" : "-"}
     notekeya=["g","n","N","r","k","t","d","c","-"]
     notekeyb=["3'","gf","G","/f","vf]","tf","WofF","rf","-"]
 blankfour=["","","",""]
@@ -147,6 +151,26 @@ document.querySelector("#searchTerm").addEventListener("keypress",e=>{
 
 // notes=notea+notec
         var newArr=[]
+
+              
+function changeMe(noteArry){
+  noteArry.forEach(note=>{
+      if(isArray(note)==true){
+          changeme(note)
+      }else{
+        notes=note.split("")
+        intNote=""
+        notes.forEach(n=>{
+            intNote+=notesX[n]
+            console.log(intNote)
+          })
+        newArr.push(intNote)
+      }
+  })
+  console.log(newArr)
+  return newArr
+}
+
         
         function changeme(noteArry){
             noteArry.forEach(note=>{
