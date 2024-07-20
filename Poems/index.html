@@ -24,7 +24,7 @@ function getAccordionItem(HiD,UiD,uText){
     return `<div class="accordion-item">
       <h2 class="accordion-header" id="${HiD}">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${UiD}" aria-expanded="false" aria-controls="${UiD}">
-        ${HiD}
+            ${HiD.split("H")[1].toUpperCase()}
         </button>
       </h2>
       <div id="${UiD}" class="accordion-collapse collapse" aria-labelledby="${HiD}" data-bs-parent="#accordionExample">
