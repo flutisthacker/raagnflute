@@ -140,6 +140,33 @@ var nepali= `# Poem
 - सरिर को ताप महसुस हुन्छ, कस्तो  होला जब जल्छ है क्रिया
 - क असू को धारा ले मलम झैँ, सेलौक्ष तो जल्दो यो पिडा 
 ---
+### 20 jhumka
+- उदायेको घामा पनि बादल थोरै लग्यो कि कतै 
+- मुस्कुरौने त्यो मुहर्म पनि उदसि थोरै छायो कि कतै
+- कान्मा झुम्का उन्को भिन्न भिन्न थरि को
+- झुम्का उनिलाई सुहाऊँछकि सोचिरहन्छु पसलमा जता ततै
+---
+### 21
+- सम्हालिन खोज्छु म आफु ले आफैलाई भुलाई
+- बितेका पल सबै समेति मुतुमा आफ्नै वनि सजई
+- नया कथा लेख्न थलेको थिऍ पुरना शब्दहरु मीताई
+- कसैले तेहि पुरानो चोत बल्झै दियो अब सम्हालुँ कसरी आफुलाई
+---
+### 22
+- तिम्रो मुस्कान को कारण हुन चाहन्छु
+- तिम्रो त्यो मुस्कान न देखि मलाई निन्द्रा आऊदैन
+- तिम्रो गहिरो आखाँ म दुब्न चहन्छु
+- लुकियेका आसुँ पुछिदिन्छु, तिम्रा आखाँ मा आसुँ सुहाऊदैन
+- तिम्रो कानको झुम्का फेरिदिन चाहँनछु
+- मायलु कुरा गुन्गुनाऊने मौका फेरि अरु कहिले पाऊदैन
+- तिम्रो केस मा उल्झिन चाहनछु
+---
+### 23
+- देखे जब मैले तिमिलाई, एक फेर हेर्दै मन भयो दन्ग
+- लेखियेको भग्य म के छ खै कुन्नि, ईश्वोर्लै मगे मेरो जिवन मत्र तिमि सँग 
+- सैयौँ मन्दिर जौला अन्गिन्ति बर्त बसौँला, हरेक दिन उस्लाई मायालु लाई हेर्नु छ नया कुर्था स्प्त रन्ग
+- अरे माया गरेको छु तिम्रो खुसी देख्ने ईक्छ्या छ म सँग
+---
 - उनको त्यो गाजलु आखा देखेरै गयो मेरो हुस
 - यतिकै त घायल थिए उनि मेरो समू आउदा झन्डै भयो यो मुटु बेहोस
 - मेरै क्लास को अगाडी उनि पर्खि बसिरख्थी कसैलाई
@@ -248,16 +275,22 @@ var hindi= `
 - पान खैके तोहर मु लाल लाल हो गइल बा
 - तोहरा उ लाली मि से हमार दिल चोरी हो गइल बा
 ---
+### 8
+- हमे भि कोइ हाथ थाम लेत तो, हम भि एक मन्नत बनलेते
+- किसि एक ने भरोसा किय हो तो, पथ्हर को भि तोद्के अल्लाह बन देते
+- लाख दुवये मागि होगि हर मन्दिर मस्जिद मे उस्को खुश रख्ना य अल्लाह
+- पर उस्कि एक मुस्कान देख्के मेरे साथ किशन भि बोले खुब्सुरति तो देखो उस्कि मसल्लाह 
+---
 `;
 
 var english= `
-### 1
+### 1:12 july
   - it will be hard for me
   - To look at you and not ask you out
   - if it really ther and it shall be
   - lets find another time and clear all the doubts
 ---
-### 2
+### 2:when you touch me-13thjuly
  - when i see your eyes it feels like, i'm looking back into my heart
  - now that we've met each other, it still feels like we have never been apart
  - i waved at you, I think you were in a shock
@@ -298,7 +331,7 @@ var english= `
 - just what went wrong between us, we both went hush
 - usually i made the mistakes and now you have made it ultra plus
 ---
-### 5 assignment
+### 5:Assignment
 - I was riding my cycle and it was a stary night
 - I was in a vest waiting under those moon light
 - You came out in such a hurry like someone will caught the sight
@@ -308,7 +341,7 @@ var english= `
 -  I changed directions with all my might
 -  Reaching home I checked the paper turned bright 
 ---
-### 6 dream
+### 6: Dream
 - Today i woke up this reality felt like a flurkin dream
 - the dream that i had seen was sort of my chocolate dream
 - I would want to be the sleeping beast rather than wake up
@@ -386,4 +419,11 @@ var newari=`
 - जी सोय हे छन्त मतिन यना च्वोना
 - छन्त येइका छौ लिउ लिउ वैत
 - छ वैगु लँ ये पिया च्वोना 
---- `;
+---
+### 5 
+- छौ खँ छन्त ध्या जिँ छन्गु किपा हे जक सोया
+- जिँ सिल छला वो गुलाब स्वाँ थेँ बालाँ
+- थौँ छँ हाकु पतासी फिना तगु सोया
+- बिचा वोल छन्त मैचा सते धका आला 
+---
+`;
