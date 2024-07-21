@@ -137,7 +137,7 @@ document.querySelector("#dropItems").addEventListener("change",e=>{
   var myval=document.querySelector("#dropItems").value
   document.body.innerHTML+="<div class='list'></div>"
     maketable(4)
-    tabledisplay(changeme(eval(`noted.${myval}`)),4)
+    tabledisplay(changeMe(eval(`noted.${myval}`)),4)
 })
 document.querySelector("#searchTerm").addEventListener("keypress",e=>{
   if(e.keyCode==13){
