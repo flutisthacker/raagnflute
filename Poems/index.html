@@ -24,23 +24,12 @@
     </div>
   </header>
 
-  <article id="poem-article">
-    
-  </article>
-  <script>
-    window.addEventListener('scroll', event => {
-      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
+  <article id="poem-article" class="container-fluid">
 
-      document.documentElement.style.setProperty('--article-read-size', `${scrolled}%`);
-    });
-  </script>
-  <div class="container">
-    <div id="content"></div>
-  </div>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="poem.txt"></script>
+      <div id="content"></div>
+  </article>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="poem.txt"></script>
 
 <script>
         
@@ -65,17 +54,22 @@ function getAccordionItem(HiD,UiD,uText){
     </div>`;
 }
 document.body.innerHTML +=(marked.parse(getAccordion()))
-    </script>
 
-<script>
-    var gg=
+var gg=
     getAccordionItem("Hnepali","Unepali",nepali)
     + getAccordionItem("Henglish","Uenglish",english) 
     + getAccordion(getAccordionItem("Hhindi","Uhindi",hindi) 
     + getAccordionItem("Hnewari","Unewari",newari));
     document.getElementById('content').innerHTML = gg;
-    document.getElementById('poem-article').innerHTML=marked.parse(english)
 </script>
+  <script>
+    window.addEventListener('scroll', event => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
 
+      document.documentElement.style.setProperty('--article-read-size', `${scrolled}%`);
+    });
+  </script>
 </body>
 </html>
