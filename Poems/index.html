@@ -65,7 +65,7 @@ var gg=
     + getAccordion(getAccordionItem("Hhindi","Uhindi",hindi) 
     + getAccordionItem("Hnewari","Unewari",newari));
     document.getElementById('content').innerHTML = gg;
-    document.getElementById('content').innerHTML = nepali + english + hindi + newari;
+    document.getElementById('content').innerHTML = markse.parse(nepali + english + hindi + newari);
 </script>
   <script>
     window.addEventListener('scroll', event => {
