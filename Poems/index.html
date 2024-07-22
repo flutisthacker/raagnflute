@@ -24,10 +24,14 @@
     </div>
   </header>
 
-  <article id="poem-article" class="container-fluid">
+  <article id="poem-article">
 
-      <div id="content"></div>
+
   </article>
+
+<div class= container-fluid>
+  <div id="content"></div>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="poem.txt"></script>
 
@@ -61,6 +65,7 @@ var gg=
     + getAccordion(getAccordionItem("Hhindi","Uhindi",hindi) 
     + getAccordionItem("Hnewari","Unewari",newari));
     document.getElementById('content').innerHTML = gg;
+    document.getElementById('content').innerHTML = nepali + english + hindi + newari;
 </script>
   <script>
     window.addEventListener('scroll', event => {
