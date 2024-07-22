@@ -167,6 +167,20 @@ var nepali= `# Poem
 - सैयौँ मन्दिर जौला अन्गिन्ति बर्त बसौँला, हरेक दिन उस्लाई मायालु लाई हेर्नु छ नया कुर्था स्प्त रन्ग
 - अरे माया गरेको छु तिम्रो खुसी देख्ने ईक्छ्या छ म सँग
 ---
+### 24
+- एकदिन मेरो लास तिम्रो अंगालो मा हुने छ 
+- तब मेरो अनुहार देखेर तिम्रो मुटु धुरुधुरु रुने छ
+- कसै को एक झलक ले नि बर्सौ सताउदो रहेछ
+- कसैलाई माया गर्नु पनि मन ले दिनौउ रुवाऊ दो रहेछ 
+---
+### 25
+- त्यो नाम को पनि क आर्थ वायो 2
+- जसलाई तिमीले हजरा बार गायौ
+- हजरा बार बोल्यौ 
+- हजरा बार सम्झेउ 
+- हजरा बार लेख्यौ 
+- तर आज गएर उसकै लागि हजार बार रोयौ 
+---
 - उनको त्यो गाजलु आखा देखेरै गयो मेरो हुस
 - यतिकै त घायल थिए उनि मेरो समू आउदा झन्डै भयो यो मुटु बेहोस
 - मेरै क्लास को अगाडी उनि पर्खि बसिरख्थी कसैलाई
@@ -281,6 +295,13 @@ var hindi= `
 - लाख दुवये मागि होगि हर मन्दिर मस्जिद मे उस्को खुश रख्ना य अल्लाह
 - पर उस्कि एक मुस्कान देख्के मेरे साथ किशन भि बोले खुब्सुरति तो देखो उस्कि मसल्लाह 
 ---
+### 9
+- तुम रोज के बात करते हो
+- और मे हर वक्त तुम्हे याद कर्ता हु 
+- तुम्हे अपनी लिला मानते हुए लाखों कहानिया बुनता हु 
+- जनेमन्न एक फुल देन मेरे फिद्रत मैन नही 
+- पर तुम्हारे लिए गुलाब के बघिचे मैन बन डु अभि यहि 
+---
 `;
 
 var english= `
@@ -387,6 +408,21 @@ var english= `
 - we are perfect for each other so their is no need to rush
 - we can make memories and capture these wonderful beauty
 - so lator we can brag our childrens about our previous ruby
+---
+### 9
+- when i had the love vibes I should have ignored you 
+- should have abandoned the love when ppl told me to 
+- should have killed my self instead of suffering new 
+- you called me hitler but i must be a satan's nephew 
+---
+### 10
+- you flip you hair like its a photo shoot
+- you make me feel like ants under boot
+- i have never scrolled so fast 
+- wanted to see you till the last
+- breath i took when i first saw your pics
+- eyes gazinng til i heard my heart's ticks
+---
 `;
 
 var newari=`
@@ -425,5 +461,11 @@ var newari=`
 - जिँ सिल छला वो गुलाब स्वाँ थेँ बालाँ
 - थौँ छँ हाकु पतासी फिना तगु सोया
 - बिचा वोल छन्त मैचा सते धका आला 
+---
+### 6
+- तिमिला थे छंगु खवा ठउँ तस्क हे झ झ धा
+- छ लुगु मक्कुसे च्वंगु म्हिग त्वोनौ एला गयौ सा
+- भाम्चा ह सिनि या मा बा स्वो ठाउँ जिगु न्हिला खवा
+- गुलि कविता जक धयागु आ फुक्का वोन प्याखा ल्हुई वा 
 ---
 `;
