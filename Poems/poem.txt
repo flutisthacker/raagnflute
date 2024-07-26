@@ -473,6 +473,22 @@ var english= `
 - some may things forsaken just to be lost again
 - memories can be sweet but it is also thecause of the pain
 ---
+### 16-56
+- Now i think its a good thing that we havnt met
+- All the feelings that i havnt said to you yet
+- You are the sun to my whole world
+- I rise with your smile and wait for your story to unfold
+- Hidden beneath that smile i know you have a chaos
+- I am waiting for a chance, i would slay such damned  like kratos
+- I waited  for decades just to see through the promise
+- I can wait another few seeing you happy,its just my wish
+- I dont know why i stumbled upon your posts
+- Now every time i see you everywhere like a ghost
+- Yes my heart is a open door
+- It is a lore, i am not sure what can you find hidden there
+- My life is a mess everything is gore, so i dont want to ruin your
+- I hope this is love cause happiness is all i want to pour
+- En los albores de esta vida, eres mi mundo, mi amour
 `;
 
 var newari=`
