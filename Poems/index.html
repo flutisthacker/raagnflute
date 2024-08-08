@@ -22,8 +22,28 @@
         </a>
       </div>
     </div>
+    
   </header>
-
+  <p>
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Hindi</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">English</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample3">nepali</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="false" aria-controls="multiCollapseExample4" >newari</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  data-bs-toggle="collapse" tabindex="-1" data-bs-target=".multi-collapse" aria-controls="multiCollapseExample1 multiCollapseExample2 multiCollapseExample3">All</a>
+      </li>
+      
+    </ul>
+  </p>
   <article id="poem-article">
 
 
@@ -32,6 +52,36 @@
 <div class= container-fluid>
   <div id="content"></div>
 </div>
+<div class="row col-lg-12">
+  <div class="col-lg-12">
+    <div class="collapse multi-collapse show" id="multiCollapseExample1">
+      <div class="card card-body">
+        Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-12">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body">
+        Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-12">
+    <div class="collapse multi-collapse" id="multiCollapseExample3">
+      <div class="card card-body">
+        Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-12">
+    <div class="collapse multi-collapse" id="multiCollapseExample4">
+      <div class="card card-body">
+        Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+      </div>
+    </div>
+  </div>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="poem.txt"></script>
 
@@ -42,6 +92,43 @@ function getAccordion(AddItem){
   ${AddItem}
   </div>`;
 }
+
+function AddCarousel(Ctype,index,AddItem,Mname){
+    return Ctype == 1 ? `<div class="carousel-item text-success ${index==0? "active":""}">
+        ${marked.parse(AddItem)}
+      </div>` : `<button type="button" data-bs-target="#carousel${Mname}" data-bs-slide-to="${index}" class="active" aria-current="true" aria-label="Slide ${index+1}"></button>`
+
+}
+function getCarousel(AddItems,Mname){
+  var toReturn = ""
+  var indicatorR=''
+  var innerR=''
+    toReturn = `  <div id="carousel${Mname}" class="carousel slide bg-dark" data-bs-ride="carousel">
+        <div class="carousel-indicators sticky-xl-top">
+      Update_indicator
+  </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel${Mname}" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carousel${Mname}" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+   <div class="carousel-inner text-center">
+      Update_inner
+      </div>
+      </div>`
+
+      AddItems.forEach((AddItem,index)=>{
+        indicatorR +=AddCarousel(0,index,AddItem,Mname)
+        innerR +=AddCarousel(1,index,AddItem,Mname)
+      })
+
+
+  return toReturn.replace("Update_indicator",indicatorR).replace("Update_inner",innerR) 
+}
+
 
 function getAccordionItem(HiD,UiD,uText){
     return `<div class="accordion-item">
@@ -64,8 +151,12 @@ var gg=
     + getAccordionItem("Henglish","Uenglish",english) 
     + getAccordion(getAccordionItem("Hhindi","Uhindi",hindi) 
     + getAccordionItem("Hnewari","Unewari",newari));
-    document.getElementById('content').innerHTML = gg;
+    // document.getElementById('content').innerHTML = gg;
     document.getElementById('poem-article').innerHTML = marked.parse(nepali + english + hindi + newari);
+    document.getElementById('multiCollapseExample3').innerHTML = getCarousel(nepali.split("---"),'nepali');
+    document.getElementById('multiCollapseExample4').innerHTML = getCarousel(newari.split("---"),'newari');
+    document.getElementById('multiCollapseExample2').innerHTML = getCarousel(english.split("---"),'english');
+    document.getElementById('multiCollapseExample1').innerHTML = getCarousel(hindi.split("---"),'hindi');
 </script>
   <script>
     window.addEventListener('scroll', event => {
