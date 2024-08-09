@@ -101,6 +101,7 @@ function getAccordion(AddItem){
 function AddCarousel(Ctype,index,AddItem,Mname){
     return Ctype == 1 ? `<div class="carousel-item text-success ${index==0? "active":""}">
           <img src="https://placehold.co/600x280/grey/white?text=.&font=roboto" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block text-light ${Mname}">
         ${marked.parse(AddItem)}
       </div></div>` : `<button type="button" data-bs-target="#carousel${Mname}" data-bs-slide-to="${index}" class="active" aria-current="true" aria-label="Slide ${index+1}"></button>`
 
