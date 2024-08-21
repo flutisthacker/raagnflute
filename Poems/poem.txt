@@ -197,34 +197,20 @@ var nepali= `# Poem
 - हजुर को पाउ छुनु पैन्ना अब कहिले 
 ---
 ### 28 Neha
-- उनको त्यो गाजलु आखा देखेरै गयो मेरो हुस
-- यतिकै त घायल थिए उनि मेरो समू आउदा झन्डै भयो यो मुटु बेहोस
-- मेरै क्लास को अगाडी उनि पर्खि बसिरख्थी कसैलाई
-- उनले पर्खिने मै हु की सोचेर भाग्यमानी सोच्थे आफैलाई
+- उनको त्यो गाजलु आखा देखेरै गयो मेरो हुस | यतिकै त घायल थिए उनि मेरो समू आउदा झन्डै भयो यो मुटु बेहोस
+- मेरै क्लास को अगाडी उनि पर्खि बसिरख्थी कसैलाई | उनले पर्खिने मै हु की सोचेर भाग्यमानी सोच्थे आफैलाई
 - यो मान्न नि कस्तो बेमान उनि समू हुदा होस हरायो
-- उनि अर्कै ठाउँ म गएर बस्दा यो  नाराम डरायो
-- सो आज को दिन पनि सक्कियो, रति its prom night
-- तिमि नै हौ त्यो sweet girl my crush at first sight
-- college म त just लग्थियो you were so cute
-- डर लग्छ तिमि हुन्क्षौ  competetor of my flute
-- तिम्रो नाम सोध्न म कति तद्पिये you wont know
-- त्यो रति तिम्रो blue लेहेंगा र हसिलो मुहार what's that glow
-- चित्त दुख्यो you came in like a couple कोहि अरु संग 
-- मेरो रिस देख्दा लग्यो वायो ऋषि मुनिजी को तपस्या वंगा 
-- its funny that it was so romantic when I stepped on your dress
-- I hate my cowardice but love your damn beautiful face
-- you were like a disney's princess तिमि भित्र आउदा खेरि 
-- I imagined we danced like तिमि हौ only मेरी 
-- तर i really hoped you were just an illusion
-- now every time when i think of you I am in delusion
-- It didn;t took me like a week or a month तिम्रो नाम थाहा पाउन
-- राम्रो सुर वयेको वाए चाहन्छु तिम्रो लागि हरेक गीत हरु गाउन 
-- ghadi ko tyo harek hour lagna thalyo a couple seconds
--  timro foto herda hunxa mero 6th sense awakened
--  so you were sitting on a chair right infront of me
--  you sounded so swwt like an angel to be
--  sochchhu k paap garechhu mutu ma baseki timlai chahera pani pauna sakina
--  tesaile yo mutu aaba timi kaha nai rakha ma yeslai ghar lagdina
+- उनि अर्कै ठाउँ म गएर बस्दा यो  नाराम डरायो | सो आज को दिन पनि सक्कियो, रति its prom night
+- तिमि नै हौ त्यो sweet girl my crush at first sight| college म त just लग्थियो you were so cute
+- डर लग्छ तिमि हुन्क्षौ  competetor of my flute |तिम्रो नाम सोध्न म कति तद्पिये you wont know
+- त्यो रति तिम्रो blue लेहेंगा र हसिलो मुहार what's that glow | चित्त दुख्यो you came in like a couple कोहि अरु संग | मेरो रिस देख्दा लग्यो वायो ऋषि मुनिजी को तपस्या वंगा 
+- its funny that it was so romantic when I stepped on your dress| I hate my cowardice but love your damn beautiful face
+- you were like a disney's princess तिमि भित्र आउदा खेरि | I imagined we danced like तिमि हौ only मेरी 
+- तर i really hoped you were just an illusion| now every time when i think of you I am in delusion
+- It didn;t took me like a week or a month तिम्रो नाम थाहा पाउन| राम्रो सुर वयेको वाए चाहन्छु तिम्रो लागि हरेक गीत हरु गाउन 
+- ghadi ko tyo harek hour lagna thalyo a couple seconds|  timro foto herda hunxa mero 6th sense awakened
+-  so you were sitting on a chair right infront of me|  you sounded so swwt like an angel to be
+-  sochchhu k paap garechhu mutu ma baseki timlai chahera pani pauna sakina | tesaile yo mutu aaba timi kaha nai rakha ma yeslai ghar lagdina
 ---
 ### 29
 - आज मैले online मा देखे तिमीलाई
@@ -262,16 +248,41 @@ var nepali= `# Poem
   - तिमी लजाएको हेरुम त तिमीलाई हेरी टोलाई रहु लाग्छ
   - तिमी बोलिदेउ न माया एक फेर तिम्रो अघि आए घुडा टेकुम टेकुम लाग्छ
 ---
+### 33
+- तिम्रो आखाको नजर पनि राम्रो
+- तिम्रो त्यो मुहारको हासो त झनै
+- बोलि सुन्दा मिठो सक्कर जस्तो
+- घुली गए त्यो मिठासमा मन मनै  
+---
+### 34
+- आजकल राति बाहिर कौसीमा बस्छु
+- खोइ मलाई यो के भएछ
+- आकाशमा हेरी टोलाई बस्छु
+- चाँदनी रातको म म कुनै जादु चलेछ
+---
+### 35
+- मुटु भित्रको माया तिमीलाई देखाउन सकेन मैले
+- लुकी लुकी माया बसाए जहिले
+- त्यो पल फर्केर आउदैन अब कहिले
+- तिम्रो हातमा मेरो हात याद आउछ अहिले
+---
+### 36
+- कसैलाई मन दिनु नि पापै रहेछ
+- उनि बिना यो जीवन पनि सराप नै रहेछ
+- जिउनु त चा तर जिउ कसरि
+- माया को बन्धन मा उनलाई बाधु कसरि
+- माया त एउटा भ्रम पो रहेछ
+- हे कृष्ण, त्यो भ्रमलाई वास्तविकतामा परिवर्तन गरु मा कसरि 
 `;
 
 var hindi= `
-### 1-32
+### 1-36
 - तेरे जुल्फो को देखु तो उस्मे एक गजरा लगाने का दिल कर्ता है
 - तेरे आखों मे देखु तो उस्मे मुझे प्यार का मन्जिल दिखाई देत है
 - तेरे हाथों को छुलु तो उस्मे इशक का खुस्बू आत है
 - तेरे हाथ को ठाम लु तो उस्मे मेरि दिल दिखऐ देता है
 ---
-### 2-33
+### 2-37
 - फूलोंमै है देखा तुझे, और मे भावारे तेरे प्यार मे
 - कोइ चुरा न ले तुझे किसी बहने से
 - और मे रहु तेरे इन्तेजार मे
@@ -280,7 +291,7 @@ var hindi= `
 - काटें भरि है इसमे जिसे मेरे दिल मे खिली है आप 
 - जैसे मुस्कुराने पे आपकी गाल होती है गुलाब 
 ---
-### 3-34
+### 3-38
 - उस आखोँसे तुम अगर नमी हतादो
 - तो उन आखोँमे कुछ कमी नही है
 - उन लब्जोँ से अगर तुम प्यार भुलादो
@@ -288,13 +299,13 @@ var hindi= `
 - मिलेँ तो नही है पर ये थोरी दुरी तो हता दो
 - तो हम दोनो मिल्ने के लिए ये लम्हा बदी सहि है
 ---
-### 4-35
+### 4-39
 - वो दो नशिली आखे दुबा लगी मुझे
 - छुपके राखा हु मेरे दिल के मस्जिद पे तुझे
 - ये प्यार मोहब्बत एक गुत्थी है जानेमन
 - जी किसी और के कहने से नही सिर्फ तेरे मेरे बीच मे सुल्झे 
 ---
-### 5-36
+### 5-40
 - कहनेको तो हम भी एक नवाब है 
 - येह कुदरत कि जैसे तुम्हारी खुब्सुरती लाजवाब है
 - तुम्हे देख्के मान्न मेह हुइ हलचल ये कैसे
@@ -302,30 +313,30 @@ var hindi= `
 - तुम ३ बार कबुल कर्दो तोह सहि 
 - मेरी बेगम,तेरी मेरी बीच मे ये सारी दुनिया एक कबाब है 
 ---
-### 6-37
+### 6-41
 - तु कहे तो मे अपनी नशको हि काट डु 
 - अपनी हर खुशी कि हसिन पल तेरे साथ् बात्दु 
 - ख्वाब तोह देख्ता हु मे तेरे
 - तु कहे तो तेरे सात जनमो टक तेरे साथ् डु 
 ---
-### 7-38 she eating paan
+### 7-42 she eating paan
 - पान खैके तोहर मु लाल लाल हो गइल बा
 - तोहरा उ लाली मि से हमार दिल चोरी हो गइल बा
 ---
-### 8-39
+### 8-43
 - हमे भि कोइ हाथ थाम लेत तो, हम भि एक मन्नत बनलेते
 - किसि एक ने भरोसा किय हो तो, पथ्हर को भि तोद्के अल्लाह बन देते
 - लाख दुवये मागि होगि हर मन्दिर मस्जिद मे उस्को खुश रख्ना य अल्लाह
 - पर उस्कि एक मुस्कान देख्के मेरे साथ किशन भि बोले खुब्सुरति तो देखो उस्कि मसल्लाह 
 ---
-### 9-40 
+### 9-44 
 - तुम रोज के बात करते हो
 - और मे हर वक्त तुम्हे याद कर्ता हु 
 - तुम्हे अपनी लिला मानते हुए लाखों कहानिया बुनता हु 
 - जनेमन्न एक फुल देन मेरे फिद्रत मैन नही 
 - पर तुम्हारे लिए गुलाब के बघिचे मैन बन डु अभि यहि 
 ---
-### 10 -41
+### 10 -45
 - तु  फूलों की तर्हा  दिल में खिली ओह मेरे दिल्काशी (attraction)
 - आखों मे मेरे छाने लागि थोडी सी उन्स (infatuation) जैसी 
 - तेरे रूह से इन्ति करीब हु, अब होगाया है इश्क (love)
@@ -334,16 +345,30 @@ var hindi= `
 - तेरी आखों मै ऐसे दुबुन की लोग मुझे कहे जुनुन(madness) है ये तेरी 
 - हकिकत मे मोहोबत करुण आइसी की कुधा बोले मौत है ये तेरी 
 --- 
+### 11 -46
+- तुत फुता समादर मे बेहता हुवा जो मे
+- डर सेहेमा सा हु इस खुंखार दुनिया से
+- कोइ एक राज तो बतादो, कैसे कर्लेते है सभी
+- दौड के दिखा कहते है, अपनी पैर खडी होती नही
+- एक भुल से सब तभा हो गया, जाने कहाँ गया वो
+- कुन हे ये सकस, क्या है, क्यु है ये लिख रह है जो 
+---
+### 12 - 47
+- सुहानी रात होगी और हम दोनो कि मुलाकत
+- वो तारे भरि आसमा होगी, और हमारे बीच लम्बि चोडी कुच बात
+- मे तुम्हारी तरफ देखु, तुम थोडी मुस्कुरा भी देना
+- इस पल से आख्री वक्त टक, सिर्फ तेरे साथ् है रहन
+- रेहेना है तेरे दिल में 
 `;
 
 var english= `
-### 1-41:12 july
+### 1-48:12 july
   - it will be hard for me
   - To look at you and not ask you out
   - if it really ther and it shall be
   - lets find another time and clear all the doubts
 ---
-### 2-42:when you touch me-13thjuly
+### 2-49:when you touch me-13thjuly
  - when i see your eyes it feels like, i'm looking back into my heart
  - now that we've met each other, it still feels like we have never been apart
  - i waved at you, I think you were in a shock
@@ -357,7 +382,7 @@ var english= `
  - The warmth of you hand just spread over me lie a virus
  - A jolt of lightning ran through my body and i believe you are my iris
 ---
-### 3-43
+### 3-50
 - how would you not feel jealous when someone is living your dream
 - wouldn't your body and mind shout out and bloody scream
 - knowing that you could never achieve what they have
@@ -377,14 +402,14 @@ var english= `
 - every time i say no something changes within me
 - Should I accept the darkness and let it be a fantsy
 ---
-### 4-44
+### 4-51
 - At first she wasn't even my crush
 - As the time flew our relationship was too rush
 - really every moment with her still makes me blush
 - just what went wrong between us, we both went hush
 - usually i made the mistakes and now you have made it ultra plus
 ---
-### 5-45:Assignment
+### 5-52:Assignment
 - I was riding my cycle and it was a stary night
 - I was in a vest waiting under those moon light
 - You came out in such a hurry like someone will caught the sight
@@ -394,7 +419,7 @@ var english= `
 -  I changed directions with all my might
 -  Reaching home I checked the paper turned bright 
 ---
-### 6-46: Dream
+### 6-53: Dream
 - Today i woke up this reality felt like a flurkin dream
 - the dream that i had seen was sort of my chocolate dream
 - I would want to be the sleeping beast rather than wake up
@@ -414,7 +439,7 @@ var english= `
 - genjitsu was kanojo wa watashi no aaoi sora
 - mom ko ra usko smile dekhna payeko bhagyamani mora 
 ---
-### 7-47
+### 7-54
 - Did someone stopped there breath just for me
 - would the time freeze for the love to be
 - does it feel like a poison or to be free
@@ -430,7 +455,7 @@ var english= `
 - those smile  were like rays in the rain
 - it made my day and washed all the pain
 ---
-### 8-48
+### 8-55
 - you can laugh you can smile 
 - We are far apart a kilometer and a miletake you sorrow and give it a private share
 - lets divide those onto the portion we each can bear
@@ -441,13 +466,13 @@ var english= `
 - we can make memories and capture these wonderful beauty
 - so lator we can brag our childrens about our previous ruby
 ---
-### 9-49
+### 9-56
 - when i had the love vibes I should have ignored you 
 - should have abandoned the love when ppl told me to 
 - should have killed my self instead of suffering new 
 - you called me hitler but i must be a satan's nephew 
 ---
-### 10-50
+### 10-57
 - you flip you hair like its a photo shoot
 - you make me feel like ants under boot
 - i have never scrolled so fast 
@@ -455,34 +480,34 @@ var english= `
 - breath i took when i first saw your pics
 - eyes gazinng til i heard my heart's ticks
 ---
-### 11-51
+### 11-58
 - if this was a fairytale you would be the princess and i wouldbe the frog
 - love is an addiction  i would be addict and you would be my drug
 ---
-### 12-52
+### 12-59
 - you even took the wrong door to the mart
 - brought them a knife from the cart
 - let hem play a game of dart
 - which always results in a bulleys piercing the heart
 ---
-### 13-53
+### 13-60
 - loving some one isn't your fault that you couldn't win
 - but expecting some thing from the love is greater than any seven deadly sin
 
 - every rain is not romantic
 - rather its just lunatic
 ---
-### 14-54
+### 14-61
 - hobby was what i addicted to
 - then i found love as addiction new
 - i am an addict of love knows only few
 - love cant be rehabilitated i found it true
 ---
-### 15-55
+### 15-62
 - some may things forsaken just to be lost again
 - memories can be sweet but it is also thecause of the pain
 ---
-### 16-56
+### 16-63
 - Now i think its a good thing that we havnt met
 - All the feelings that i havnt said to you yet
 - You are the sun to my whole world
@@ -499,10 +524,19 @@ var english= `
 - I hope this is love cause happiness is all i want to pour
 - En los albores de esta vida, eres mi mundo, mi amour
 ---
+### 17-64
+- I asked her to be mine
+- if i could take the clock and just rewind
+- there are a lots of mistakes that i had made
+- so many things that i want me to persuade
+- some relations would had been better
+- if i had the guts and sent the letter
+- Even today i have the urge to call her up
+- bind our hearts and patch them up
 `;
 
 var newari=`
-### 1-56
+### 1-65
 - वो किपा छन्गु स्वोया हे जिगु नुग जिके मन्त
 - ओ मैचा धका सतेगु बिचा या धुन जि छन्त
 - माकसी तय गुखे स्वोया चोनौ छक धयाबिउ
@@ -510,14 +544,15 @@ var newari=`
 - हाकु पतासी फिना तगु छन्गु वो न्हिलख्वा गुलिबाँला
 - छन्त खुया येन्का छ नाप ब्या या थे जुल आला 
 ---
-### 2-57
+### 2-66
 - ल्हाते भातिचा अबिर काया छंगु न्हासे उलाबिला
 - मिखाए छंगु आजः उल बाँ लक बिला
 - अजः उल तगु छंगु मिखाँ थो नख झ झ धा
 - माया दुगु ख सा, छंगु ल्हा ज्वोने बले ख ख धा
 - म्हुतुसी लाली तय वे मते जिगु  न्ह्याने छ 
 - आ छंगु लाली यु रंग उला बिउ चासे जित 
-### 3-58
+---
+### 3-67
 - मिखा बोयेके बले जिउ मिखा न छन्त खन
 - छौँ मिखा ये सोया सोया जिगु नुग छन्थ्या हे वोन
 - छन्त स्वोयेत जि वोथे थासे पिया च्वोना
@@ -526,27 +561,26 @@ var newari=`
 - अथे हे चोन्चोने मते जिउ ख्वा स्वोया
 - न्हिला न्हिला धालः छँ जि न छौँ मतिना धया
 - वोने त्येल जि थौ जिउ मतिना य मे चोया
-### 4-59
+---
+### 4-68
 - मिर्ग या थेँ छन्गु मिखा
 - जी सोय हे छन्त मतिन यना च्वोना
 - छन्त येइका छौ लिउ लिउ वैत
 - छ वैगु लँ ये पिया च्वोना 
 ---
-### 5-60
+### 5-69
 - छौ खँ छन्त ध्या जिँ छन्गु किपा हे जक सोया
 - जिँ सिल छला वो गुलाब स्वाँ थेँ बालाँ
 - थौँ छँ हाकु पतासी फिना तगु सोया
 - बिचा वोल छन्त मैचा सते धका आला 
 ---
-### 6-61
+### 6-70
 - तिमिला थे छंगु खवा ठउँ तस्क हे झ झ धा
 - छ लुगु मक्कुसे च्वंगु म्हिग त्वोनौ एला गयौ सा
 - भाम्चा ह सिनि या मा बा स्वो ठाउँ जिगु न्हिला खवा
 - गुलि कविता जक धयागु आ फुक्का वोन प्याखा ल्हुई वा 
 ---
-### 7-62
+### 7-71
 - बस मा छैन आज जिगु थो मन 
 - तिम्रै मात्र गीत गुन्गुनौचा मेरो धड्कन 
----
-
-  `;
+`;
