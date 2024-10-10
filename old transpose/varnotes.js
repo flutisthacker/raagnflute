@@ -6678,6 +6678,24 @@ notex = {
       "artist":"mongolian heart",
       "title": "sayadtimrobaato"      
     }
+    ,"saathi": {
+      "note": ["cd","e","de","-","cd","e","-","-","c","d","ee","dd","cd","e","de","-","cd","e","de","-c","c","d","ee","dd","ee","g","c","c","eg","ed","ee","eg","c","-","eg","ed","fe","dc","c","ed","d","-","cd","dc","gc","c","-","-"],
+      "key": "G",
+      "beat": "8",
+      "locale": "nepali",
+      "bpm":"90",
+      "artist":"sugam pokhrel",
+      "title": "saathi"      
+    }
+    ,"hawajastai": {
+      "note": ["cd","ed","ed","e","g","-","-","ed","c","ac","c","de","-","-","cd","ed","ed","e","g","a","g","-","-","a","ga","a","cbc","a","g","cd","ed","ed","e","g","ed","c","ac","cc","e","cd","ed","ed","e","g","a","g","-","-","a","ga","a","cbc","a","g"],
+      "key": "G",
+      "beat": "8",
+      "locale": "nepali",
+      "bpm":"90",
+      "artist":"johnrai",
+      "title": "hawajastai"      
+    }
 } //endofnote
 
 
