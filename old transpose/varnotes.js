@@ -6641,7 +6641,7 @@ notex = {
       "created_at": "27th August 2024"            
     }
 ,"haaldilmera": {
-      "note": ["cd","ef","d","--","ed","c#","-","cd","c","ce","d","ca","c","c","ce","d","ca","c","c","ce","d","ca","c","ed","ef","e","dc","g#","g#","g#","g","e","g","g#g#","g#","g","e","g","g#g#","g#","g","e","g","gg","g","ac","ac","e","de","de","de","-","-","dc","ced","ca","eg","a","c","ef","g","g#","g#","g","ef","d","a","c"],
+      "note": ["cd","ef","d","-","-","ed","c#","-","cd","c","ce","d","ca","c","c","ce","d","ca","c","c","ce","d","ca","c","ed","ef","e","dc","g#","g#","g#","g","e","g","g#g#","g#","g","e","g","g#g#","g#","g","e","g","gg","g","ac","ac","e","de","de","de","-","-","dc","ced","ca","eg","a","c","ef","g","g#","g#","g","ef","d","a","c"],
       "key": "F",
       "beat": "8",
       "locale": "hindi",
