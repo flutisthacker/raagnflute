@@ -6630,7 +6630,7 @@ notex = {
     "title": "tere naina",   
     "created_at": "27th August 2023"      
   },
-  "tere chehra": {
+  "terechehra": {
       "note": ["ag","ff","c","dc","ag","f","a","g","d","de","dd","fe","fg","a","gf","d","de","dd","fe","fg","a","gf","ag","ff","c","dc","ag","f","a","g","d","de","dd","fe","fg","a","gf","d","de","dd","fe","fg","a","gf","fe","fe","e","-","","ed","ed","cde","d","bc","cd","dc","gg","ga","ag","f","gf","ag","ff","c","dc","ag","f","a","g","d","de","dd","fe","fg","a","gf","d","de","dd","fe","fg","a","gf","ef","eg","gf","fe","ef","eg","f","ef","eg","gf","fe","ef","ga","-","ef","eg","gf","fe","ef","eg","f","ef","eg","gf","fe","ef","ga","-"],
       "key": "G#",
       "beat": "8",
@@ -6640,7 +6640,7 @@ notex = {
       "title": "tere chehra",   
       "created_at": "27th August 2024"            
     }
-,"haal dil mera": {
+,"haaldilmera": {
       "note": ["cd","ef","d","--","ed","c#","-","cd","c","ce","d","ca","c","c","ce","d","ca","c","c","ce","d","ca","c","ed","ef","e","dc","g#","g#","g#","g","e","g","g#g#","g#","g","e","g","g#g#","g#","g","e","g","gg","g","ac","ac","e","de","de","de","-","-","dc","ced","ca","eg","a","c","ef","g","g#","g#","g","ef","d","a","c"],
       "key": "F",
       "beat": "8",
