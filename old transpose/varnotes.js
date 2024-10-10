@@ -6694,7 +6694,7 @@ notex = {
       "locale": "nepali",
       "bpm":"90",
       "artist":"johnrai",
-      "title": "hawajastai"      
+      "title": "hawajastai"   
     }
 } //endofnote
 
