@@ -6650,6 +6650,17 @@ notex = {
       "title": "haal dil mera",   
       "created_at": "27th August 2024"            
     }
+    ,"birsanehauki": {
+      "note": ["g","-","e","-","c","c","g","-","e","-","cd","de","g","-","e","-","e","fe","dc","cc","c","g","-","e","-","c","c","g","-","e","-","cd","de","cc","g","e","e","-","f","e","dc","cc","c","de","fe","dc","c","ac","c","de","fe","dc","c","ac","c","dd","de","fe","dc","c","ac","c","-","-","-","-","-","ge","e","ge","e","ge","ee","d","c","ge","e","ge","e","ge","ee","d","c","ge","e","ge","e","ge","ee","d","c","ge","e","ge","e","ge","ee","d","c","ge","e","ge","e","ge","ee","d","c","de","e","ge","e","dc","cc","ac","c","de","e","ge","e","dc","cc","ac","c","cd","e","gd","d","ec","c","ca","c","c","e","d","c","cd","e","a","-","-","e","d","c","cd","e","g","-","-"],
+      "key": "G",
+      "beat": "8",
+      "locale": "nepali",
+      "bpm":"90",
+      "artist":"saman",
+      "title": "birsanehauki",      
+      "created_at": "10th October 2024"            
+
+    }
 } //endofnote
 
 
