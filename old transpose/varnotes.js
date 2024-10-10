@@ -6659,7 +6659,15 @@ notex = {
       "artist":"saman",
       "title": "birsanehauki",      
       "created_at": "10th October 2024"            
-
+    }
+    ,"timilaidekhera": {
+      "note": ["c","de","e","d","de","de","dc-","c","de","e","d","de","de","dc-","c","de","e","d","de","de","dc-","c","eg","e","de","de","dc","-","-","c","ca","c","ce","d","-","-","-","fe","dc","e","d","-","-","-","-","aa","d","dd","c","aa","d","dd","c","gg","fe","ef","d","dd","ddg","f","e","ee","ef","edc","cc","c","de","d","dg","ff","ee"],
+      "key": "G",
+      "beat": "8",
+      "locale": "nepali",
+      "bpm":"90",
+      "artist":"mongolian heart",
+      "title": "timilaidekhera"      
     }
 } //endofnote
 
