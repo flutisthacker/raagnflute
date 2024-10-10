@@ -6669,6 +6669,15 @@ notex = {
       "artist":"mongolian heart",
       "title": "timilaidekhera"      
     }
+    ,"sayadtimrobaato": {
+      "note": ["ge","gg","a","ee","ee","d","ca","af","e","ge","gg","a","ee","ee","d","ca","af","e","dd","gg","ed","c","dd","gg","ed","c","dd","gg","ed","c","dd","gg","ed","c"],
+      "key": "G",
+      "beat": "8",
+      "locale": "nepali",
+      "bpm":"90",
+      "artist":"mongolian heart",
+      "title": "sayadtimrobaato"      
+    }
 } //endofnote
 
 
