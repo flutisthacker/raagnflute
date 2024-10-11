@@ -6227,14 +6227,14 @@ notex = {
     "artist":"saman",
     "title": "eutasapanacha"      
   }
-  ,"saluguagcha": {
+  ,"salugugacha": {
     "note": ["c","d","e","d","c","b","a","g","a","c","c","c","c","d","e","d","e","g","g","e","g","a","a","a","a","ac","cb","aab","agg","gg","ga","ag","ag","ec","dd","dd","edc","cd","eg","ed","de","dcc","cc"],
     "key": "G",
     "beat": "8",
     "locale": "newari",
     "bpm":"90",
     "artist":"saman",
-    "title": "saluguagcha"      
+    "title": "salugugacha"      
   }
   ,"ghodeypesawar": {
     "note": ["bbc","ge","ef","g","d","c","b","a","g","a","b","a","g","f","e","g","g","f","e","d","efe","gabc","c","cc","bcd","cb","a","ag","ef","agf","ed","de","c","cd","de","e-ef","ed","de","e-ef","ed","de","e-ef","ga","gf","e","cb","cd","cce","de","dc","c","-","-","ab","cb","cb","c","baga","ba","ba","b","agfg","ag","ag","a","agf","ef","g","-","eee","fff","ggg","ab","ccd","baa","gg","ab","bbc","baa","gee","efg","ccd","baa","gg","ab","bbc","ba","ag","cdefg","aa","a-g","fe","ef","efg","cc","edc","ce","dc","c","-","-","aed","e","ed","g","ed","e","ea","gf","ed","ef","d","dc","ba","g","a","aa","ab","cd","de","d"],
@@ -6630,6 +6630,15 @@ notex = {
     "title": "tere naina",   
     "created_at": "27th August 2023"      
   },
+  "swoyetadhyamwa":{
+    "note":["-", "cd", "-e", "d", "c", "cb", "a", "g", "-", "cd", "-e", "g", "ga", "a", "-g", "a", "c", "-", "-", "-", "-", "bd", "-c", "b", "g", "gf#", "e", "d", "-", "ee", "-d", "c", "c", "-", "-", "-", "cd", "eg", "AC", "E", "-", "-", "-", "D", "FE", "-", "D", "E", "C", "-", "CD", "C", "-", "DC", "A#A", "Gf", "e", "d", "de", "d", "-", "fe", "-d", "e", "c", "-g", "ed", "c", "-", "eg", "-a", "b", "a", "a", "a", "a", "ge", "eg", "-a", "b", "a", "a", "g", "-", "-", "ad", "-c", "b", "g", "gf#", "e", "d", "-", "ee", "-d", "c", "c", "-", "-", "-"],
+    "key":"D",
+    "beat":"8",
+    "locale":"newari",
+    "artist":"none",
+    "title":"swoyeta dhya mwa",
+    "created_at":"Sun Oct 01 2023 15:20:01 GMT+0545 (Nepal Time)"
+},
   "terechehra": {
       "note": ["ag","ff","c","dc","ag","f","a","g","d","de","dd","fe","fg","a","gf","d","de","dd","fe","fg","a","gf","ag","ff","c","dc","ag","f","a","g","d","de","dd","fe","fg","a","gf","d","de","dd","fe","fg","a","gf","fe","fe","e","-","","ed","ed","cde","d","bc","cd","dc","gg","ga","ag","f","gf","ag","ff","c","dc","ag","f","a","g","d","de","dd","fe","fg","a","gf","d","de","dd","fe","fg","a","gf","ef","eg","gf","fe","ef","eg","f","ef","eg","gf","fe","ef","ga","-","ef","eg","gf","fe","ef","eg","f","ef","eg","gf","fe","ef","ga","-"],
       "key": "G#",
@@ -6694,7 +6703,43 @@ notex = {
       "locale": "nepali",
       "bpm":"90",
       "artist":"johnrai",
-      "title": "hawajastai"   
+      "title": "hawa jastai"   
+    }
+    ,"aayat": {
+      "note": ["ag","ed","c","de","de","e","-","-","ag","c-a","g","ag","e","g","-","-","ga","d","","ce","d","ca","c","c","ge","d","ce","d","ca","c","c","ed","g","e","d","ed","c","ga","cd","ed","ca","c","cc","ab","cc","cc","b","bd","c","ab","c","d","dd","dc","ed","dd","ce","d","ca","b","c","-","-","-","-","cd","e","ed","e","ed","eg","e","ea","ga","g","ed","c","de","e","cd","e","ed","e","ed","eg","fe","ca","ge","d","","c","de","e","ga","d","dc","ed","ac","c","gg","e","ed","ed","ca","c","c","e","dg","e","d","ed","c","acd","edc","a","-"],
+      "key": "D",
+      "beat": "8",
+      "locale": "hindi",
+      "bpm":"90",
+      "artist":"saman",
+      "title": "aayat"      
+    }
+    ,"phirleaayadil": {
+      "note": ["gg","cac","c","cc","ced","dc","b","b","ce","e","d","-","-","fe","cb","c","c","-","-","cc","ced","cb","b","ce","e","d","-","-","d","-","-","cb","af","e","da","-","fe","d","fe","-","-d","c","fe","d","fe","-","-d","c","fe","d","fe","-","-a","g","fe","df","ed","fe","d","fe","-","-c","c","d","cb","c","-","-","ga","b-cc","c","cc","ced","dc","b","b","ce","e","d","-","-","ed","fed","cb","c","c","-","-","cc","ced","cb","b","ce","e","d","-","-","d","-","-","cb","af","e","da","-","fe","d","fe","-","-d","c","fe","d","fe","-","-d","c","fe","d","fe","-","-a","g","fe","df","ed","fe","d","fe","-","-c","c","d","cb","c","-","-","fe","ee","e","e","df","fg","fe","ef","ba","d","-","bd","ba","ba","bf","a","-","g","-","ee","fg","a","gf","g","fe","f","g","fe","-","-","gg","bb","c","c","cc","ced","cb","bce","ed","-","ed","f","ed","b","c","c","cc","ce","de","cb","bce","e","d"],
+      "key": "G#",
+      "beat": "8",
+      "locale": "hindi",
+      "bpm":"90",
+      "artist":"saman",
+      "title": "phir le aaya dil"      
+    }
+    ,"ailaluwaya": {
+      "note": ["ed","ed","cd","cb","ab","g","-","-","ed","ed","cd","cb","c","-","-","-","ee","g","ee","g","ee","dd","gf","ag","fe","de","c","c","b","-","-","-","-","e","ed","cb","a","ab","ag","g","ee","aa","gf","g","ed","d","ee","dc","c","e","ed","ea","a","ga","g","ed","ee","dd","c"],
+      "key": "F",
+      "beat": "8",
+      "locale": "newari",
+      "bpm":"90",
+      "artist":"saman",
+      "title": "ailaluwaya"      
+    }
+    ,"mayamadula": {
+      "note": ["ge","ee","eg","f","ed","c","gg","gc","ba","g","fe","d","cc","de","d","-","c","cd","ca#","gg","a#","d","fe","dc","c"],
+      "key": "F",
+      "beat": "8",
+      "locale": "newari",
+      "bpm":"90",
+      "artist":"rojman maharjan",
+      "title": "mayamadula"      
     }
 } //endofnote
 
