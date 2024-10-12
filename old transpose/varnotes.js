@@ -6730,7 +6730,7 @@ notex = {
       "locale": "newari",
       "bpm":"90",
       "artist":"saman",
-      "title": "ailaluwaya"      
+      "title": "aila lu waya"      
     }
     ,"mayamadula": {
       "note": ["ge","ee","eg","f","ed","c","gg","gc","ba","g","fe","d","cc","de","d","-","c","cd","ca#","gg","a#","d","fe","dc","c"],
@@ -6739,7 +6739,16 @@ notex = {
       "locale": "newari",
       "bpm":"90",
       "artist":"rojman maharjan",
-      "title": "mayamadula"      
+      "title": "maya madula"      
+    }
+    ,"makhatwayagwaa": {
+      "note": ["e","ed","cd","e","ed","cc","a","e","ed","cd","ea","a","g","gd","e","ed","cb","a","aa","bb","ga","ee","d","cc","b","dd","cb","a"],
+      "key": "G",
+      "beat": "8",
+      "locale": "nepali",
+      "bpm":"90",
+      "artist":"rojman",
+      "title": "makha twa ya gwaa"      
     }
 } //endofnote
 
