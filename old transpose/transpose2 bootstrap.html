@@ -22,7 +22,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropup">
+          <!-- <li class="nav-item dropup">
             <select class="form-select select-songs" aria-label="Default select example">
               <option selected>Open this select menu</option>
             </select>
@@ -44,6 +44,9 @@
           </li>
           <li class="nav-item">
             <button class="btn btn-outline-primary btn-sm nav-link" href="#" id="playNotes">Play</button>
+          </li> -->
+          <li class="nav-item">
+            <button class="btn btn-outline-primary btn-sm nav-link" href="#" id="liveToastBtn">Menu</button>
           </li>
         </ul>
         <form class="d-flex" method="get">
@@ -61,8 +64,9 @@
     </div>
     <div class="offcanvas-body">
       <div>
-        Notes will be listed here...
-
+        <div class="col-12 noteInfo">            
+        </div>
+            Notes will be listed here...
       </div>
       <ul class="list-group list-songs">
       </ul>
@@ -73,46 +77,45 @@
   <div class="list col-12">
     Notes will be added in this division...
   </div>
-  <div class="col-12 noteInfo">            
-    </div>
 </div>
 <div class="toast-container position-fixed top-0 end-0 p-3 bg-success" style="z-index: 11">
 </div>
 
 
-<div class="toast show fixed-bottom" role="alert" aria-live="assertive" aria-atomic="true">
-  <div class="toast-header bg-dark text-light">
-    <strong class="me-auto">Menu</strong>
-    <small>11 mins ago</small>
-    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-  </div>
-  <div class="toast-body">
-    <div class="btn-group-vertical" role="group" aria-label="Basic example">
-      <button class="btn btn-outline-primary btn-sm nav-link" href="#"><i class="fa fa-camera"></i>Capture</button>
-
-      <button type="button" class="btn btn-outline-primary m-2" id="surprise" href="#"><i class="fa fa-gift"></i> Surprise</button>
-
-      <button type="button" class="btn btn-outline-primary m-2" href="#">Change</button>
-
-      <button type="button" class="btn btn-outline-primary m-2" id="translated" href="#">Translate</button>
-
-      <button type="button" class="btn btn-outline-primary m-2" href="#">Staff</button>
-
-      <button type="button" class="btn btn-outline-primary m-2" href="#" id="playNotes">Play</button>
-      <select class="form-select select-songs" aria-label="Default select example">
-        <option selected>Open this select menu</option>
-      </select>
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+  <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="me-auto">Menu</strong>
+      <small>11 mins ago</small>
     </div>
-
+    <div class="toast-body">
+      <div class="btn-group-vertical" role="group" aria-label="Basic example">
+        <button class="btn btn-outline-primary btn-sm nav-link" href="#"><i class="fa fa-camera"></i>Capture</button>
+  
+        <button type="button" class="btn btn-outline-primary m-2" id="surprise" href="#"><i class="fa fa-gift"></i> Surprise</button>
+  
+        <button type="button" class="btn btn-outline-primary m-2" href="#">Change</button>
+  
+        <button type="button" class="btn btn-outline-primary m-2" id="translated" href="#">Translate</button>
+  
+        <button type="button" class="btn btn-outline-primary m-2" href="#">Staff</button>
+  
+        <button type="button" class="btn btn-outline-primary m-2" href="#" id="playNotes">Play</button>
+        <select class="form-select select-songs" aria-label="Default select example">
+          <option selected>Open this select menu</option>
+        </select>
+      </div>
+    </div>
   </div>
 </div>
+
 
 <script>
 
     function addToast(message,callId){
        let toastMessage=`  <div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
     <div id="liveToast${callId}" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-      <div class="toast-header bg-info text-white">
+      <div class="toast-header bg-info tex  t-white">
         <img src="..." class="rounded me-5" alt="...">
         <strong class="me-auto">Notification</strong>
         <small>0 mins ago</small>
@@ -127,6 +130,18 @@
     var toast = new bootstrap.Toast(toastLiveExample)
     toast.show()
     }
+
+    document.querySelector("#liveToastBtn").addEventListener("click",a=>{
+      if(document.querySelector("#liveToast").classList.contains("hide")){
+        document.querySelector("#liveToast").classList.remove("hide")
+      document.querySelector("#liveToast").classList.add("show")
+      document.querySelector("#liveToastBtn").classList.add("bg-info")
+      }else{
+        document.querySelector("#liveToast").classList.remove("show")
+        document.querySelector("#liveToast").classList.add("hide")
+      document.querySelector("#liveToastBtn").classList.remove("bg-info")
+      }
+    })
 
 </script>
 
