@@ -43,6 +43,7 @@
     <input type="text" name="" placeholder="locale" value="nepali" id="locale">
     <input type="text" name="" placeholder="bpm" value="90" id="bpm">
     <input type="text" name="" placeholder="changetonum" value="saman" id="chtonum">
+    <button class="btn btn-primary" onclick="writeToClipboard(document.querySelector('#givenote'))">Copy</button>
   </div>
   <textarea name="" id="takenote" cols="30" rows="10"></textarea>
   <textarea name="" id="givenote" cols="30" rows="10"></textarea>
@@ -99,7 +100,9 @@
       "locale": "${document.querySelector("#locale").value}",
       "bpm":"${document.querySelector("#bpm").value}",
       "artist":"${document.querySelector("#chtonum").value}",
-      "title": "${document.querySelector("#naam").value}"      
+      "title": "${document.querySelector("#naam").value}",
+      "created_at": "${(new Date).toGMTString()}",
+      "native":"${addtoname}"
     }`
     givenote.value = ass
   })
