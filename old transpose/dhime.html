@@ -24,7 +24,7 @@
 <body>
   <select name="" id="dropItems"></select>
   <input type="text" name="" id="searchTerm">
-
+  <div class="container"></div>
     <script>
 /*
 abcd=[]
@@ -33,11 +33,13 @@ abcd.push(ddd.firstChild.href)
 })
 */
 
-notesX={"g" : "घु","n" : "ना","N" : "न्","r" : "रा","k" : "खाे","t" : "ता","d" : "ध्याँ",
+notesX={"g" : "घुँ","n" : "ना","N" : "न्","r" : "रा","k" : "खाे","t" : "ता","d" : "ध्याँ",
 "c" : "चा","-" : "-"}
-    notekeya=["g","n","N","r","k","t","d","c","-"]
-    notekeyb=["3'","gf","G","/f","vf]","tf","WofF","rf","-"]
-    notekeyc=["घु","ना","न्","रा","खाे","ता","ध्याँ","चा","-"]
+var notesChanges={
+  notekeya:["g","n","N","r","k","t","d","c","-"],
+    notekeyb:["3'","gf","G","/f","vf]","tf","WofF","rf","-"],
+    notekeyc:["घुँ","ना","न्","रा","खाे","ता","ध्याँ","चा","-"]
+}
 
     blankfour=["","","",""]
 blanknhya=["","Nhya","",""]
@@ -48,7 +50,7 @@ noted={"choose":[],
   ["dt","gnng","k","tgd","dt","gnng","k-t","gnng","dd","tgd","kttg","d","kttg","ntkt","kttk","d","dtk","tktt","dd","t","kkk","tktt","tk-d","ddkk","tgd","k","-tg","gn","-"]],
 "own":[["g","g","g","ttk","ttk","g","g","g","g","g","ttk","ttk","g","tg","g","-","tt","gn","kk","tk","gk","tg","g","-","d","ttkt","t","ttkt","d","ttkt","t","ttkt","tg","t","tt","k","tk","t","tt","k","k","kkk","tktk","t","gnNc","gg","tgtg","t","k","kkk","tktk","t","tggg","tgg","tgtg","t","k","kkk","tktk","t","t-tt","gt","gt","t","dd","ttkt","dd","ttkt","dd","ttkt","d","-","dd","ttkt","dd","ttkt","dt","dt-d","d","-"],blankfour,
 ["d","-t","d","d","kt","tk","t","-","tt","kt","tk","tt","kt","tk","t","-","tk","d","d","tt","kt","d","d","t","k","tk","tt","kt","kt","tk","t","-","t","kt","tg","gn","tg","gn","tg","gn","d-t","d-t","d","d","-","tg","gn","t","-","ttk","ttk","k-t","kt","tk","kt","tk","t","kttk","tk","t","tt","t-tt","kttk","t","-","k-k","tk","tk","tt","ktt","kttk","t","-"]],
-        "dyalhya1":["gn","tg","gn","nt","ttkt","tgnr","kttk","tg","gnkt","tgnr","kttk","ntt","ktg","tgnr","ktg","tgnr","g-nr","k-t","ttkt","tgnr","gn"],
+        "dyalhya1":["gn","tg","gn","nNt","ttkt","tgnr","kttk","tg","gnkt","tgnr","kttk","ntt","ktg","tgnr","ktg","tgnr","g-nr","k-t","ttkt","tgnr","gn"],
         "dyalhya2":["gk","tg","gk","nt","ttkt","tgnr","kttk","tg","gnkt","tgnr","kttk","ntt","ktg","tgnr","ktg","tgnr","g-nr","k-t","ttkt","tgnr","gn"],
         "dyalhya3":["gnkt","tg","gnkt","nt","ttkt","tgnr","kttk","tg","gnkt","tgnr","kttk","ntt","ktg","tgnr","ktg","tgnr","g-nr","k-t","ttkt","tgnr","gn"],
         "dyalhya4":["gn","gn","gn","gn","gn","ng","n","d","tt","kt","tg","nr","kt","tk","t","d","gnkt","tgnr","kttk","ntt","ktg","tgnr","ktg","tgnr","g-nr","k-t","ttkt","tgnr","gn"],
@@ -81,22 +83,39 @@ Object.keys(noted).forEach(not=>{
   opt.innerHTML=not
   document.querySelector("#dropItems").append(opt)
 })
+
+const containerDOM=document.querySelector('.container')
+const listDOM=document.querySelector('.list')
+
 document.querySelector("#dropItems").addEventListener("change",e=>{
   var myval=document.querySelector("#dropItems").value
-  document.body.innerHTML+="<div class='list'></div>"
-    maketable(4)
-    tabledisplay(changeMe(eval(`noted.${myval}`)),4)
-    // tabledisplay(changeme(eval(`noted.${myval}`)),4)
+  containerDOM.innerHTML=""
+  updateNotes(myval)
+
 })
 document.querySelector("#searchTerm").addEventListener("keypress",e=>{
   if(e.keyCode==13){
-    myval=document.querySelector("#searchTerm").value
-      document.body.innerHTML+="<div class='list'></div>"
-    // document.querySelector(".list").innerHTML=""
-    maketable(4)
-    tabledisplay(changeme(eval(`noted.${myval}`)),4)
+    var myval=document.querySelector("#searchTerm").value
+    updateNotes(myval)
+
   }
 })
+
+function updateNotes(myval){
+  containerDOM.innerHTML=""
+  if (containerDOM.innerHTML==""){
+    containerDOM.innerHTML+="<div class='list'></div>"
+    maketable(4)
+    tabledisplay(changeMe(eval(`noted.${myval}`)),4)
+  }
+  else{
+    listDOM.innerHTML+=""
+    maketable(4)
+    tabledisplay(changeMe(eval(`noted.${myval}`)),4)
+  }
+    newArr=[]
+
+}
 
 // notes=notea+notec
         var newArr=[]
@@ -127,7 +146,7 @@ function changeMe(noteArry){
                 intNote=""
                 // debugger
                 notes.forEach(n=>{
-                  intNote+=notekeyc[notekeya.indexOf(n)]
+                  intNote+=notesChanges.notekeyc[notesChanges.notekeya.indexOf(n)]
                 })
                 newArr.push(intNote)
               }
