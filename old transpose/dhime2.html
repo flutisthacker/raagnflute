@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<script src="https://transposenotes.pages.dev/lib/splitNotes.js"></script>
+<script src="https://transposenotes.pages.dev/lib/makeTable.js"></script>
+<script src="https://transposenotes.pages.dev/lib/tableDisplay.js"></script>
+</head>
+<style>
+  .tbody{
+    font-family: 'Preeti','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  body{
+    background-color:  #19981121;
+  }
+</style>
+<body>
+  <select name="" id="dropItems"></select>
+  <input type="text" name="" id="searchTerm">
+  <div class="container"></div>
+    <script>
+/*
+abcd=[]
+document.querySelectorAll(".v1Nh3.kIKUG._bz0w").forEach(ddd=>{
+abcd.push(ddd.firstChild.href)
+})
+*/
+
+notesX={"g" : "घुँ","n" : "ना","N" : "न्","r" : "रा","k" : "खाे","t" : "ता","d" : "ध्याँ",
+"c" : "चा","-" : "-"}
+var notesChanges={
+  "g":"घेँ",
+"t":"ता",
+"n":"ना",
+"k":"ख",
+"r":"र",
+"T":"ती",
+"":"था",
+"d":"दि",
+"D":"धाँ",
+"q":"धेँ",
+"w":"धिँ",
+"-":"-"
+}
+
+    blankfour=["","","",""]
+blanknhya=["","Nhya","",""]
+noted={"choose":[],
+  "note":[["kk-k","tkt","dgn","d","tggn","tggn","tggn","d","kk-k","tkt","gnng","d","gnt","gnngn","gnng","d"],blankfour,
+  ["kk","k","tg","gn","k","-","tg","d","kk","k","tg","gt","gn","ng","nn","gn","tt","k","ktk","tt","kk","tk","tk","tt","kt","tk","tt","k","g","g","t","g","t","g","gn","t","-","t","-","tg","gn","kt","t","gn","n","gn","nn","gn","n","gn","nn","gn","gn","gn","gn","gn","ng","tt","kt","d","-","-","t","k","-","-","-"]],
+"note1":[["gd","tg","-g","ng","gd","tT","dtkT","tg"],blankfour,
+["qn","gq","ng","qn","q-ng","dtkd","tgdt","gdt","kTtk","dtkt","kTD","Td","D","-","dd","tk"],blankfour,
+["Dg","tT","tg","DT","tg","tT","tg","DT"],blankfour,
+["D","gdrgn","g","q","tk","gdrgt","g","q"],blankfour,
+["D-dt","kdrk","tk","q","tk-dt","kdrk","tk","q"],blankfour,
+["Ddt","kdrk","tkdt","kdrk"],blankfour,
+["D","gnkd","tk","gnkd"],blankfour,
+["D","dtkT","n","dtkT"],blankfour,
+["dtkT","n","dtkT","D"],blankfour,
+["DT","n","nT","D"],blankfour,
+["DT","nT","nT","DT"],blankfour,
+["D","dtkt","tk","w","tk","dtkt","tk","w"],blankfour,
+["g","-t","T","k-D"],blankfour,
+
+]
+
+}
+
+Object.keys(noted).forEach(not=>{
+  opt=document.createElement("option")
+  opt.value=not
+  opt.innerHTML=not
+  document.querySelector("#dropItems").append(opt)
+})
+
+const containerDOM=document.querySelector('.container')
+const listDOM=document.querySelector('.list')
+
+document.querySelector("#dropItems").addEventListener("change",e=>{
+  var myval=document.querySelector("#dropItems").value
+  containerDOM.innerHTML=""
+  updateNotes(myval)
+
+})
+document.querySelector("#searchTerm").addEventListener("keypress",e=>{
+  if(e.keyCode==13){
+    var myval=document.querySelector("#searchTerm").value
+    updateNotes(myval)
+
+  }
+})
+
+function updateNotes(myval){
+  containerDOM.innerHTML=""
+  if (containerDOM.innerHTML==""){
+    containerDOM.innerHTML+="<div class='list'></div>"
+    maketable(4)
+    tabledisplay(changeMe(eval(`noted.${myval}`)),4)
+  }
+  else{
+    listDOM.innerHTML+=""
+    maketable(4)
+    tabledisplay(changeMe(eval(`noted.${myval}`)),4)
+  }
+    newArr=[]
+
+}
+
+// notes=notea+notec
+        var newArr=[]
+        
+function changeMe(noteArry){
+  noteArry.forEach(note=>{
+      if(isArray(note)==true){
+          changeme(note)
+      }else{
+        notes=note.split("")
+        intNote=""
+        notes.forEach(n=>{
+            intNote+=notesChanges[n]
+          })
+        newArr.push(intNote)
+      }
+  })
+  return newArr
+}
+
+        function changeme(noteArry){
+            noteArry.forEach(note=>{
+              if(isArray(note)==true){
+                changeme(note)
+              }
+              else{
+                notes=note.split("")
+                intNote=""
+                // debugger
+                notes.forEach(n=>{
+                  intNote+=notesChanges[n]
+                })
+                newArr.push(intNote)
+              }
+            })
+          return newArr
+        }
+
+        function isArray(item){
+    return Array.isArray(item);
+}
+
+</script>
+
+<script>
+
+const bc= new BroadcastChannel("test_channel")
+bc.postMessage("this is a test message")
+bc.onmessage= function(ev){console.log(ev)}
+
+</script>
+    
+</body>
+</html>
