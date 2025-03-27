@@ -22,7 +22,7 @@
 
 <!-- <script src="../resources/console.js"></script> -->
 <script src="https://transposenotes.pages.dev/lib/splitNotes.js"></script>
-<script src="https://transposenotes.pages.dev/lib/varnotes.js"></script>
+<script src="https://transposenotes.pages.dev/varnotes.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vexflow/3.0.9/vexflow-min.js"></script>
 <script src="stave.js"></script>
@@ -33,13 +33,19 @@
 
 <!-- <script src="sayHi.js"></script> -->
 <script>
+  var slicednote = [];
+  var keepslicednote = [];
+  var a;
+
+  var searchedNote=location.search.split("=")[1];
+  notesToSlice=(notex[searchedNote].note)
+  putnotes(notesToSlice)
+  // document.querySelector("#takekey").value=(notex[searchedNote].note).join(" ")
+
   // adds notes/
   twinkle = ["c", "c", "G", "G", "A", "A", "G", "-", "f", "f", "e", "e", "d", "d", "c", "-", "G", "G", "f", "f", "e",
     "e", "d", "-", "G", "G", "f", "e", "f", "d", "c", "-"
   ]
-  var slicednote = [];
-  var keepslicednote = [];
-  var a;
   document.querySelector("#takekey").addEventListener("keyup", (w) => {
     a = document.querySelector("#takekey").value.split(" ")
     if (w.keyCode == 13) {

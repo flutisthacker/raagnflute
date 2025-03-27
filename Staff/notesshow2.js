@@ -6,12 +6,13 @@ function addbadnotes(mynotes) {
   let div = document.getElementById("staffnotation")
   let renderer2 = new VF.Renderer(div, VF.Renderer.Backends.SVG);
 
-  renderer2.resize(500, 200);
+  renderer2.resize(800, 150);
   let context = renderer2.getContext();
   context.setFont("Arial", 20, "").setBackgroundFillStyle("#aaa");
 
   // Create a stave at position 10, 40 of width 400 on the canvas.
-  let stave = new VF.Stave(10, 40, 400);
+  let stave = new VF.Stave(10, 40, 750);
+  stave.addClef("treble").addTimeSignature("8/8");
 
   stave.setContext(context).draw();
 
