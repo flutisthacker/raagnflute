@@ -49,7 +49,7 @@ function addlines(a, b, c, d) {
       ckf["3"]["duration"] = dn + "r"
       ckf["3"]["keys"] = [c + "/4"]
     }
-    console.log(ckf)
+    console.debug(ckf)
     stave2.setContext(context2).draw();
     var notes = [
       // A quarter-note C.
@@ -64,8 +64,8 @@ function addlines(a, b, c, d) {
       new VF.StaveNote(ckf["3"])
     ];
     debugger
-    console.log("to check #" + notes[0]["keys"][0].includes("#"))
-    console.log("to check #" + notes)
+    console.debug("to check #" + notes[0]["keys"][0].includes("#"))
+    console.debug("to check #" + notes)
     if (notes[0]["keys"][0].includes("#")) {
       notes[0].addAccidental(0, new VF.Accidental("#"))
     }

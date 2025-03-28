@@ -61,7 +61,7 @@ function addbadnotes(mynotes) {
       }
       else if(ksy.length>1){
         mysplitednotes=splitnotes(ksy)
-        console.log(mysplitednotes)
+        console.debug(mysplitednotes)
         mysplitednotes.forEach(msdn=>{
           if(msdn== "-"){
             tosend=mmidi[mmidi.length-1][1]/2
@@ -83,7 +83,7 @@ function addbadnotes(mynotes) {
       }
         // oscillator.stop()
       });
-      console.log(mmidi);
+      console.debug(mmidi);
       addStaffNote(mmidi)
     }
     
@@ -106,11 +106,11 @@ function addbadnotes(mynotes) {
           }else{
             quack = [new VF.StaveNote(quackd)]
           }
-          console.log(quack[0])
+          console.debug(quack[0])
           notes.push(quack[0])
         })
       }
-  console.log(notes)
+  console.debug(notes)
   var beams = VF.Beam.generateBeams(notes);
   Vex.Flow.Formatter.FormatAndDraw(context, stave, notes);
   beams.forEach(function (b) {

@@ -129,7 +129,7 @@ function addbadnotes(mynotes) {
       })
     }
     if (mynotes[i].length == 1) {
-      console.log(notes[i])
+      console.debug(notes[i])
       if (mynotes[i] == "-") {
         quack = [eval(
           `new VF.StaveNote({
@@ -151,7 +151,7 @@ function addbadnotes(mynotes) {
 
     }
   }
-  console.log(notes)
+  console.debug(notes)
   var beams = VF.Beam.generateBeams(notes);
   Vex.Flow.Formatter.FormatAndDraw(context, stave, notes);
   beams.forEach(function (b) {

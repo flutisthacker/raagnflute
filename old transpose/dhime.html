@@ -121,7 +121,7 @@ function changeMe(noteArry){
 
 const bc= new BroadcastChannel("test_channel")
 bc.postMessage("this is a test message")
-bc.onmessage= function(ev){console.log(ev)}
+bc.onmessage= function(ev){console.debug(ev)}
 
 </script>
     

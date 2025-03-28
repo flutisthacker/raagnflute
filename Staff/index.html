@@ -61,7 +61,7 @@
     while (a.length) {
       slicednote.push(a.splice(0, 4));
     }
-    console.log(a.length,slicednote);
+    console.debug(a.length,slicednote);
     
     slicednote.forEach(slice => {
       for (i = 0; i < slice.length; i++) {
@@ -84,7 +84,7 @@
     while (a.length) {
       slicednote.push(a.splice(0, 4));
     }
-    console.log("slicednote"+slicednote);
+    console.debug("slicednote"+slicednote);
 
     slicednote.forEach(slice => {
       addbadnotes(slice);
@@ -103,7 +103,7 @@
     while (a.length) {
       slicednote.push(a.splice(0, a.length));
     }
-    console.log(slicednote);
+    console.debug(slicednote);
 
     keepslicednote.forEach(slice => {
       for (i = 0; i < slice.length; i++) {

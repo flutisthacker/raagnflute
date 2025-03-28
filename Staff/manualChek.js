@@ -155,7 +155,7 @@ function singleAdd(mynotes) {
               }
         }
         else if(individualKey== "-"){
-          console.log("aayo")
+          console.debug("aayo")
         listOfMIDI.push(["c",valuePerBeat])
         }
   
@@ -164,7 +164,7 @@ function singleAdd(mynotes) {
         }
         else if(individualKey.length>1){
           arrayOfSplitedNotes=splitnotes(individualKey)
-          // console.log(arrayOfSplitedNotes)
+          // console.debug(arrayOfSplitedNotes)
           arrayOfSplitedNotes.forEach(individualNotefromSplitedNotes=>{
             if(individualNotefromSplitedNotes== "-"){
               let tosend=listOfMIDI[listOfMIDI.length-1][1]/2
@@ -188,7 +188,7 @@ function singleAdd(mynotes) {
         if(valuePerBeat==ListofKeysToConvert.length-1){
             listOfMIDI.push([0,valuePerBeat])}
         
-        console.log(listOfMIDI);
+        console.debug(listOfMIDI);
         addStaffNote(listOfMIDI)
       }
       
@@ -201,7 +201,7 @@ function singleAdd(mynotes) {
         function addStaffNote(midi){
             let quack=[];
         midi.forEach(md=>{
-            console.log(md,"md midi")
+            console.debug(md,"md midi")
             // quackd={
             //   clef: "treble",
             //   keys:  [md[0]],
@@ -209,22 +209,22 @@ function singleAdd(mynotes) {
             // }
             // if(md[0].includes("#")){
             //   quack = [new VF.StaveNote(quackd).addAccidental(0, new VF.Accidental("#"))]
-            // console.log(quack,105)
+            // console.debug(quack,105)
             // }else if(md[0].includes("-")){
             //   quackd["duration"] = "qr"
             //   quack = [new VF.StaveNote(quackd)]
             // }else{
             //   quack = [new VF.StaveNote(quackd)]
             // }
-            // console.log(quack[0],quackd,"toadd")
+            // console.debug(quack[0],quackd,"toadd")
             md[0]["duration"] = `${md[1]}`;
-            console.log(md[0]["duration"],"duration")
+            console.debug(md[0]["duration"],"duration")
             notes.push(md[0])
             // notes.push(midi)
-            // console.log(notes,md,"md")
+            // console.debug(notes,md,"md")
           })
         }
-console.log(notes)
+console.debug(notes)
 
     var beams = VF.Beam.generateBeams(notes);
     Vex.Flow.Formatter.FormatAndDraw(context, stave, notes);

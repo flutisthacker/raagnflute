@@ -26,7 +26,7 @@ function splitnotes(abcd) {
   bcde = abcd.split("")
   bcde.forEach((cdef, index) => {
     if (cdef.includes("#")) {
-      // console.log(index)
+      // console.debug(index)
       defg.push(index)
 
     }
@@ -42,9 +42,9 @@ function splitnotes(abcd) {
 
   w = 0;
   for (i = 0; i < defg.length; i++) {
-    // console.log(defg[i], w, bcde)
+    // console.debug(defg[i], w, bcde)
     bcde.splice(defg[i] - w, 1)
-    // console.log(defg[i], w, bcde)
+    // console.debug(defg[i], w, bcde)
     w++;
   }
   return bcde.join().split(",");
