@@ -39,7 +39,46 @@ var notesX={"g" : "घुँ","n" : "ना","N" : "न्","r" : "रा","k" :
     "dhyachahiliu":[["gnr","gnr","gn","tg","gnr","gnr","gn","tg","gnr","gn","tg","tgnr","gnr","kt","gn","tg","gn","ttk","t","ttt","kt","kttk","t","t","ttt","kt","kttk","ttkt","ktt","ktt","kt","tg"],blankfour,["gn","ng","nN","tt","kr","rk","rN","tt","gn","ng","tt","kt","tg","nr","gn","gn","gnNc","gg","tgnr","kk","gnNc","gg","tgnr","kk","gkt","gk","tgnr","gk","gkt","gk","tgnr","gk","gk","tg","kt","g","gn"]],
     "kwaweu":["t","tkt","tkt","g","n","-t","tkt","tkt","gn","-t","gnNc","gg","gn","-t","gnNc","gg","gn","gnr","ktr","kttk","tg","ttkt","tktt","kttk","tg","gnr","ktr","gnr","ktr","gg","tgnr","gn","-"],
     "thawoniu":["t","g","g","k","tg","g","g","k","t","g","g","k","t","-","t","-","t","tt","kt","t","kt","tk","t","tt","kt","tk","gn","kt","t","-","t","-","g","tg","nt","kt","tg","ng","ttkt","g","tg","nt","kt","t","t"]
-    
-    
     }
     
+
+
+
+    var notesXx={"g" : "घुँ","n" : "ना","N" : "न्","r" : "रा","k" : "खाे","t" : "ता","d" : "ध्याँ",
+      "c" : "चा","-" : "-"}
+      var notesChanges2={
+        "g":"घेँ",
+      "t":"ता",
+      "n":"ना",
+      "k":"ख",
+      "r":"र",
+      "T":"ती",
+      "":"था",
+      "d":"दि",
+      "D":"धाँ",
+      "q":"धेँ",
+      "w":"धिँ",
+      "-":"-"
+      }
+      
+      var notedd={"choose":[],
+        "note":[["kk-k","tkt","dgn","d","tggn","tggn","tggn","d","kk-k","tkt","gnng","d","gnt","gnngn","gnng","d"],blankfour,
+        ["kk","k","tg","gn","k","-","tg","d","kk","k","tg","gt","gn","ng","nn","gn","tt","k","ktk","tt","kk","tk","tk","tt","kt","tk","tt","k","g","g","t","g","t","g","gn","t","-","t","-","tg","gn","kt","t","gn","n","gn","nn","gn","n","gn","nn","gn","gn","gn","gn","gn","ng","tt","kt","d","-","-","t","k","-","-","-"]],
+      "note1":[["gd","tg","-g","ng","gd","tT","dtkT","tg"],blankfour,
+      ["qn","gq","ng","qn","q-ng","dtkd","tgdt","gdt","kTtk","dtkt","kTD","Td","D","-","dd","tk"],blankfour,
+      ["Dg","tT","tg","DT","tg","tT","tg","DT"],blankfour,
+      ["D","gdrgn","g","q","tk","gdrgt","g","q"],blankfour,
+      ["D-dt","kdrk","tk","q","tk-dt","kdrk","tk","q"],blankfour,
+      ["Ddt","kdrk","tkdt","kdrk"],blankfour,
+      ["D","gnkd","tk","gnkd"],blankfour,
+      ["D","dtkT","n","dtkT"],blankfour,
+      ["dtkT","n","dtkT","D"],blankfour,
+      ["DT","n","nT","D"],blankfour,
+      ["DT","nT","nT","DT"],blankfour,
+      ["D","dtkt","tk","w","tk","dtkt","tk","w"],blankfour,
+      ["g","-t","T","k-D"],blankfour,
+      
+      ]
+      
+      }
+      
