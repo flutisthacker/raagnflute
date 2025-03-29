@@ -93,16 +93,19 @@
     else if(!takenote.value.includes(`","`)){
       takenote.value=takenote.value.replaceAll(",",'","')
     }
-    var ass = `,"${document.querySelector("#naam").value}": {
+    var ass = `,"${document.querySelector("#naam").value.join("_")}": {
       "note": ["${takenote.value.replaceAll(" ",`","`)}"],
       "key": "${document.querySelector("#key").value}",
       "beat": "${document.querySelector("#beat").value}",
       "locale": "${document.querySelector("#locale").value}",
       "bpm":"${document.querySelector("#bpm").value}",
       "artist":"${document.querySelector("#chtonum").value}",
+      "movie":"",
+      "lyrics":"",
+      "status":"new",
       "title": "${document.querySelector("#naam").value}",
       "created_at": "${(new Date).toGMTString()}",
-      "native":"${addtoname}"
+      "native":"${document.querySelector("#naam").value}"
     }`
     givenote.value = ass
   })
