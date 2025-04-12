@@ -93,7 +93,7 @@
     else if(!takenote.value.includes(`","`)){
       takenote.value=takenote.value.replaceAll(",",'","')
     }
-    var ass = `,"${document.querySelector("#naam").value.replaceAll(" ","_")}": {
+    var ass = `,"${document.querySelector("#naam").value.replaceAll(" ","").toLowerCase()}": {
       "note": ["${takenote.value.replaceAll(" ",`","`)}"],
       "key": "${document.querySelector("#key").value}",
       "beat": "${document.querySelector("#beat").value}",
