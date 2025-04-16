@@ -94,7 +94,7 @@
       takenote.value=takenote.value.replaceAll(",",'","')
     }
     var ass = `,"${document.querySelector("#naam").value.replaceAll(" ","").toLowerCase()}": {
-      "note": ["${takenote.value.replaceAll(" ",`","`)}"],
+      "note": ["${takenote.value.replaceAll(" ",`","`).replaceAll("",...getBlanks(4))}"],
       "key": "${document.querySelector("#key").value}",
       "beat": "${document.querySelector("#beat").value}",
       "locale": "${document.querySelector("#locale").value}",
