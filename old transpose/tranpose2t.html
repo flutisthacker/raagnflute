@@ -53,6 +53,8 @@
   <textarea name="" id="givenote" cols="30" rows="10"></textarea>
 </body>
 <script>
+  const $=(x)=>document.querySelector(x)
+  const $$=(x)=>document.querySelectorAll(x)
   function changeatonum(a) {
     const letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
       "u", "v", "w", "x", "y", "z"
@@ -69,14 +71,14 @@
     }
   return changed;
   }
-  document.querySelector("#chtonum").addEventListener("keypress", (e) => {
+  $("#chtonum").addEventListener("keypress", (e) => {
     if (e.keyCode == 13) {
-      chn=changeatonum(document.querySelector("#chtonum").value);
-      document.querySelector("#chtonum").value=chn
+      chn=changeatonum($("#chtonum").value);
+      $("#chtonum").value=chn
     }
   })
-  var takenote = document.querySelector("#takenote")
-  var givenote = document.querySelector("#givenote")
+  var takenote = $("#takenote")
+  var givenote = $("#givenote")
   takenote.addEventListener("keypress", () => {
     if (takenote.value.includes("+")) {
       initailvalue = takenote.value
@@ -97,19 +99,19 @@
     else if(!takenote.value.includes(`","`)){
       takenote.value=takenote.value.replaceAll(",",'","')
     }
-    var ass = `,"${document.querySelector("#naam").value.replaceAll(" ","").toLowerCase()}": {
+    var ass = `,"${$("#naam").value.replaceAll(" ","").toLowerCase()}": {
       "note": ["${takenote.value.replaceAll(" ",`","`)}"],
-      "key": "${document.querySelector("#key").value}",
+      "key": "${$("#key").value}",
       "keys": ["c","g"],
-      "beat": "${document.querySelector("#beat").value}",
-      "locale": "${document.querySelector("#locale").value}",
-      "bpm":"${document.querySelector("#bpm").value}",
-      "artist":"${document.querySelector("#chtonum").value}",
+      "beat": "${$("#beat").value}",
+      "locale": "${$("#locale").value}",
+      "bpm":"${$("#bpm").value}",
+      "artist":"${$("#chtonum").value}",
       "movie":"",
       "lyrics":"",
       "code":${totalNoteList+1||"x"},
-      "title": "${document.querySelector("#naam").value}",
-      "native":"${document.querySelector("#naam").value}",
+      "title": "${$("#naam").value}",
+      "native":"${$("#naam").value}",
       "status":"new",
       "created_at": "${(new Date).toGMTString()}"
     }`
@@ -119,12 +121,12 @@
   givenote.addEventListener("keypress", () => {
     asd = JSON.parse(`{${givenote.value}}`)
     keys=Object.keys(asd)[0]
-    document.querySelector("#key").value = asd[keys].key
+    $("#key").value = asd[keys].key
     allkeys=asd[keys].note
-    document.querySelector("#takenote").value =allkeys.toString().replaceAll(","," ")||allkeys.toString()
-    document.querySelector("#locale").value = asd[keys].locale
-    document.querySelector("#beat").value = asd[keys].beat
-    document.querySelector("#naam").value = keys
+    $("#takenote").value =allkeys.toString().replaceAll(","," ")||allkeys.toString()
+    $("#locale").value = asd[keys].locale
+    $("#beat").value = asd[keys].beat
+    $("#naam").value = keys
   })
 </script>
 
