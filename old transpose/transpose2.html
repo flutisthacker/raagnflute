@@ -226,24 +226,32 @@
 
 
   <script>
-    document.querySelector(".addToTable").addEventListener("click",()=>{
-      var addthis=document.querySelector("#addThis").value
+    const $=(x)=>document.querySelector(x)
+    const $$=(x)=>document.querySelectorAll(x)
+    const $$$=(x)=>document.getElementById(x)
+    
+    function getBlanks(numOfBlank){
+      return " ".repeat(numOfBlank).split("")
+    }
+    
+    $(".addToTable").addEventListener("click",()=>{
+      var addthis=$("#addThis").value
       maketable(8);
       tabledisplay(addthis.split(" "), 8 ); 
     }
     )
   </script>
   <script>
-    document.querySelector("#songstwo").addEventListener("scroll", moveSCrollIndicator)
+    $("#songstwo").addEventListener("scroll", moveSCrollIndicator)
 
-    const scrollIndicatorElt = document.getElementById("scrollIndicator")
-    const scrollIndicatorEltw = document.getElementById("scrollIndicator2")
+    const scrollIndicatorElt = $$$("scrollIndicator")
+    const scrollIndicatorEltw = $$$("scrollIndicator2")
     const maxHeight =  11918 - 606;
-    // const maxHeight =  document.querySelector("#songstwo").scrollHeight - window.innerheight ;
+    // const maxHeight =  $("#songstwo").scrollHeight - window.innerheight ;
 
 
     function moveSCrollIndicator(e) {
-      const percentage = (( document.querySelector("#songstwo").scrollTop) / maxHeight) * 100;
+      const percentage = (( $("#songstwo").scrollTop) / maxHeight) * 100;
       scrollIndicatorElt.style.width = percentage + "%";
       scrollIndicatorEltw.style.height = percentage + "%";
     }
@@ -334,15 +342,15 @@
 
 
 Object.keys(infoo).forEach(inf=>{
-    document.querySelector("#filterKeyNotes").innerHTML+=`<option value="${inf}">${inf}:${infoo[inf]}</option>`
-  document.querySelector(".Rinfo").innerHTML+= 
+    $("#filterKeyNotes").innerHTML+=`<option value="${inf}">${inf}:${infoo[inf]}</option>`
+  $(".Rinfo").innerHTML+= 
   `<button type="button"  class="btn btn-primary" id="btn${inf}" onclick="filterNote('${inf}')">${inf}:${infoo[inf]}</button>`
   /*   `<li class="list-group-item d-flex justify-content-between align-items-center">
     ${inf}
     <span class="badge bg-primary rounded-pill">${infoo[inf]}</span>
     </li>` */
     
-    // document.querySelector(".Rinfo").innerHTML+= `<li class="list-group-item list-group-item-action">${inf} : ${infoo[inf]}</li>`
+    // $(".Rinfo").innerHTML+= `<li class="list-group-item list-group-item-action">${inf} : ${infoo[inf]}</li>`
   })
 
 function filterNote(sae){
@@ -382,8 +390,8 @@ function clearFilter(){
   <script>
     // notex = notex + raagnotes;
 
-    var btn = document.getElementById("toggle");
-    var menu = document.getElementById("menu");
+    var btn = $$$("toggle");
+    var menu = $$$("menu");
     btn.addEventListener("click", toggleMenu)
     menu.addEventListener("click", toggleMenu)
 
@@ -403,21 +411,21 @@ function clearFilter(){
     document.addEventListener("keyup", (e) => {
       if (e.keyCode == 67 && e.keyCode == 16) {
         // console.log(e.key, songs.value)
-        html2canvas(document.querySelector("#capture")).then(canvas => {
+        html2canvas($("#capture")).then(canvas => {
           document.body.appendChild(canvas)
           // $('.modal-body').append(canvas)
           // $('#exampleModal').modal()
         });
       }
     })
-    document.querySelector(".btn-primary").addEventListener("click", () => {
-      html2canvas(document.querySelector("#capture")).then(canvas => {
+    $(".btn-primary").addEventListener("click", () => {
+      html2canvas($("#capture")).then(canvas => {
         $('.notecapture').append(canvas)
       });
     })
     // console.log(mydata[0].age);
 
-    document.querySelector("#staff").addEventListener("click", (e) => {
+    $("#staff").addEventListener("click", (e) => {
       a = notesearch.value
       console.log(notesearch.value)
       totransposed = {
@@ -446,7 +454,7 @@ function clearFilter(){
 
 }
 
-    var ifr = document.querySelector("#myiframe");
+    var ifr = $("#myiframe");
     const ifrwindow=ifr.contentWindow;
     const ifrdocument=ifr.contentDocument;
 
