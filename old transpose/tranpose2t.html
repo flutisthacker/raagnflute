@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Add notes</title>
+  <script src="https://transposenotes.pages.dev/lib/splitNotes.js"></script>
+<script src="https://transposenotes.pages.dev/lib/filterNotes.js"></script>
+<script src="https://transposenotes.pages.dev/varnotes.js"></script>
+
 </head>
 <style>
   body {
@@ -103,6 +107,7 @@
       "artist":"${document.querySelector("#chtonum").value}",
       "movie":"",
       "lyrics":"",
+      "code":totalNoteList+1||"x" ,
       "status":"new",
       "title": "${document.querySelector("#naam").value}",
       "created_at": "${(new Date).toGMTString()}",
