@@ -107,11 +107,11 @@
       "artist":"${document.querySelector("#chtonum").value}",
       "movie":"",
       "lyrics":"",
-      "code":${totalNoteList+1||"x"} ,
-      "status":"new",
+      "code":${totalNoteList+1||"x"},
       "title": "${document.querySelector("#naam").value}",
-      "created_at": "${(new Date).toGMTString()}",
-      "native":"${document.querySelector("#naam").value}"
+      "native":"${document.querySelector("#naam").value}",
+      "status":"new",
+      "created_at": "${(new Date).toGMTString()}"
     }`
     givenote.value = ass
   })
