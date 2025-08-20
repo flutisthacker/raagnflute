@@ -10,6 +10,7 @@
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <meta name="theme-color" content="#9d4edd" />
+<script src="https://fh-resoruces.pages.dev/bootstrapFunctions.js"></script>
 
 </head>
 <body>
@@ -30,17 +31,15 @@
     </style>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#" onclick="history.go(0)">Raag and Flute</a>
+        <a class="navbar-brand" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+          Raag and Flute
+      </a>
+      <!-- <a class="navbar-brand" href="#" onclick="history.go(0)">Raag and Flute</a> -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex raags">
-            <li class="nav-item">
-                <button class="btn btn-outline-info nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                    ->
-                </button>
-            </li>
             <li class="nav-item pl-2">
                 <h5  class="btn btn-outline-success position-relative raagh5 mr-2">
                     Raag
@@ -130,6 +129,9 @@
     <!-- <script src="raagJson2.js"></script> -->
     <script src="raagJson.js"></script>
     <script src="transpose2.js"></script>
+    <script>
+        AddToComponent(".offcanvas-body",AddAccordion(Object.entries(raags.raag).map(c=>[c[0],createListGroup(Object.entries(c[1]).map(c=>c.join(":")))])))
+    </script>
     <script>
         // console.table(raags.raag)
         var chooseThaat=document.querySelector("#chooseThaat");
