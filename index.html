@@ -117,10 +117,11 @@
             <div class="col-lg-9 col-md-6 col-sm-6 list"></div>
         </div>        
 
-    <script src="aboutRaag.js"></script>
+    <script src="./aboutRaag.js"></script>
     <!-- <script src="raagJson2.js"></script> -->
-    <script src="raagJson.js"></script>
-    <script src="transpose2.js"></script>
+    <script src="./raagJson.js"></script>
+    <script src="https://transposenotes.pages.dev/lib/transpose_v2.js"></script>
+
     <script>
         AddToComponent(".offcanvas-body",AddAccordion(Object.entries(raags.raag).map(c=>[c[0],createListGroup(Object.entries(c[1]).map(c=>c.join(":")))])))
     </script>
