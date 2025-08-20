@@ -33,6 +33,7 @@
     <div class="container-fluid">
         <a class="navbar-brand" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
           Raag and Flute
+        <span class="badge rounded-pill bg-danger raagh5">*</span>
       </a>
       <!-- <a class="navbar-brand" href="#" onclick="history.go(0)">Raag and Flute</a> -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,15 +41,6 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex raags">
-            <li class="nav-item pl-2">
-                <h5  class="btn btn-outline-success position-relative raagh5 mr-2">
-                    Raag
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    99+
-                    <span class="visually-hidden">unread messages</span>
-                    </span>
-                </h5>
-            </li>
             <li class="nav-item">
                 <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Click to Play</button>
             </li>
@@ -147,8 +139,7 @@
             }
         })
         getBadge()
-        document.querySelector(".start-100").textContent=totalRaag
-        document.querySelector(".raagh5").innerHTML+=`(${Object.keys(raags.raag).length})`
+        document.querySelector(".raagh5").textContent=totalRaag
 
 
         function getBadge(){
